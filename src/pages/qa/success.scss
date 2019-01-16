@@ -1,0 +1,84 @@
+@import "../../common/util.scss";
+.page-qa-suc {
+  min-height: 100%;
+  background-image: url("../../assets/qa/qabg.png");
+  background-color: #000a39;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  text-align: center;
+  padding-top: p2r(60);
+  min-height: 106%;
+  &-title {
+    font-size: p2r(32);
+    color: #ffffff;
+    line-height: p2r(45);
+    margin-bottom: p2r(4);
+  }
+  &-titlesmall {
+    font-size: p2r(14);
+    color: #ffffff;
+    line-height: p2r(20);
+  }
+  .img1 {
+    height: p2r(228);
+    -webkit-animation: big 1s;
+    animation: big 1s;
+    margin-top: p2r(-36);
+  }
+  .img2 {
+    width: p2r(80);
+    display: block;
+    margin: p2r(36) auto p2r(66) auto;
+  }
+  &-wl {
+    font-size: p2r(28);
+    line-height: p2r(40);
+    color: #ffca32;
+    margin-top: p2r(-70);
+    span {
+      vertical-align: p2r(-2);
+    }
+  }
+  &-sharebtn {
+    width: p2r(287);
+    line-height: p2r(49);
+    background-image: linear-gradient(-132deg, #ff42a2 0%, #ff3571 100%);
+    border-radius: p2r(100);
+    font-size: p2r(16);
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: p2r(16);
+    margin-top: p2r(30);
+  }
+  &-againbtn {
+    width: p2r(287);
+    line-height: p2r(49);
+    background: #ffffff;
+    border-radius: p2r(100);
+    font-size: p2r(16);
+    text-align: center;
+    color: #4d87ea;
+  }
+}
+
+@-webkit-keyframes big {
+  from {
+    -webkit-transform: translate(0.1);
+    transform: translate(0.1);
+  }
+  to {
+    -webkit-transform: translate(1);
+    transform: translate(1);
+  }
+}
+
+@keyframes big {
+  from {
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+  }
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}

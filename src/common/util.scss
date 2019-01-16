@@ -1,0 +1,15 @@
+@function p2r($px) {
+    @return $px / 20 * 1rem;
+}
+
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+        overflow: hidden;
+    }
+}

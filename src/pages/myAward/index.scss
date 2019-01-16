@@ -1,0 +1,162 @@
+@import "../../common/util.scss";
+.myAward {
+    &-border {
+        height: p2r(10);
+        background: #f2f3f5;
+    }
+    &-s1 {
+        height: p2r(122);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        &-item {
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            text-align: center;
+            &-v {
+                font-size: p2r(30);
+                color: #232426;
+                margin-bottom: p2r(8);
+            }
+            &-k {
+                font-size: p2r(14);
+                line-height: p2r(20);
+                color: #98999b;
+            }
+        }
+    }
+    &-s2 {
+        padding-top: p2r(32);
+        padding-bottom: p2r(32);
+        &-title {
+            font-size: p2r(18);
+            color: #232426;
+            line-height: p2r(25);
+            margin-bottom: p2r(12);
+            text-align: center;
+            font-weight: bold;
+        }
+        &-list {
+            margin-bottom: p2r(24);
+        }
+        &-item {
+            width: p2r(327);
+            margin: 0 auto;
+            height: p2r(40);
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            border-bottom: 1px solid #eeeeee;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            &-k {
+                font-size: p2r(14);
+                color: #555658;
+            }
+            &-V {
+                font-size: p2r(14);
+                color: #232426;
+                font-weight: bold;
+            }
+        }
+        &-btn {
+            width: p2r(287);
+            line-height: p2r(44);
+            text-align: center;
+            background-image: linear-gradient(-136deg, #4d9eff 0%, #2864ff 100%);
+            border-radius: p2r(100);
+            display: block;
+            margin: 0 auto;
+            font-size: p2r(16);
+            color: #ffffff;
+        }
+    }
+    &-s3 {
+        padding-top: p2r(32);
+        padding-bottom: p2r(32);
+        &-title {
+            font-size: p2r(18);
+            color: #232426;
+            line-height: p2r(25);
+            margin-bottom: p2r(10);
+            text-align: center;
+            font-weight: bold;
+        }
+        &-list {
+            margin-bottom: p2r(10);
+        }
+        &-item {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            height: p2r(60);
+            width: p2r(327);
+            margin: 0 auto;
+            border-bottom: 1px solid #eeeeee;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            &-left {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+            img {
+                width: p2r(36);
+                height: p2r(36);
+                border-radius: 50%;
+                margin-right: p2r(10);
+            }
+            &-user {
+                &-name {
+                    font-size: p2r(14);
+                    color: #555658;
+                    margin-bottom: p2r(6);
+                }
+                &-time {
+                    font-size: p2r(12);
+                    color: #98999b;
+                }
+            }
+            &-award {
+                &-des {
+                    font-size: p2r(13);
+                    color: #232426;
+                    font-weight: bold;
+                    &.hasmargin {
+                        margin-bottom: p2r(8);
+                    }
+                }
+                &-num {
+                    text-align: right;
+                    font-size: p2r(13);
+                    color: #232426;
+                }
+            }
+        }
+        &-more {
+            text-align: center;
+            font-size: p2r(12);
+            line-height: p2r(17);
+            color: #c7c8cb;
+            display: block;
+            &.empty {
+                margin-top: p2r(20);
+            }
+        }
+    }
+}

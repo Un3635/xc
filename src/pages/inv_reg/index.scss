@@ -1,0 +1,90 @@
+@import "../../common/util.scss";
+#inv_reg {
+    background-image: url("../../assets/qa/invite_zc_bg@3x.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    padding-top: p2r(323);
+    min-height: 100%;
+    background-color: #ecf3ff;
+    .labels {
+        padding: 0 p2r(30);
+        .label {
+            background-color: white;
+            margin-bottom: p2r(10);
+            height: p2r(46); //   display: flex;
+            span {
+                font-size: 14px;
+                color: #999999;
+                width: p2r(87);
+                line-height: p2r(46);
+                display: inline-block;
+                padding-left: p2r(15);
+            }
+            input {
+                line-height: normal;
+                -webkit-user-select: auto;
+                font-size: p2r(14);
+                color: #333333;
+                width: p2r(100);
+                &.phoneinput {
+                    width: p2r(200);
+                }
+            }
+            button {
+                width: p2r(100);
+                font-size: p2r(14);
+                color: #a4beeb;
+                display: inline-block;
+                background-color: transparent;
+                border-left: 1px solid #eeeeee;
+                &.time {
+                    color: #666666;
+                }
+                &.cansub:not(.time) {
+                    color: #4d87ec;
+                }
+            }
+        }
+    }
+    .err {
+        margin-top: p2r(23);
+        font-size: p2r(12);
+        line-height: p2r(17);
+        height: p2r(17);
+        color: #f95453;
+        margin-bottom: p2r(4);
+        text-align: center;
+        &:empty {
+            opacity: 0;
+        }
+    }
+    .regBt {
+        width: p2r(343);
+        line-height: p2r(44);
+        background-image: -webkit-gradient(linear, right top, left top, from(#68a8ff), to(#5582f4));
+        background-image: linear-gradient(-90deg, #68a8ff 0%, #5582f4 100%);
+        background-image: -webkit-linear-gradient(-90deg, #68a8ff 0%, #5582f4 100%);
+        border-radius: p2r(4);
+        font-size: 16px;
+        color: #ffffff;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-bottom: p2r(16);
+        &[disabled="disabled"] {
+            background: #c7c8cb;
+            border-radius: 4px;
+        }
+    }
+    .pro {
+        text-align: center;
+        font-size: p2r(12);
+        color: #666666;
+        a {
+            font-size: p2r(12);
+            color: #68a8ff;
+            text-decoration: none;
+        }
+    }
+}

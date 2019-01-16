@@ -1,0 +1,22 @@
+@import "../../common/util.scss";
+.page-qashare {
+  min-height: 100%;
+  background-color: #000a39;
+  a {
+    background-image: linear-gradient(-136deg, #4d9eff 0%, #2864ff 100%);
+    -webkit-box-shadow: 0 2px 10px 0 rgba(77, 135, 234, 0.24);
+    box-shadow: 0 2px 10px 0 rgba(77, 135, 234, 0.24);
+    border-radius: 100px;
+    width: p2r(327);
+    line-height: p2r(49);
+    text-align: center;
+    font-size: p2r(16);
+    color: #ffffff;
+    position: absolute;
+    top: p2r(377);
+    left: p2r(27);
+  }
+  img {
+    width: 100%;
+  }
+}

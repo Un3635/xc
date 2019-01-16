@@ -1,0 +1,224 @@
+@import "../../common/util.scss";
+#inv {
+  padding: p2r(16) p2r(16) 0 p2r(16);
+  background-image: url("../../assets/qa/invite_sybj.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-color: #e5edf9;
+  min-height: 100%;
+  .invRule {
+    width: p2r(71);
+    line-height: p2r(28);
+    font-size: p2r(12);
+    border-top-left-radius: p2r(14);
+    border-bottom-left-radius: p2r(14);
+    background-color: rgba($color: #ffffff, $alpha: 0.2);
+    padding-left: p2r(12);
+    margin-left: auto;
+    margin-right: p2r(-16);
+    font-size: p2r(12);
+    color: #ffffff;
+  }
+  .invBtn {
+    margin-bottom: p2r(24);
+    height: p2r(44);
+    line-height: p2r(44);
+    text-align: center;
+    background-image: linear-gradient(-130deg, #fdaa24 0%, #f76b1c 100%);
+    background-image: -webkit-linear-gradient(
+      -130deg,
+      #fdaa24 0%,
+      #f76b1c 100%
+    );
+    border-radius: p2r(4);
+    font-size: p2r(16);
+    color: #ffffff;
+  }
+  .invNum {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: white;
+    padding: p2r(20) 0;
+    &Item {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      text-align: center;
+      &Title {
+        font-size: p2r(14);
+        color: #232426;
+        margin-bottom: p2r(8);
+      }
+      &Value {
+        font-size: p2r(26);
+        color: #f9a742;
+        span {
+          font-size: 14px;
+          color: #555658;
+        }
+      }
+    }
+  }
+  .invList {
+    background-color: white;
+    &Item {
+      border-top: 1px solid #eeeeee;
+      height: p2r(64);
+      padding-left: p2r(16);
+      padding-right: p2r(20);
+      &:last-of-type {
+        border-bottom: 1px solid #eeeeee;
+      }
+      &Left {
+        float: left;
+        padding-top: p2r(12);
+        img {
+          width: p2r(40);
+          height: p2r(40);
+          border-radius: 50%;
+          vertical-align: p2r(-4);
+        }
+        &Info {
+          display: inline-block;
+          .phone {
+            font-size: p2r(14);
+            margin-bottom: p2r(8);
+            color: #555658;
+          }
+          .time {
+            font-size: p2r(12);
+            color: #98999b;
+          }
+        }
+      }
+      &Right {
+        float: right;
+        line-height: p2r(64);
+        font-size: p2r(14);
+        color: #fdaa24;
+        &.suc {
+          color: #555658;
+        }
+      }
+    }
+    &More {
+      text-align: center;
+      font-size: p2r(14);
+      padding: p2r(18) 0;
+      color: #4d87ea;
+    }
+  }
+  .invFt {
+    padding-top: p2r(24);
+    padding-bottom: p2r(26);
+    font-size: p2r(12);
+    color: #98999b;
+    text-align: center;
+  }
+  .invBannerinfo0 {
+    width: p2r(248);
+    height: p2r(248);
+    background-image: url("../../assets/qa/invite_sy_planet@3x.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: p2r(65);
+    margin-top: p2r(17);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: p2r(30);
+    img {
+      width: p2r(45);
+      margin-bottom: p2r(9);
+    }
+    .l1,
+    .l2 {
+      font-size: p2r(14);
+      line-height: p2r(24);
+      color: #555658;
+    }
+  }
+  .invBannerinfo1 {
+    width: p2r(248);
+    height: p2r(248);
+    background-image: url("../../assets/qa/invite_sy_planet@3x.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: p2r(74);
+    margin-top: p2r(17);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: p2r(30);
+    .l1,
+    .l2,
+    .l3 {
+      font-size: p2r(14);
+      color: #555658;
+      line-height: p2r(20);
+    }
+    span {
+      font-size: 40px;
+      color: #555658;
+    }
+    .l2 {
+      margin-top: p2r(8);
+      margin-bottom: p2r(14);
+    }
+  }
+  .invtitle {
+    font-size: p2r(14);
+    color: #555658;
+    line-height: p2r(24);
+    text-align: center;
+    margin-bottom: p2r(16);
+  }
+}
+
+.mint-msgbox-wrapper#inv-messagebox {
+  .mint-msgbox {
+    border-radius: p2r(12);
+    width: p2r(300);
+  }
+  .mint-msgbox-header {
+    padding: 0;
+    height: p2r(48);
+    .mint-msgbox-title {
+      line-height: p2r(48);
+      font-size: p2r(16);
+      color: #232426;
+    }
+  }
+  .mint-msgbox-btns {
+    line-height: p2r(45);
+    height: p2r(45);
+    &::after {
+      content: "";
+      position: absolute;
+      width: p2r(268);
+      height: 1px;
+      background-color: #eeeeee;
+      left: 50%;
+      margin-left: p2r(-134);
+    }
+    button {
+      font-size: p2r(16);
+      color: #4d87ea;
+    }
+  }
+  .mint-msgbox-content {
+    margin: 0 p2r(16);
+    padding: p2r(16) 0;
+    border-bottom: none;
+    border-top: 1px solid #eeeeee;
+    .mint-msgbox-message {
+      text-align: left;
+      p {
+        font-size: p2r(14);
+        line-height: p2r(26);
+        color: #98999b;
+      }
+    }
+  }
+}

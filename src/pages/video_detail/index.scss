@@ -1,0 +1,101 @@
+@import "../../common/util.scss";
+.video_detail {
+    >.video {
+        padding: p2r(13) p2r(16);
+        .title {
+            font-size: p2r(22);
+            line-height: p2r(30);
+            color: #232426;
+            max-height: p2r(60);
+            overflow: hidden;
+            font-weight: 900;
+            margin-bottom: p2r(17);
+        }
+        .data {
+            .headerimg {
+                width: p2r(20);
+                height: p2r(20);
+                border-radius: 50%;
+                vertical-align: middle;
+            }
+            div {
+                display: inline-block;
+            }
+            .name {
+                font-size: p2r(12);
+                color: #232426;
+            }
+            .time {
+                font-size: p2r(12);
+                color: #98999B;
+            }
+            .read {
+                font-size: p2r(12);
+                color: #98999B;
+                float: right;
+                margin-top: p2r(6);
+            }
+        }
+        .edit {
+            border-top: 1px solid #EEEEEE;
+            margin-top: p2r(16);
+            margin-bottom: p2r(60);
+            padding-top: p2r(13);
+            font-size: p2r(14);
+            line-height: p2r(24);
+            color: #555658;
+            p,
+            h2,
+            h3,
+            h4,
+            h1,
+            h5,
+            h6,
+            strong,
+            ul {
+                font-size: p2r(14);
+                line-height: p2r(24);
+                color: #555658;
+                margin: p2r(10) auto;
+            }
+            img {
+                max-width: 100% !important;
+                height: auto !important;
+            }
+            ul {
+                list-style: initial;
+                margin-left: p2r(20);
+                li {
+                    line-height: p2r(24);
+                }
+            }
+            div {
+                font-size: p2r(14);
+                line-height: p2r(24);
+                color: #555658;
+            }
+            .f1,
+            .f2,
+            .f3 {}
+            .f3 {
+                span {
+                    display: block;
+                    font-size: p2r(14);
+                    line-height: p2r(24);
+                    color: #555658;
+                }
+                img {
+                    // display: block;
+                    width: p2r(20);
+                }
+            }
+        }
+    }
+    >.mp4 {
+        display: block;
+        width: p2r(375);
+        height: p2r(210);
+        -o-object-fit: cover;
+           object-fit: cover;
+    }
+}

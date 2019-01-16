@@ -1,0 +1,113 @@
+@import "../../common/util.scss";
+.audio_detail {
+  padding: p2r(26) p2r(16);
+  position: relative;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  .blurbg {
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-filter: blur(p2r(16));
+            filter: blur(p2r(16));
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+  > .audiotitle {
+    font-size: 0;
+    margin-bottom: p2r(24);
+    img {
+      width: p2r(20);
+      height: p2r(20);
+      vertical-align: p2r(-3);
+      margin-right: p2r(6);
+    }
+    .left {
+      font-size: p2r(18);
+      color: white;
+    }
+    .right {
+      float: right;
+      font-size: p2r(12);
+      line-height: p2r(20);
+      color: #dddddd;
+    }
+  } // >.audiocontent {
+  //     font-size: p2r(14);
+  //     line-height: p2r(20);
+  //     color: white;
+  //     margin-bottom: p2r(60);
+  // }
+  > .mp3 {
+    > .mp3player {
+      width: p2r(275);
+      height: p2r(275);
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: p2r(20);
+      text-align: center;
+      border-radius: p2r(8);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      img {
+        margin-top: p2r(105);
+        width: p2r(64);
+        height: p2r(64);
+      }
+    }
+    > .mp3title {
+      font-size: p2r(16);
+      color: #ffffff;
+      line-height: p2r(24);
+      margin-bottom: p2r(24);
+    }
+    > .mp3state {
+      height: p2r(30);
+      border-top: 3px solid white;
+      padding-top: p2r(12);
+      height: p2r(30);
+      margin-bottom: p2r(30);
+      font-size: p2r(12);
+      color: #dddddd;
+      position: relative;
+      .activestate {
+        position: absolute;
+        left: 0;
+        top: p2r(-3);
+        height: p2r(3);
+        width: 0;
+        background-color: #4d87ea; // &::after {
+        //     content: "";
+        //     width: p2r(16);
+        //     height: p2r(16);
+        //     display: block;
+        //     position: absolute;
+        //     right: 0;
+        //     margin-top: p2r(-7);
+        //     background-image: url("../../assets/radio_oval.png");
+        //     background-size: cover;
+        // }
+      }
+      .radioimg {
+        width: p2r(16);
+        height: p2r(16);
+        position: absolute;
+        left: 0;
+        top: p2r(-10);
+        z-index: 10;
+      }
+      .left {
+        float: left;
+      }
+      .right {
+        float: right;
+      }
+    }
+  }
+}

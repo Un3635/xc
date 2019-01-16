@@ -1,0 +1,202 @@
+@import "../../common/util.scss";
+#coin_detail {
+    background-color: #F2F3F5;
+    .bg {
+        .up {
+            height: p2r(168);
+            background-image: url("../../assets/ziliaoku_bg@3x.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative; // background-color: red;
+            padding-top: p2r(130);
+            .logo {
+                width: p2r(44);
+                height: p2r(44);
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .name {
+                color: white;
+                text-align: center;
+                font-size: p2r(18);
+            }
+        }
+        .down {
+            height: p2r(66);
+            background-color: white;
+            margin-bottom: p2r(10);
+            .left,
+            .right {
+                width: 50%;
+                float: left;
+                text-align: center;
+            }
+            .left {
+                .price {
+                    font-size: p2r(16);
+                    margin-top: p2r(15);
+                    margin-bottom: p2r(8);
+                    color: #4D87EA
+                }
+                .pricetitle {
+                    font-size: p2r(12);
+                    color: #999999;
+                }
+            }
+            .right {
+                .rate {
+                    font-size: p2r(16);
+                    margin-top: p2r(15);
+                    margin-bottom: p2r(8);
+                    color: rgba(245, 73, 73, 0.96);
+                }
+                .ratetitle {
+                    font-size: p2r(12);
+                    color: #999999;
+                }
+            }
+        }
+    }
+    .intro {
+        background-color: white;
+        &title {
+            font-size: p2r(16);
+            color: #232426;
+            line-height: p2r(48);
+            font-weight: 900;
+            padding-left: p2r(16);
+        }
+        &info {
+            text-align: center;
+            .inner {
+                display: inline-block;
+                text-align: left;
+                width: p2r(343);
+                background: #FAFAFA;
+                border-radius: p2r(4);
+                padding: p2r(12) p2r(16);
+                font-size: p2r(12);
+                line-height: p2r(22);
+                color: #555658;
+                letter-spacing: p2r(-0.35);
+            }
+        }
+    }
+    .par {
+        background-color: white;
+        margin-bottom: p2r(10);
+        &title {
+            font-size: p2r(16);
+            color: #232426;
+            line-height: p2r(48);
+            font-weight: 900;
+            padding-left: p2r(16);
+        }
+        &list {
+            text-align: center;
+            padding-bottom: p2r(20);
+            .inner {
+                display: inline-block;
+                text-align: left;
+                width: p2r(343);
+                background: #FAFAFA;
+                border-radius: p2r(4);
+                padding: p2r(12) p2r(16);
+            }
+        }
+        &item {
+            height: p2r(14);
+            margin-bottom: p2r(16);
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            .left {
+                font-size: p2r(14);
+                color: #98999B;
+                float: left;
+            }
+            .right {
+                font-size: p2r(14);
+                color: #232426;
+                float: right;
+            }
+        }
+    }
+    .news {
+        background-color: white;
+        &title {
+            font-size: p2r(16);
+            color: #232426;
+            line-height: p2r(48);
+            font-weight: 900;
+            padding-left: p2r(16);
+        }
+        &list {
+            text-align: center;
+            padding: 0 p2r(16);
+            .inner {
+                display: inline-block;
+                text-align: left;
+                width: p2r(343);
+                border-radius: p2r(4);
+            }
+        }
+        &item {
+            padding-bottom: p2r(18);
+            border-bottom: 1px solid #EEEEEE;
+            margin-bottom: p2r(16);
+            padding-right: p2r(116);
+            height: p2r(118);
+            position: relative;
+            &:last-of-type {
+                border: none;
+            }
+            img {
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: p2r(100);
+                height: p2r(100);
+                border-radius: p2r(8);
+            }
+            &content {
+                &title {
+                    font-size: p2r(17);
+                    color: #232426;
+                    height: p2r(48);
+                    line-height: p2r(24);
+                    overflow: hidden;
+                }
+                &introduce {
+                    position: absolute;
+                    left: 0;
+                    width: p2r(227);
+                    bottom: p2r(18);
+                    div {
+                        display: inline-block;
+                    }
+                    .recommend {
+                        font-size: p2r(12);
+                        background-color: #ECF3FF;
+                        padding: p2r(3);
+                        color: #4D87EA;
+                        margin-bottom: p2r(10);
+                    }
+                    .name,
+                    .time,
+                    .read {
+                        font-size: p2r(12);
+                        color: #98999B;
+                    }
+                    .read {
+                        float: right;
+                        margin-top: p2r(6);
+                    }
+                }
+            }
+        }
+    }
+}

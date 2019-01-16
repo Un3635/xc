@@ -1,0 +1,99 @@
+@import "../../common/util.scss";
+#mylevel {
+    background: #f2f3f5;
+    padding-bottom: p2r(20);
+    >.up {
+        height: p2r(260);
+        text-align: center;
+        color: white;
+        background-image: url("../../assets/01@3x.png"), url("../../assets/common_Light@3x.png");
+        background-size: p2r(165) auto, auto auto;
+        background-repeat: no-repeat, no-repeat;
+        background-position: center p2r(6), right 0;
+        img {
+            width: p2r(88);
+            margin-top: p2r(50);
+            margin-bottom: p2r(25);
+        }
+        h2 {
+            font-size: p2r(18);
+            margin-bottom: p2r(10);
+        }
+        .percent {
+            width: p2r(263);
+            display: inline-block;
+            &up {
+                height: p2r(10);
+                overflow: hidden;
+                margin-bottom: p2r(10);
+                opacity: 0.15;
+                border-radius: p2r(100);
+                background-color: rgba(255, 255, 255, 0.15);
+                .percentupvalue {
+                    height: 100%; // background: #ffffff;
+                    background-image: linear-gradient( 90deg, rgba(255, 255, 255, 0.7) 0%, #ffffff 100%);
+                    border-top-right-radius: p2r(10);
+                    border-bottom-right-radius: p2r(10);
+                }
+            }
+            &down {
+                font-size: p2r(14);
+                span {
+                    &:first-of-type {
+                        float: left;
+                    }
+                    &:last-of-type {
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
+    >.down {
+        background-color: white;
+        .downtitle {
+            line-height: p2r(52);
+            font-size: p2r(16);
+            color: #303137;
+            position: relative;
+            padding-left: p2r(12);
+            margin-left: p2r(16);
+            &::before {
+                content: "";
+                display: block;
+                height: p2r(15);
+                width: p2r(4);
+                background-color: #ffb12f;
+                border-radius: p2r(4);
+                position: absolute;
+                left: 0;
+                top: p2r(18.5);
+            }
+        }
+        .downlist {
+            margin: 0 p2r(16);
+            .downth,
+            .downtd {
+                display: flex;
+                border-top: 1px solid #eeeeee;
+                .downthitem {
+                    flex: 1;
+                    line-height: p2r(62);
+                    text-align: center;
+                    font-size: p2r(14);
+                    &.wordright {
+                        text-align: right;
+                        padding-right: p2r(20);
+                    }
+                    img {
+                        width: p2r(36);
+                        vertical-align: middle;
+                    }
+                }
+            }
+            .downth .downthitem {
+                color: #98999b;
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@import "../../common/util.scss";
+.qasharedownload {
+    min-height: 100%;
+    background-color: #000a39;
+    img {
+        display: block;
+        width: 100%;
+    }
+    .btn {
+        background-image: linear-gradient(-136deg, #4D9EFF 0%, #2864FF 100%);
+        border-radius: p2r(4);
+        width: p2r(327);
+        line-height: p2r(49);
+        text-align: center;
+        font-size: p2r(16);
+        color: #ffffff;
+        position: absolute;
+        top: p2r(377);
+        left: p2r(27);
+        text-decoration: none;
+    }
+}
