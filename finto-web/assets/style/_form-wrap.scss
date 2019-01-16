@@ -1,0 +1,118 @@
+.form-wrap {
+  input {
+    max-width: 100%;
+  }
+  .err-info {
+    min-height: 20px;
+    font-size: 12px;
+    color: #f95453;
+    line-height: 20px;
+    margin-top: -20px;
+    position: relative;
+    top: 20px;
+    white-space: nowrap;
+  }
+  .has-info {
+    line-height: 36px;
+    height: 36px;
+    font-size: 14px;
+    color: #303137;
+  }
+  .f-title {
+    font-size: 14px;
+    color: #303137;
+    line-height: 16px;
+    margin: 20px 0;
+    font-weight: normal;
+    &:first-child {
+      margin: 0 0 20px;
+    }
+  }
+  label, .label {
+    margin-bottom: 20px;
+    display: block;
+    position: relative;
+    padding-left: 74px;
+    .drop-down-box {
+      width: 100%;
+    }
+    > span,
+    .drop-tag {
+      left: 0;
+      top: 0;
+      line-height: 36px;
+      font-size: 14px;
+      color: #303137;
+      position: absolute;
+      max-width: 70px;
+      &.two-line {
+        line-height: 18px;
+      }
+    }
+    .code-ipt {
+      width: 100%;
+      height: 36px;
+      line-height: 34px;
+      border: 1px solid #EDEEF0;
+      transition: all 0.5s;
+      &:focus,
+      &:hover {
+        border-color: #ccc;
+      }
+      > input {
+        border: none;
+        background: none;
+        height: 34px;
+        width: calc(100% - 116px);
+        font-size: 14px;
+        padding: 0 10px;
+        transition: all 0.5s;
+        &.is-danger {
+          border-color: #F95453;
+        }
+        &::-webkit-input-placeholder {
+          color: #c2c6ce;
+        }
+      }
+      &.address {
+        width: 100%;
+      }
+    }
+    .send-code.address span {
+      padding-left: 10px;
+      border-left: 1px solid #E3EAF1;
+    }
+    .send-code {
+      height: 34px;
+      line-height: 34px;
+      padding: 0;
+      width: 116px;
+      font-size: 12px;
+      min-width: 116px;
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 10px;
+        background: #E3EAF1;
+        width: 1px;
+        height: 14px;
+      }
+      &.address {
+        position: absolute;
+        right: 15px;
+      }
+    }
+  }
+}
+
+.form-wrap label, .form-wrap .label {
+  padding-left: 110px;
+  .el-select.y-m {
+    width: 47%;
+    &:first-of-type {
+      margin-right: 6%;
+    }
+  }
+}

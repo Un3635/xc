@@ -1,0 +1,241 @@
+//3 office介绍页
+.o-banner {
+  position: relative;
+  width: 100%;
+  height:700px;
+  //height: auto;
+  margin: 0 auto;
+  text-align:center;
+  overflow:hidden;
+  .web-img {
+    height: 100%;
+    width:100%;
+    min-width:1920px;
+  }
+  .wap-img {
+    display: none;
+  }
+  .w-img-info {
+    display:block;
+    position: absolute;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:950px;
+    text-align:center;
+    color: #fff;
+    font-size: 48px;
+    letter-spacing: -0.99px;
+    cursor: pointer;
+  }
+  .m-img-info{
+    display:none;
+  }
+}
+
+.o-present {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  .tit-wrap {
+    @include tit-wrap;
+    margin-top: 96px;
+  }
+  .web-item {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    margin: 97px auto 0;
+    background: #F3F5FA;
+    .item-in {
+      width: 1200px;
+      margin: 0 auto;
+      @include clearfix;
+    }
+  }
+  .item-in {
+    .left {
+      float: left;
+      height: 700px;
+      width: 58%;
+      margin-right: 4.7%;
+      padding-top: 86px;
+      p {
+        padding-bottom: 32px;
+        font-size: 16px;
+        color: #333;
+        line-height: 32px;
+
+        text-align: justify;
+        text-justify: inter-ideograph;
+      }
+      .sign{
+        width:100%;
+        height:41px;
+        text-align:right;
+        img{
+          width:160px;
+          height:41px;
+        }
+      }
+    }
+  }
+  .item-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 38.2%;
+    height: 700px;
+    background-image: url($img_path + 'o_present_1x.png');
+    background-image: -webkit-image-set(url($img_path + 'o_present_1x.png') 1x, url($img_path + 'o_present_2x.png') 2x, url($img_path + 'o_present_3x.jpg') 3x);
+    background-image: image-set(url($img_path + 'o_present_1x.png') 1x, url($img_path + 'o_present_2x.png') 2x, url($img_path + 'o_present_3x.jpg') 3x);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .wap-item {
+    display: none;
+  }
+}
+
+.o-general {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  .tit-wrap {
+    margin-top: 95px;
+    @include tit-wrap;
+  }
+  .sub-info {
+    width: 1009px;
+    margin: 45px auto 0;
+    font-size: 16px;
+    color: #333;
+    line-height: 32px;
+    text-align: justify;
+    text-justify: inter-ideograph;
+
+  }
+  .item {
+    width: 1200px;
+    margin: 0 auto;
+    @include clearfix;
+    .left, .right {
+      float: left;
+      width: 550px;
+      text-align: left;
+      padding: 20px 0;
+    }
+    .right {
+      margin-left: 97px;
+    }
+  }
+  .left, .right {
+    .li-item {
+      padding: 15px 0;
+      border-bottom: 1px solid #D8D8D8;
+      &:last-of-type {
+        border: none;
+      }
+      span {
+        display: inline-block;
+        font-size: 16px;
+        padding: 15px 0;
+        color: #333;
+        line-height: 16px;
+
+      }
+      .tit {
+        width: 19%;
+        text-align: left;
+
+      }
+      .tit-list {
+        display: inline-block;
+        width: 19%;
+        height: 100%;
+        vertical-align: top;
+
+      }
+      .txt-list {
+        display: inline-block;
+        font-size: 16px;
+        color: #333;
+        line-height: 16px;
+
+      }
+    }
+  }
+  .txt-list {
+    .in-li {
+      span {
+        width: 100px;
+      }
+    }
+    .li-in {
+      padding: 15px 0;
+      .pl {
+        padding-bottom: 23px;
+      }
+    }
+    .pt {
+      padding: 15px 0 23px;
+    }
+    .pb {
+      padding-bottom: 15px;
+    }
+  }
+}
+
+.o-map {
+  width: 100%;
+  margin: 0 auto 122px;
+  text-align: center;
+  .tit-wrap {
+    margin-top: 93px;
+    @include tit-wrap;
+  }
+  .item {
+    width: 1200px;
+    margin: 98px auto 0;
+    @include clearfix;
+    .item-left {
+      float: left;
+      width: 653px;
+      height: 443px;
+      background: #eee;
+    }
+    .item-right {
+      float: right;
+      width: 547px;
+      text-align: center;
+      .right-ul {
+        display: inline-block;
+        padding-top: 89px;
+        width: 100%;
+        padding-left: 84px;
+        text-align: center;
+      }
+    }
+    .right-ul {
+      li {
+        width: 100%;
+        padding: 22px 0;
+        text-align: left;
+        span {
+          display: inline-block;
+          width: 22px;
+          height: 22px;
+          margin-right: 13px;
+          background: #0369D5;
+          border-radius: 50%;
+          color: #fff;
+
+          font-size: 16px;
+          line-height: 22px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+//协议页 protocol
+.w-proto {
+  width: 100%;
+  margin: 0 auto 120px;
+  text-align: center;
+  .tit-wrap {
+    margin-top: 92px;
+    @include tit-wrap;
+  }
+  .content {
+    width: 1130px;
+    margin: 52px auto 0;
+    text-align: center;
+    .txt{
+      font-size: 16px;
+      color: #333333;
+      padding-bottom: 32px;
+      line-height: 32px;
+      text-align: justify;
+      text-justify: inter-ideograph;
+
+    }
+  }
+}
+
+@media screen and (max-width: 918px) {
+  .w-proto {
+    width: 6.8rem;
+    margin: 1.04rem auto 0.56rem;
+    .tit-wrap {
+      margin-top: 0.76rem;
+      @include m-tit-wrap;
+    }
+    .content {
+      width: 100%;
+      margin: 0.68rem auto 0;
+      text-align: center;
+      .txt{
+        font-size: 0.28rem;
+        padding-bottom: 0.48rem;
+        line-height: 0.48rem;
+
+
+      }
+    }
+  }
+}

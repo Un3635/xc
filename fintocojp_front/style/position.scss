@@ -1,0 +1,219 @@
+//职位详情页 position
+.pos-banner {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  .web-img {
+    width: 100%;
+    min-width:1920px;
+  }
+  .wap-img {
+    display: none;
+  }
+  .info-box {
+    position: absolute;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    .img-icon {
+      width: 100px;
+      height: auto;
+      margin: 0 auto;
+      img {
+        width: 100px;
+      }
+    }
+    .img-info {
+      font-size: 28px;
+      color: #fff;
+      padding-top: 27px;
+      line-height: 36px;
+      text-align: center;
+
+    }
+  }
+}
+
+.pos-detail {
+  text-align: center;
+  .tit-wrap {
+    margin-top: 96px;
+    @include tit-wrap;
+  }
+  .sub-txt {
+    width: 1108px;
+    margin: 40px auto 0;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    line-height: 32px;
+
+  }
+}
+
+.pos-general {
+  width: 1200px;
+  margin: 60px auto 113px;
+  text-align: center;
+  @include clearfix;
+  .tit {
+    text-align: center;
+    font-size: 30px;
+    color: #333;
+    font-weight:600;
+  }
+  .box {
+    width: 100%;
+    margin:23px auto 0;
+    @include clearfix;
+    .left-list {
+      float: left;
+      width: 550px;
+    }
+    .right-list {
+      float: right;
+      width: 550px;
+    }
+  }
+  .pos-list {
+    .list-item {
+      width: 100%;
+      text-align: left;
+      padding: 22px 0;
+      border-bottom: 1px solid #D8D8D8;
+      &:last-of-type {
+        border: none;
+      }
+      .item-tit {
+        display: inline-block;
+        width: 100%;
+        text-align: left;
+        font-size: 16px;
+        line-height: 36px;
+        color: #333;
+        font-weight:600;
+      }
+      .item-txt {
+        font-size: 16px;
+        color: #666666;
+        line-height: 36px;
+        text-align: left;
+
+      }
+    }
+  }
+  .position-btn {
+    @include finto-btn-style2;
+    width: 555px;
+    height: 80px;
+    margin: 58px auto 0;
+  }
+}
+
+@media screen and (max-width: 918px) {
+  .pos-banner {
+    @include m-banner;
+    .info-box {
+      font-size: 0;
+      .img-icon {
+        width: 1rem;
+        height: 1rem;
+        margin: 0 auto;
+        text-align: center;
+        img {
+          vertical-align: top;
+          width: 100%;
+          height: auto;
+        }
+      }
+      .img-info {
+        padding-top: 0.1rem;
+
+        font-size: 0.48rem;
+        color: #fff;
+        text-align: center;
+      }
+    }
+  }
+  .pos-detail {
+    .tit-wrap {
+      margin-top: 0.76rem;
+      @include m-tit-wrap;
+    }
+    .sub-txt {
+      width: 6.8rem;
+      margin: 0.26rem auto 0;
+      font-size: 0.28rem;
+      line-height: 0.6rem;
+
+    }
+  }
+  .pos-general {
+    width: 6.8rem;
+    margin: 0.6rem auto;
+    @include clearfix;
+    .tit {
+      font-size: 0.4rem;
+      color: #333333;
+      font-weight: 700;
+    }
+    .box {
+      width: 100%;
+      margin: 0 auto;
+      .left-list {
+        float: none;
+        width: 100%;
+      }
+      .right-list {
+        float: none;
+        width: 100%;
+      }
+    }
+    .pos-list {
+      .list-item {
+        width: 100%;
+        text-align: left;
+        padding: 0.4rem 0;
+        border: none;
+        border-bottom: 0.5px solid #F0F0F0;
+        &:last-of-type{
+          border-bottom: 0.5px solid #F0F0F0;
+        }
+        @include clearfix;
+        .item-tit {
+          float: left;
+          width: 1.6rem;
+          max-height: 1.74rem;
+          overflow: hidden;
+          padding-right: 0.3rem;
+          font-size: 0.32rem;
+          line-height: 0.6rem;
+          font-weight: 600;
+
+        }
+        .item-txt {
+          float: left;
+          font-size: 0.32rem;
+          line-height: 0.6rem;
+          max-width: 4.9rem;
+
+        }
+      }
+      .m-last-list{
+        border:none !important;
+      }
+    }
+    .position-btn {
+      @include m-finto-btn-style2;
+      width: 6rem;
+      height: 0.8rem;
+      margin: 0.6rem auto 0;
+
+      font-size: 0.28rem;
+      letter-spacing: 1px;
+    }
+  }
+}

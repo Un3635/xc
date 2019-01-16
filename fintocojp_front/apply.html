@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <title>Finto</title>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="style/public.css">
+    <link rel="stylesheet" href="style/style.css"/>
+    <link rel="stylesheet" href="style/iosSelect.css">
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <link rel="shortcut icon" href="./favicon.ico">
+</head>
+<body>
+<div class="wrapper">
+    <input type="checkbox" class="nav-select" id="nav-select">
+    <div class="header">
+        <div class="inner">
+            <div class="logo"></div>
+            <div class="menuicon">
+                <label for="nav-select">
+                <span class="menuicon-bread-tab menuicon-bread-top">
+                    <span></span>
+                </span>
+                    <span class="menuicon-bread-bottom menuicon-bread-tab">
+                    <span></span>
+                </span>
+                </label>
+            </div>
+            <div class="nav">
+                <div class="nav-item">
+                    <a href="index.html">
+                        <div class="text">ホーム</div>
+                        <div class="xline"></div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="office.html">
+                        <div class="text">会社概要</div>
+                        <div class="xline"></div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="product.html">
+                        <div class="text">事業概要</div>
+                        <div class="xline"></div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="contact.html">
+                        <div class="text">採用情報</div>
+                        <div class="xline"></div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="submit.html">
+                        <div class="text">お問合せ</div>
+                        <div class="xline"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="crumbs">
+        <div class="dot"></div><p class="text"> <a href="contact.html">採用情報</a> &gt;  <a href="position.html" id="crumbs-position">コンサルティングセールス</a> &gt;エントリー内容</p>
+    </div>
+    <div class="sub-form sub-form-apply">
+        <div class="tit-wrap">
+            <div class="tit-ball"></div>
+            <h2 class="tit-txt">エントリー内容</h2>
+        </div>
+        <ul class="form-list">
+            <li class="form-item">
+                <div class="tip-box">
+                    <p class="tip"><span>*</span>希望職種</p>
+                </div>
+                <div class="dropdown pos-select select-item" id="pos-select"></div>
+                <div class="wap-select">
+                    <input type="hidden" name="select" id="applyPosInput" value="">
+                    <span id="applyPosSelect">営業職</span>
+                </div>
+            </li>
+            <li class="form-item">
+                <div class="tip-box">
+                    <p class="tip"><span>*</span>お名前</p>
+                    <p class="error" id="error-name2">お名前をご入力ください</p>
+                </div>
+                <input type="text" name="input1" class="input-item" id="input-name2">
+            </li>
+            <li class="form-item">
+                <div class="tip-box">
+                    <p class="tip"><span>*</span>ご年齢</p>
+                </div>
+                <div class="dropdown age-select select-item" id="age-select"></div>
+                <div class="wap-select">
+                    <input type="hidden" name="select" id="applyAgeInput" value="">
+                    <span id="applyAgeSelect">20 歳</span>
+                </div>
+            </li>
+            <li class="form-item">
+                <div class="tip-box">
+                    <p class="tip"><span>*</span>電話番号</p>
+                </div>
+                <input type="text" name="input1" class="input-item phone-item2" id="input-phone2">
+            </li>
+            <li class="form-item">
+                <div class="tip-box">
+                    <p class="tip"><span>*</span>メールアドレス</p>
+                    <p class="error" id="error-email2">メールアドレスをご記入ください。</p>
+                </div>
+                <input type="text" name="input1" class="input-item" id="input-email2">
+            </li>
+            <li class="form-item">
+                <div class="tip-box">
+                    <p class="tip last-tip"><span>*</span>お問合せ内容・志望理由など</p>
+                </div>
+                <textarea class="texterea-item" id="textarea2"></textarea>
+            </li>
+        </ul>
+        <input type="button" class="form-btn disable-btn" value="送信" id="apply-btn"/>
+    </div>
+    <div class="w-footer">
+        <div class="w-footer-up">
+            <div class="w-fot-up-left"><img src="./img/icon/logo_new.png"></div>
+            <div class="w-fot-up-right">
+                <ul class="up-list">
+                    <li class="up-list-item">
+                        <input type="checkbox" id="select-1">
+                        <label for="select-1"></label>
+                        <span class="a-tit"><a href="product.html" target="_self">事業紹介</a></span>
+                        <!--<span><a href="product.html" target="_self">商品シリーズ</a></span>-->
+                        <span><a href="product.html#FintoIntro" target="_self">FinTo</a></span>
+                        <span><a href="product.html#FintoCube" target="_self">FinTo Cube</a></span>
+                        <span><a href="product.html#FintoIndex" target="_self">FinTo Index</a></span>
+                    </li>
+                    <li class="up-list-item">
+                        <input type="checkbox" id="select-2">
+                        <label for="select-2"></label>
+                        <span class="a-tit"><a href="office.html" target="_self">会社紹介</a></span>
+                        <span><a href="office.html#present" target="_self">代表挨拶</a></span>
+                        <span><a href="office.html#general" target="_self">会社概要 </a></span>
+                        <span><a href="office.html#map" target="_self">アクセス</a></span>
+                    </li>
+                    <li class="up-list-item">
+                        <input type="checkbox" id="select-3">
+                        <label for="select-3"></label>
+                        <span class="a-tit"><a href="contact.html" target="_self">ジョインする</a></span>
+                        <span><a href="contact.html#concept" target="_self">経営理念</a></span>
+                        <span><a href="contact.html#feature" target="_self">フィントとは</a></span>
+                        <span><a href="contact.html#welfare" target="_self">福利厚生</a></span>
+                        <span><a href="contact.html#emplo-box" target="_self">ジョインする</a></span>
+                    </li>
+                    <li class="up-list-item">
+                        <input type="checkbox" id="select-4">
+                        <label for="select-4"></label>
+                        <span class="a-tit"><a href="submit.html" target="_self">お問合せ</a></span>
+                        <span><a href="submit.html" target="_self">コンタクト</a></span>
+                    </li>
+                    <li class="up-list-item">
+                        <input type="checkbox" id="select-5">
+                        <label for="select-5"></label>
+                        <span class="a-tit"><a href="protocol.html" target="_self">プライバシーポリシー</a></span>
+                        <span><a href="protocol.html" target="_self">個人情報保護方針</a></span>
+                    </li>
+                    <li class="up-list-item">
+                        <input type="checkbox" id="select-6">
+                        <label for="select-6"></label>
+                        <span class="a-tit"><a href="javascript:;">SNS</a></span>
+                        <span><img class="sns-icon" src="img/icon/facebook_3x.png"><a href="javascript:;">Facebook</a></span>
+                        <span><img class="sns-icon" src="img/icon/twiter_3x.png"><a href="javascript:;">Twitter</a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="w-fot-line"></div>
+        <div class="w-footer-down">
+            <div class="w-fot-down-left"></div>
+            <div class="w-fot-down-right">
+                <ul class="w-fot-down-r1">
+                    <li><a href="index.html" target="_self" >フィント株式会社</a></li>
+                    <li><a href="javascript:;" class="no-hover">所在地：東京都千代田区丸の内1-11-1 <p>パシフィックセンチュリーブレイス丸の内8F</p></a></li>
+                    <li><a href="javascript:;" class="no-hover">TEL：０３－６８６０－８２９８</a></li>
+                    <li><a href="javascript:;" class="no-hover">営業時間：平日 １０：００～１９：００</a></li>
+                </ul>
+                <div class="w-fot-down-r2">
+                    <!--<span class="w-fot-down-r2-a1"><a href="product.html" target="_self">商品シリーズ</a></span>-->
+                    <ul class="clearfix">
+                        <li><a href="product.html#FintoIntro" target="_self">FinTo</a></li>
+                        <li><a href="product.html#FintoCube" target="_self">FinTo Cube</a></li>
+                        <li><a href="product.html#FintoIndex" target="_self">FinTo Index</a></li>
+                    </ul>
+                    <span class="w-fot-down-r2-a2"><a href="javascript:;" class="no-hover">© 2018 FinTo Inc. All rights reserved.</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pop" id="apply-pop">
+        <div class="pop-box">
+            <div class="pop-in">
+                <div class="pop-left">
+                    <img src="./img/icon/success_3x.png">
+                </div>
+                <div class="web-pop-right">
+                    お問合せ内容が送信されました。<br>
+                    ２営業日以内に担当よりご連絡いたします。<br>
+                    誠にありがとうございました。
+                </div>
+                <div class="wap-pop-right">
+                    お問合せ内容が送信されました。
+                    ２営業日以内に担当よりご連絡いたします。
+                    誠にありがとうございました。
+                </div>
+                <div class="pop-close" id="apply-pop-close">
+                    <a href="index.html"><img src="./img/icon/pop-close.png"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="./js/submit.js"></script>
+<!--PC 端下拉选择-->
+<script>
+    var _dataPos=[
+        {'value':'法務'},
+        {'value':'総務'},
+        {'value':'経理'},
+        {'value':'財務'},
+        {'value':'人事·労務'},
+        {'value':'ＰＲ広報'},
+        {'value':'ＷＥＢエンジニア'},
+        {'value':'金融関連エンジニア'},
+        {'value':'グラフィックエンジニア'},
+        {'value':'コンサルティングセールス'},
+        {'value':'ＷＥＢマーケティングディレクター'},
+        {'value':'ＷＥＢマーケティングアシスタント'}
+    ]
+    var _dataAge=[
+        {'value':'18 歳'},
+        {'value':'19 歳'},
+        {'value':'20 歳'},
+        {'value':'21 歳'},
+        {'value':'22 歳'},
+        {'value':'23 歳'},
+        {'value':'24 歳'},
+        {'value':'25 歳'},
+        {'value':'26 歳'},
+        {'value':'27 歳'},
+        {'value':'28 歳'},
+        {'value':'29 歳'},
+        {'value':'30 歳'},
+        {'value':'31 歳'},
+        {'value':'32 歳'},
+        {'value':'33 歳'},
+        {'value':'34 歳'},
+        {'value':'35 歳'},
+        {'value':'36 歳'},
+        {'value':'37 歳'},
+        {'value':'38 歳'},
+        {'value':'39 歳'},
+        {'value':'40 歳'}
+    ]
+    var dropPos=new Dropdown({
+        selector: '.pos-select',
+        dataList: _dataPos,
+        defaultValue: '営業職'
+    })
+    var dropAge=new Dropdown({
+        selector: '.age-select',
+        dataList: _dataAge,
+        defaultValue: '18 歳'
+    })
+</script>
+<!--移动端下拉选择-->
+<script type="text/javascript" src="js/iosSelect.js"></script>
+<script type="text/javascript">
+    var applyPosDom = document.querySelector('#applyPosSelect');
+    var applyPosInputDom = document.querySelector('#applyPosInput');
+    applyPosDom.addEventListener('click', function () {
+        var applyPosId = applyPosDom.dataset['id'];
+        var applyPosName = applyPosDom.dataset['value'];
+        var applyPosSelect = new IosSelect(1,
+            [dataA],
+            {
+                title: '',
+                oneLevelId: applyPosId,
+                itemHeight: 0.7,
+                headerHeight: 0.88,
+                itemShowCount: 7,
+                cssUnit: 'rem',
+                sureText:'確定する',
+                closeText:'取り消す',
+                callback: function (selectOneObj) {
+                    applyPosInputDom.value = selectOneObj.id;
+                    applyPosDom.innerHTML = selectOneObj.value;
+                    applyPosDom.dataset['id'] = selectOneObj.id;
+                    applyPosDom.dataset['value'] = selectOneObj.value;
+                }
+            });
+    });
+
+    var applyAgeDom = document.querySelector('#applyAgeSelect');
+    var applyAgeInputDom = document.querySelector('#applyAgeInput');
+    applyAgeDom.addEventListener('click', function () {
+        var applyAgeId = applyAgeDom.dataset['id'];
+        var applyAgeName = applyAgeDom.dataset['value'];
+
+        var applyAgeSelect = new IosSelect(1,
+            [dataB],
+            {
+                title: '',
+                oneLevelId: applyAgeId,
+                itemHeight: 0.7,
+                headerHeight: 0.88,
+                itemShowCount: 7,
+                cssUnit: 'rem',
+                sureText:'確定する',
+                closeText:'取り消す',
+                callback: function (selectOneObj) {
+                    applyAgeInputDom.value = selectOneObj.id;
+                    applyAgeDom.innerHTML = selectOneObj.value;
+                    applyAgeDom.dataset['id'] = selectOneObj.id;
+                    applyAgeDom.dataset['value'] = selectOneObj.value;
+                }
+            });
+    });
+
+    var dataA=[
+        {'id':'法務', 'value':'法務'},
+        {'id':'総務','value':'総務'},
+        {'id':'経理','value':'経理'},
+        {'id':'財務','value':'財務'},
+        {'id':'人事·労務','value':'人事·労務'},
+        {'id':'ＰＲ広報','value':'ＰＲ広報'},
+        {'id':'ＷＥＢエンジニア','value':'ＷＥＢエンジニア'},
+        {'id':'金融関連エンジニア','value':'金融関連エンジニア'},
+        {'id':'グラフィックエンジニア','value':'グラフィックエンジニア'},
+        {'id':'コンサルティングセールス','value':'コンサルティングセールス'},
+        {'id':'ＷＥＢマーケティングディレクター','value':'ＷＥＢマーケティングディレクター'},
+        {'id':'ＷＥＢマーケティングアシスタント','value':'ＷＥＢマーケティングアシスタント'}
+    ]
+    var dataB=[
+        {'id':'18 歳','value':'18 歳'},
+        {'id':'19 歳','value':'19 歳'},
+        {'id':'20 歳','value':'20 歳'},
+        {'id':'21 歳','value':'21 歳'},
+        {'id':'22 歳','value':'22 歳'},
+        {'id':'23 歳','value':'23 歳'},
+        {'id':'24 歳','value':'24 歳'},
+        {'id':'25 歳','value':'25 歳'},
+        {'id':'26 歳','value':'26 歳'},
+        {'id':'27 歳','value':'27 歳'},
+        {'id':'28 歳','value':'28 歳'},
+        {'id':'29 歳','value':'29 歳'},
+        {'id':'30 歳','value':'30 歳'},
+        {'id':'31 歳','value':'31 歳'},
+        {'id':'32 歳','value':'32 歳'},
+        {'id':'33 歳','value':'33 歳'},
+        {'id':'34 歳','value':'34 歳'},
+        {'id':'35 歳','value':'35 歳'},
+        {'id':'36 歳','value':'36 歳'},
+        {'id':'37 歳','value':'37 歳'},
+        {'id':'38 歳','value':'38 歳'},
+        {'id':'39 歳','value':'39 歳'},
+        {'id':'40 歳','value':'40 歳'}
+    ]
+
+</script>
+
+
+</html>

@@ -1,0 +1,25 @@
+.left {
+  float: left !important;
+}
+
+.right {
+  float: right !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}

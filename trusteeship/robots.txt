@@ -1,0 +1,11 @@
+﻿User-agent: *
+Disallow: /sign-in
+Disallow: /sign-up
+Disallow: /detail?pid=*
+Disallow: /trusteeship-agreement
+Disallow: /i/
+Disallow: /trusteeship/
+Disallow: /powerShop/
+Disallow: /cart
+Disallow: /pay?orderId=*&orderNum=*&amount=*
+Sitemap: http://www.hc.top/sitemap.xml

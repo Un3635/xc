@@ -1,0 +1,539 @@
+[
+  {
+    "id": 5,
+    "active": false,
+    "price": 41450,
+    "name": "iBeLink DSM6T",
+    "model": "DSM",
+    "power": "6T",
+    "type": "DCR",
+    "displayName": "iBeLink DSM6T DCR矿机",
+    "desc": "高度集成 自动诊断 性能强悍",
+    "currencies": "DCR",
+    "batches": [
+      {
+        "id": "",
+        "no": "",
+        "deliveryStartDate": "2018-06-20",
+        "deliveryEndDate": "2018-06-25",
+        "saleTime": "6月20日14点发售",
+        "warrantyPeriod": 180
+      }
+    ],
+    "figureImg": "/static/images/DSM6T.jpeg",
+    "detailImages": [
+      "1.png",
+      "2.png",
+      "3.png",
+      "4.png"
+    ],
+    "params": [
+      {
+        "name": "矿机算法",
+        "desc": "Blake256"
+      },
+      {
+        "name": "额定算力",
+        "desc": "6 TH/s ± 5%"
+      },
+      {
+        "name": "功耗",
+        "desc": "2.1 kW ±5% (at the wall, with 25°C ambient temp)"
+      },
+      {
+        "name": "功耗与算力比",
+        "desc": "0.35 J/GH (at the wall, with 25°C ambient temp)"
+      },
+      {
+        "name": "运行温度",
+        "desc": "0°C to 40°C"
+      },
+      {
+        "name": "网络连接",
+        "desc": "Ethernet"
+      },
+      {
+        "name": "电压",
+        "desc": "190V to 240V, 50Hz/60Hz"
+      },
+      {
+        "name": "认证",
+        "desc": "FCC, CE"
+      },
+      {
+        "name": "尺寸",
+        "desc": "490mm(L)*390mm(W)*180mm(H)"
+      },
+      {
+        "name": "重量",
+        "desc": "17.6kg"
+      },
+      {
+        "name": "Modular PCB design",
+        "desc": "for reliability and the ease of maintenance/repair"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "active": true,
+    "price": 41450,
+    "name": "iBeLink DSM6T",
+    "model": "DSM",
+    "power": "6T",
+    "type": "DCR",
+    "displayName": "iBeLink DSM6T DCR矿机",
+    "desc": "高度集成 自动诊断 性能强悍",
+    "currencies": "DCR",
+    "batches": [
+      {
+        "id": "",
+        "no": "",
+        "deliveryStartDate": "2018-06-20",
+        "deliveryEndDate": "2018-06-25",
+        "saleTime": "6月15日14点发售",
+        "warrantyPeriod": 180
+      }
+    ],
+    "figureImg": "/static/images/DCR.jpeg",
+    "detailImages": [
+      "1.png",
+      "2.png",
+      "3.png",
+      "4.png"
+    ],
+    "params": [
+      {
+        "name": "矿机算法",
+        "desc": "Blake256"
+      },
+      {
+        "name": "额定算力",
+        "desc": "6 TH/s ± 5%"
+      },
+      {
+        "name": "功耗",
+        "desc": "2.1 kW ±5% (at the wall, with 25°C ambient temp)"
+      },
+      {
+        "name": "功耗与算力比",
+        "desc": "0.35 J/GH (at the wall, with 25°C ambient temp)"
+      },
+      {
+        "name": "运行温度",
+        "desc": "0°C to 40°C"
+      },
+      {
+        "name": "网络连接",
+        "desc": "Ethernet"
+      },
+      {
+        "name": "电压",
+        "desc": "190V to 240V, 50Hz/60Hz"
+      },
+      {
+        "name": "认证",
+        "desc": "FCC, CE"
+      },
+      {
+        "name": "尺寸",
+        "desc": "490mm(L)*390mm(W)*180mm(H)"
+      },
+      {
+        "name": "重量",
+        "desc": "17.6kg"
+      },
+      {
+        "name": "Modular PCB design",
+        "desc": "for reliability and the ease of maintenance/repair"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "active": true,
+    "price": 51450,
+    "name": "雪豹矿机",
+    "model": "A1",
+    "power": "49T",
+    "type": "BTC",
+    "displayName": "雪豹矿机 A1 49T",
+    "desc": "真正意义上的“工业级矿机”",
+    "currencies": "BTC、BCH、SBTC、UBTC等",
+    "batches": [
+      {
+        "id": 28,
+        "no": "2018041316274887211",
+        "deliveryStartDate": "2018-05-20",
+        "deliveryEndDate": "2018-05-30",
+        "saleTime": "3月23日14点发售",
+        "warrantyPeriod": 180
+      }
+    ],
+    "figureImg": "/static/images/A1.png",
+    "detailImages": [
+      "1.png",
+      "2.png",
+      "3.png",
+      "4.png"
+    ],
+    "params": [
+      {
+        "name": "矿机算法",
+        "desc": "SHA-256（BTC/BCH/SBTC/UBTC）"
+      },
+      {
+        "name": "额定算力",
+        "desc": "49 TH/s ± 5% (max performance)"
+      },
+      {
+        "name": "墙上功耗",
+        "desc": "variable, 6.4 KW (max)"
+      },
+      {
+        "name": "功耗与算力比",
+        "desc": "variable, form 0.101 to 0.133 J/GH"
+      },
+      {
+        "name": "额定电压",
+        "desc": "176-277V"
+      },
+      {
+        "name": "芯片数量",
+        "desc": "576 片 BF16BTC"
+      },
+      {
+        "name": "算力板数量",
+        "desc": "6 片 Hash 板"
+      },
+      {
+        "name": "裸机尺寸",
+        "desc": "599*483*275mm"
+      },
+      {
+        "name": "包装尺寸",
+        "desc": "760*575*430mm"
+      },
+      {
+        "name": "冷却",
+        "desc": "6×12038 风扇"
+      },
+      {
+        "name": "工作环境",
+        "desc": "-10℃ to 40℃ (5-95% RH)"
+      },
+      {
+        "name": "存储环境",
+        "desc": "-30℃ to 50℃ (35-75% RH)"
+      },
+      {
+        "name": "网络链接",
+        "desc": "以太网"
+      },
+      {
+        "name": "质保",
+        "desc": "配件及整机保修180天"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "active": true,
+    "price": 22000,
+    "name": "雪豹矿机",
+    "model": "E3",
+    "power": "230M",
+    "type": "ETH",
+    "displayName": "雪豹矿机 E3 230M",
+    "desc": "GPU矿机 多币种挖矿 算力稳定 效率高超",
+    "currencies": "",
+    "batches": [
+      {
+        "id": 29,
+        "no": "2018041316274887211",
+        "deliveryStartDate": "2018-05-20",
+        "deliveryEndDate": "2018-05-30",
+        "saleTime": "3月23日14点发售",
+        "warrantyPeriod": 99
+      }
+    ],
+    "figureImg": "/static/images/E3.png",
+    "detailImages": [
+      "1.png",
+      "2.png",
+      "3.png",
+      "4.png"
+    ],
+    "params": [
+      {
+        "name": "显卡",
+        "desc": "AMD570显卡共8卡"
+      },
+      {
+        "name": "额定算力",
+        "desc": "单卡算力29M±5%；整机230MH/s±5%"
+      },
+      {
+        "name": "计算功耗",
+        "desc": "1160W+10%"
+      },
+      {
+        "name": "CPU",
+        "desc": "Intel G440 CPU"
+      },
+      {
+        "name": "内存",
+        "desc": "4GB DDR3"
+      },
+      {
+        "name": "硬盘",
+        "desc": "MSATA  60GB"
+      },
+      {
+        "name": "USB",
+        "desc": "2个USB2.0接口"
+      },
+      {
+        "name": "网口",
+        "desc": "1个千兆网RJ45接口"
+      },
+      {
+        "name": "额定电压",
+        "desc": "11.6-12.6V"
+      },
+      {
+        "name": "工作温度",
+        "desc": "0℃至40℃"
+      },
+      {
+        "name": "工作湿度",
+        "desc": "5%RH-95%RH非凝露"
+      },
+      {
+        "name": "OS",
+        "desc": "Windows 10"
+      },
+      {
+        "name": "外箱尺寸",
+        "desc": "565*362*160mm"
+      },
+      {
+        "name": "净重",
+        "desc": "15kg"
+      },
+      {
+        "name": "质保",
+        "desc": "显卡及整机保修99天"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "active": false,
+    "price": 51450,
+    "name": "蚂蚁矿机",
+    "model": "T9",
+    "power": "10.5T",
+    "type": "BTC",
+    "displayName": "蚂蚁矿机 T9 10.5T",
+    "desc": "真正意义上的“工业级矿机”",
+    "currencies": "BTC、BCH、SBTC、UBTC等",
+    "batches": [
+      {
+        "id": 1,
+        "no": "2018030216552099815",
+        "deliveryStartDate": "2018-05-25",
+        "deliveryEndDate": "2018-06-10",
+        "saleTime": "3月23日14点发售",
+        "warrantyPeriod": 180
+      }
+    ],
+    "figureImg": "/static/images/A1.png",
+    "detailImages": [
+      "1.png",
+      "2.png",
+      "3.png",
+      "4.png"
+    ],
+    "params": [
+      {
+        "name": "额定算力",
+        "desc": "10.5TH/s±5%"
+      },
+      {
+        "name": "墙上功耗",
+        "desc": "1432W+7%"
+      },
+      {
+        "name": "电源效率",
+        "desc": "136mJ/GH+7%（墙上，AC/DC 93%的效率，25 ℃的环境温度）"
+      },
+      {
+        "name": "额定电压",
+        "desc": "11.6～13.0V"
+      },
+      {
+        "name": "工作温度",
+        "desc": "0 ℃至40℃"
+      },
+      {
+        "name": "工作湿度",
+        "desc": "5%RH-95%RH，非凝露"
+      },
+      {
+        "name": "网络连接",
+        "desc": "以太网"
+      },
+      {
+        "name": "噪音",
+        "desc": "75db"
+      },
+      {
+        "name": "外箱尺寸",
+        "desc": "435毫米（L）*215毫米（W）*325毫米（H）"
+      },
+      {
+        "name": "重量",
+        "desc": "6.5KG（含包装）"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "active": false,
+    "price": 41450,
+    "name": "BTM矿机",
+    "model": "BTM",
+    "power": "6T",
+    "type": "BTM",
+    "displayName": "BTM显卡矿机2000H",
+    "desc": "",
+    "currencies": "BTM",
+    "batches": [],
+    "figureImg": "",
+    "detailImages": [],
+    "params": [
+      {
+        "name": "显卡",
+        "desc": "N卡1063显卡共8卡"
+      },
+      {
+        "name": "额定算力",
+        "desc": "2000H±5%"
+      },
+      {
+        "name": "计算功耗",
+        "desc": "1250W+10%"
+      },
+      {
+        "name": "CPU",
+        "desc": "Intel Celeron 3855U CPU"
+      },
+      {
+        "name": "内存",
+        "desc": "DDR3 1.35V/1.5V 1600 4GB"
+      },
+      {
+        "name": "硬盘",
+        "desc": "MSATA 60G"
+      },
+      {
+        "name": "USB",
+        "desc": "2个USB2.0接口"
+      },
+      {
+        "name": "网口",
+        "desc": "1个千兆网RJ45接口"
+      },
+      {
+        "name": "额定电压",
+        "desc": "11.6-12.6V"
+      },
+      {
+        "name": "工作温度",
+        "desc": "0℃至40℃"
+      },
+      {
+        "name": "工作湿度",
+        "desc": "5%RH-95%RH非凝露"
+      },
+      {
+        "name": "OS",
+        "desc": "Windows 10"
+      },
+      {
+        "name": "外箱尺寸",
+        "desc": "534*324*164mm"
+      },
+      {
+        "name": "净重",
+        "desc": "7.63kg"
+      },
+      {
+        "name": "质保",
+        "desc": "显卡及整机保修50天"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "active": false,
+    "price": 41450,
+    "name": "蚂蚁矿机S9",
+    "model": "S9",
+    "power": "13.5T",
+    "type": "BTC",
+    "displayName": "蚂蚁矿机S9 13.5T",
+    "desc": "",
+    "currencies": "BTC",
+    "batches": [],
+    "figureImg": "",
+    "detailImages": [],
+    "params": [
+      {
+        "name": "额定算力",
+        "desc": "13.5 T±5%"
+      },
+      {
+        "name": "墙上功耗",
+        "desc": "1550W±5%（比特大陆APW3-1600瓦电源，AC / DC 93％的效率，25℃环境温度）"
+      },
+      {
+        "name": "电源效率",
+        "desc": "0.1J/GH + 12%（墙上，AC / DC 93％的效率，25°C的环境温度）"
+      },
+      {
+        "name": "额定电压",
+        "desc": "11.6~13.0V"
+      },
+      {
+        "name": "芯片数量",
+        "desc": "189片 BM1387"
+      },
+      {
+        "name": "外形尺寸",
+        "desc": "350毫米（L）*135毫米（W）*158毫米（H）"
+      },
+      {
+        "name": "冷却",
+        "desc": "2×12038风扇"
+      },
+      {
+        "name": "工作温度",
+        "desc": "0℃至40℃"
+      },
+      {
+        "name": "工作湿度",
+        "desc": "5%RH-95%RH，非凝露"
+      },
+      {
+        "name": "网络连接",
+        "desc": "以太网"
+      },
+      {
+        "name": "电源连接方式",
+        "desc": "每块算力板三个PCIE接口都需要连接，推荐使用独立电源给整机供电，非独立电源情况下，3个算力板可以分别连接到不同的电源，但是每块算力板不能连接多个电源，并保证算力板最后通电。"
+      }
+    ]
+  }
+]

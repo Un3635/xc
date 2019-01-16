@@ -1,0 +1,119 @@
+// 公用样式
+@import "common";
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}
+
+.green_text {
+  color: #6ECB66;
+}
+
+.pointer {
+  cursor: pointer;
+  user-select: none;
+}
+
+.el-popover {
+  min-width: 100px;
+}
+
+.el-main {
+  display: block;
+  overflow: hidden;
+  padding: 0;
+  margin-left: 10px;
+}
+
+.levelModel {
+  width: 100%;
+  background: #f5f5f5;
+  border-top: 1px solid #EEEEEE;
+  .levelBar {
+    width: 1200px;
+    margin: 0 auto;
+    ul {
+      overflow: hidden;
+      li {
+        float: left;
+        color: #999999;
+        text-align: center;
+        font-size: 12px;
+        padding: 0 2px;
+        height: 36px;
+        line-height: 36px;
+      }
+      .current {
+        color: #151515;
+      }
+    }
+  }
+}
+
+.custom .el-dialog__footer {
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.el-message-box.custom {
+  padding-bottom: 15px;
+  .el-message-box__content{
+    padding: 20px 15px;
+  }
+  .el-message-box__status{
+    font-size: 50px !important;
+  }
+  .el-message-box__status + .el-message-box__message{
+    padding-left: 64px;
+  }
+  .el-message-box__btns {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+  }
+}
+.remove-scroll-bar .el-table__body-wrapper{
+  overflow: inherit;
+}
+
+.breadcrumbs-container {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0;
+  li {
+    display: inline-block;
+    font-size: 12px;
+    vertical-align: top;
+  }
+  .parent-breadcrumb {
+    a{
+      transition: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+      color: #999999;
+    }
+    &:after {
+      font-family: 'element-icons' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      vertical-align: baseline;
+      display: inline-block;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: '\E604';
+      margin: 0 6px 0 2px;
+      color: #c0c4cc;
+    }
+  }
+  .current-breadcrumb {
+    cursor: text;
+    a{
+      color: #151515;
+    }
+  }
+}

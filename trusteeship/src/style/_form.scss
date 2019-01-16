@@ -1,0 +1,48 @@
+.form-group {
+  position: relative;
+  padding-left: 80px;
+  color: #303137;
+
+  dt, dd {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  dd {
+    margin-left: 0;
+    padding-left: 10px;
+    width: 100%;
+
+    &.line {
+      border-bottom: 1px dashed #edeef0;
+      vertical-align: 4px;
+    }
+  }
+
+  dt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80px;
+  }
+
+  &.input-group {
+    dt {
+      line-height: 36px;
+    }
+    dd {
+      padding-left: 0;
+    }
+  }
+
+  + .form-group {
+    margin-top: 20px;
+  }
+
+  .error {
+    position: absolute;
+    padding-left: 10px;
+    font-size: 12px;
+    color: #f95453;
+  }
+}

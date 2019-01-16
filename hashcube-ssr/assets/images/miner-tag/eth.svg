@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="71px" height="20px" viewBox="0 0 71 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>tuoguan_tag_eth</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="切图" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-124.000000, -94.000000)">
+            <g id="tuoguan_tag_eth" transform="translate(124.000000, 94.000000)">
+                <path d="M10,0 L71,0 L71,20 L10,20 C4.4771525,20 6.76353751e-16,15.5228475 0,10 L0,10 C-6.76353751e-16,4.4771525 4.4771525,1.01453063e-15 10,0 Z" id="Rectangle-2" fill="#303137"></path>
+                <g id="比特币" transform="translate(3.000000, 3.000000)" fill-rule="nonzero">
+                    <path d="M7,0 C3.13406897,0 0,3.13406897 0,7 C0,10.865931 3.13406897,14 7,14 C10.865931,14 14,10.865931 14,7 C14,3.13406897 10.865931,0 7,0 Z M7,12.850069 C3.76913793,12.850069 1.14993105,10.2308621 1.14993105,7 C1.14993105,3.76913795 3.76913795,1.14993105 7,1.14993105 C10.2308621,1.14993105 12.850069,3.76913793 12.850069,7 C12.850069,10.2308621 10.2308621,12.850069 7,12.850069 Z" id="Shape" fill="#FFFFFF"></path>
+                    <g id="Group-22" transform="translate(4.733586, 1.558760)">
+                        <g id="Group-2" transform="translate(0.000000, 0.500000)">
+                            <path d="M2.30769231,0.813213716 L4.61538462,4.88974632 L2.30769231,6.35167525 L0,4.88974632 L2.30769231,0.813213716 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+                            <path d="M2.30769231,3.81321372 L4.61538462,4.88974632 L2.30769231,6.35167525 L0,4.88974632 L2.30769231,3.81321372 Z" id="Combined-Shape" fill="#F5F5F7"></path>
+                            <polygon id="Shape" fill="#FFFFFF" points="2.30769231 9 0 5.33359092 2.30769231 6.85119798"></polygon>
+                            <polygon id="Shape" fill="#FFFFFF" points="2.30769231 9 4.61538462 5.30769231 2.30769231 6.85119798"></polygon>
+                        </g>
+                    </g>
+                </g>
+                <text id="ETH矿机" font-family="MicrosoftYaHei, Microsoft YaHei" font-size="12" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="21" y="15">ETH矿机</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

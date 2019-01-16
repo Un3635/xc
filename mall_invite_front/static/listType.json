@@ -1,0 +1,18 @@
+{
+  "code": "1000",
+  "data": {
+      "dataCode": "成功!",
+      "powerTypeVos": [
+          {
+              "id": "6aa48bc1a55c43d39700bfc19e670ae6",
+              "name": "比特币算力"
+          },
+          {
+              "id": "e9e6fb5e01424bdeb22df50690eaca5e",
+              "name": "莱特币算力"
+          }
+      ]
+  },
+  "message": "成功!",
+  "timestamp": 1532488040564
+}

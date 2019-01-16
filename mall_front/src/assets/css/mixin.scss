@@ -1,0 +1,23 @@
+// 公用sass混合宏
+@mixin fade($val){
+  transition: $val 0.18s ease-in-out 0s;
+}
+
+@mixin shadow($size,$col){
+  box-shadow: 0 0 $size $col;
+}
+
+@mixin tableItemSize($list,$name){
+  @for $i from 1 through length($list) {
+    .#{$name}:nth-of-type(#{$i}) {
+      width: nth($list, $i);
+    }
+  }
+}
+@mixin tableListColor($list,$name){
+  @for $i from 1 through length($list) {
+    .#{$name}:nth-of-type(#{$i}) {
+      border-left: 2px solid nth($list, $i);
+    }
+  }
+}

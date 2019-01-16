@@ -1,0 +1,170 @@
+// 公用样式清除文件
+@import "./mixin";
+@import "./common";
+
+* {
+  //font-family: Helvetica, Arial, sans-serif, SimHei !important;
+  font-family: Microsoft YaHei,Helvetica,Arial,sans-serif !important;
+  //font-family: Helvetica,Arial,sans-serif !important;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, textarea, select {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 14px;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  *line-height: 1;
+  overflow: auto;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+img{
+  max-width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  background: #FFFFFF;
+  overflow: auto;
+}
+
+input, textarea, select, option {
+  outline: none;
+  border: 1px solid $input_common;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: $input_focus;
+  @include fade(border);
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: $input_hover;
+  @include fade(border);
+}
+
+.btn {
+  border-radius: 3px;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.btn-common {
+  background: $color_path;
+}
+
+.btn-common:hover {
+  background: darken($color_path, 10);
+}
+
+.error-text {
+  color: #de1b1b;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.clearfix:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.viewer-navbar, .viewer-prev, .viewer-next {
+  display: none;
+}
+
+textarea {
+  resize: none;
+}
+
+select {
+  font-size: 14px;
+}
+
+select {
+  font-size: 14px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-corner, ::-webkit-scrollbar-track {
+  /*background-color: #e2e2e2;*/
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, .3);
+}
+
+::-webkit-scrollbar-corner, ::-webkit-scrollbar-track {
+  background-color: #e2e2e2;
+}
+

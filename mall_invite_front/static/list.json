@@ -1,0 +1,24 @@
+{
+  "code": "1000",
+  "data": {
+      "dataCode": "1000",
+      "dataMsg": "成功!",
+      "goodsVos": [
+          {
+              "cloudPowerType": "e9e6fb5e01424bdeb22df50690eaca5e",
+              "goodsImgUrl": "https://hsstar.s3.ap-northeast-1.amazonaws.com/1532431312711123a.jpg",
+              "goodsName": "莱特币商品",
+              "id": "8fad40cc6e984f2d87f82d15af994977"
+          },
+          {
+              "cloudPowerType": "6aa48bc1a55c43d39700bfc19e670ae6",
+              "goodsImgUrl": "http://t1.27270.com/uploads/tu/201807/339/5c33ae44f4.jpg",
+              "goodsName": "比特币商品",
+              "id": "f1feddbcff8d44ebb7ca5fe23aec749b"
+          }
+      ],
+      "totalCount": 2
+  },
+  "message": "成功!",
+  "timestamp": 1532488040566
+}

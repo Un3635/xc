@@ -1,0 +1,99 @@
+.form-group {
+  position: relative;
+  padding-left: 96px;
+  color: #303137;
+  dt, dd {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  dd {
+    margin-left: 0;
+    padding-left: 10px;
+    width: 100%;
+    input{
+      border:1px solid #eee;
+      font-size:14px;
+      transition: all 0.5s;
+      &:focus,
+      &:hover {
+        border-color: #ccc;
+      }
+    }
+    select{
+      border:1px solid #eee;
+      font-size:14px;
+    }
+    &.line {
+      border-bottom: 1px dashed #edeef0;
+      vertical-align: 4px;
+    }
+    &.has-send-code{
+      border: 1px solid #EDEEF0;
+      transition: all 0.5s;
+      input{
+        border:none;
+        max-width: 100%;
+      }
+      .el-button{
+        height: 34px;
+        line-height: 34px;
+        padding: 0;
+        width: 116px;
+        font-size: 12px;
+        position: relative;
+        &:before{
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 10px;
+          background: #E3EAF1;
+          width: 1px;
+          height: 14px;
+        }
+      }
+    }
+  }
+
+  dt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 96px;
+  }
+
+  &.input-group {
+    dt {
+      line-height: 36px;
+      &.two-line{
+        line-height: 18px;
+      }
+    }
+    dd {
+      padding-left: 0;
+    }
+  }
+
+  + .form-group {
+    margin-top: 20px;
+  }
+
+}
+
+.input-group {
+  .error {
+    position: absolute;
+    font-size: 12px;
+    line-height: 24px;
+    color: #f95453;
+    white-space: nowrap;
+  }
+  .is-danger input{
+    border-color: #F95453;
+  }
+}
+.form-title{
+  font-size: 16px;
+  line-height: 36px;
+  margin: 20px 0;
+}

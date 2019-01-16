@@ -1,0 +1,653 @@
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+//$--button-default-border: #DEDEE0;
+$--button-default-color: #606166;
+$--button-primary-color: #fff;
+$--button-primary-fill: #303137;
+$--button-primary-border: #303137;
+
+// 登录 注册 忘记密码
+.login-box {
+  .el-select .el-input {
+    width: 85px;
+  }
+
+  .input-with-select .el-input-group__prepend, .el-input-group__append {
+    background-color: #fff;
+  }
+  .el-input-group__append, .el-input-group__prepend, .el-input__inner {
+    border: 0px;
+    border-bottom: 1px solid #dcdfe6;
+    border-radius: 0px;
+  }
+  .el-input-group__prepend {
+    font-family: MicrosoftYaHei;
+    font-size: 14px;
+    color: #2F2F2F;
+    line-height: 14px;
+  }
+  .el-input-group__append {
+    font-family: MicrosoftYaHei;
+    font-size: 12px;
+    color: #4D2EEA;
+    line-height: 12px;
+  }
+  .phoneNum-box {
+    .el-icon-arrow-up:before {
+      content: "\E60C";
+    }
+    .el-select .el-input .el-select__caret {
+      color: #2F2F2F;
+    }
+  }
+  .pwd-box {
+    .el-input-group__append:before {
+      // border-left: 1px solid #ccc;
+      display: inline-block;
+      content: "";
+      margin-right: 15px;
+      width: 1px;
+      height: 13px;
+      background: rgba(7, 17, 27, 0.1);
+    }
+  }
+  .el-form-item.is-success .el-input__inner, .el-form-item.is-success .el-input__inner:focus {
+    border-color: #dcdfe6;
+  }
+  .el-form-item.is-error .el-input__inner, .el-form-item.is-error .el-input__inner:focus, .el-form-item.is-error .el-textarea__inner, .el-form-item.is-error .el-textarea__inner:focus {
+    border-color: #dcdfe6;
+  }
+
+}
+
+//menu
+.el-menu--horizontal > .el-submenu .el-submenu__title {
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+}
+
+.el-menu--horizontal > .el-submenu.is-active .el-submenu__title {
+  color: #fff;
+  background-color: transparent;
+  border-bottom: 0;
+}
+
+.el-menu--horizontal > .el-submenu:focus .el-submenu__title,
+.el-menu--horizontal > .el-submenu:hover .el-submenu__title {
+  color: #fff;
+  border: 0;
+  background-color: transparent;
+}
+
+.menu.lang .el-submenu__title {
+  padding-right: 5px;
+  text-align: right;
+}
+
+.menu.lang .el-submenu .el-menu-item {
+  min-width: 110px;
+}
+
+.menu.lang .el-submenu .el-menu--popup {
+  min-width: 110px;
+}
+
+.el-submenu__title i {
+  color: #FFFFFF;
+}
+
+.el-main {
+  padding: 0;
+}
+
+.el-table {
+  border-radius: 4px;
+  border: 1px solid #eaeaea;
+  th.is-leaf, td {
+    border-bottom: none !important;
+  }
+  .el-table__header {
+    .has-gutter {
+      th {
+        background-color: #F5F6FA;
+        border-bottom: 1px solid #eaeaea !important;
+      }
+    }
+  }
+  .el-table__body {
+    tr {
+      height: 54px;
+    }
+  }
+
+}
+
+.el-table--enable-row-hover .el-table__body tr:hover > td {
+  background-color: #ECE9F4 !important;
+}
+
+.el-table--group::after, .el-table--border::after, .el-table::before {
+  height: 0;
+}
+
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+  background-image: $bg_color;
+}
+
+// 云算力 pagination
+.clacsrtar-content {
+  .pagination-wrap {
+    .el-pagination.is-background .btn-prev, .el-pagination.is-background .btn-next, .el-pagination.is-background .el-pager li {
+      font-family: MicrosoftYaHei;
+      font-size: 14px;
+      color: #2F2F2F;
+      letter-spacing: 0;
+      background: #FFFFFF;
+      border-radius: 2px;
+      font-weight: 500;
+    }
+    .el-pagination.is-background .btn-prev, .el-pagination.is-background .btn-next {
+      color: #9B9B9B;
+    }
+    .el-pagination.is-background .el-pager li:not(.disabled).active {
+      background-image: linear-gradient(-153deg, #8557FF 0%, #4D2EEA 95%);
+      color: #fff;
+    }
+  }
+}
+
+//个人中心 —账户概况 center - general table
+.item-detail {
+  .el-table th {
+    height: 54px;
+    font-size: 14px;
+    color: #666666;
+    background: #f5f6fa;
+    border: none;
+    font-weight:400;
+    border-bottom: 1px solid #eaeaea !important;
+  }
+  .el-table td {
+    height: 54px;
+    font-size: 14px;
+    color: #2F2F2F;
+    border: none;
+  }
+  .el-table__fixed::before, .el-table__fixed-right::before{
+    height:0 !important;
+  }
+  .el-table--scrollable-x .el-table__body-wrapper {
+    &::-webkit-scrollbar { /*滚动条整体样式*/
+      width: 100%;
+      padding: 8px;
+      height: 16px;
+      border-radius: 0;
+      text-align: center;
+      outline: none;
+    }
+    &::-webkit-scrollbar-thumb { /*滚动条里面小方块*/
+      height: 0px;
+      margin: 5px;
+      border-radius: 10px;
+      background: #CFCFCF;
+      border: 5px solid #F9F9F9;
+    }
+    &::-webkit-scrollbar-track { /*滚动条里面轨道*/
+      display: block;
+      height: 20px;
+      -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      background: #F9F9F9;
+      border-radius: 0 4px 4px 0;
+    }
+  }
+}
+
+//个人中心 —我的云算力 center -cloudHash table
+.cloud-table-list {
+  .el-table__body tr.hover-row td {
+    background-color: #ece9f4;
+  }
+  .hover-row td {
+    background-color: #ece9f4 !important;
+    &:first-of-type {
+      color: #4D2EEA;
+      font-weight: 800;
+    }
+  }
+  .el-table__fixed, .el-table__fixed-right {
+    //box-shadow: 0 0 10px rgba(0, 0, 0, 0.12) !important;
+  }
+}
+
+//个人中心 —我的云算力 center -cloudHash  pagination
+.cloud-pagination {
+  margin-top: 41px;
+  .el-pager {
+    height: 30px;
+    .num {
+      margin: 0 5px;
+      width: 30px;
+      height: 30px;
+      border-radius: 2px;
+      font-size: 14px;
+      color: #2F2F2F;
+      line-height: 30px;
+      background: #F5F6FA;
+    }
+    .active {
+      background-image: linear-gradient(-153deg, #8557FF 0%, #4D2EEA 95%);
+    }
+  }
+  .el-pagination.is-background .el-pager li:not(.disabled):hover {
+    color: #8557FF;
+  }
+  .btn-prev, .btn-next {
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+    .el-icon {
+      font-size: 18px;
+      color: #9B9B9B;
+    }
+  }
+}
+
+//个人中心 —我的云算力 center -cloudHash-repertory pane
+.cloud-list-tab {
+  .el-tabs__header {
+    margin: 0 0 30px;
+  }
+  .el-tabs__content {
+    overflow: visible;
+  }
+  .el-tabs__item {
+    font-size: 16px;
+    color: #9B9B9B;
+    line-height: 36px;
+    font-weight:400;
+  }
+  .el-tabs__item.is-active {
+    font-size: 16px;
+    color: #2F2F2F;
+    line-height: 36px;
+    font-weight: 800;
+  }
+  .el-tabs__active-bar {
+    background: #4D2EEA;
+    height: 3px;
+    width: 62px;
+  }
+}
+
+//个人中心 —量化收益 center -cloudHash-income pane
+.income-list-tab {
+  .el-tabs__item {
+    font-size: 16px;
+    color: #9B9B9B;
+    line-height: 36px;
+    font-weight:400px;
+  }
+  .el-tabs__item.is-active {
+    font-size: 16px;
+    color: #2F2F2F;
+    line-height: 36px;
+    font-weight: 800;
+  }
+  .el-tabs__active-bar {
+    background: #4D2EEA;
+    height: 3px;
+    //width:30px !important;
+    //left:-8px;
+  }
+  .el-tabs__nav-wrap::after {
+
+  }
+  .el-tabs__item {
+    height: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight:400;
+  }
+}
+.el-tabs__nav-wrap::after {
+  height:1px !important;
+}
+
+//个人中心 —我的账户 center -account form
+.withdraw-box {
+  width: 100%;
+  text-align: left;
+  .el-form-item {
+    width: 100%;
+    margin: 0 0 8px;
+    text-align: left;
+    position: relative;
+    &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5), &:nth-of-type(6) {
+      width: 419px;
+    }
+    &:nth-of-type(4), &:nth-of-type(6) {
+      margin-left: 21px;
+    }
+    .el-input__inner {
+      height: 48px;
+      border: 1px solid #F0F0F0;
+
+    }
+    .el-form-item__label {
+      line-height: 38px;
+      padding: 0;
+      font-size: 14px;
+      color: #5F5F5F;
+      text-align: left;
+    }
+    .el-form-item__error {
+      width: 40%;
+      text-align: right;
+      color: #f56c6c;
+      font-size: 12px;
+      line-height: 38px;
+      position: absolute;
+      top: -38px;
+      right: 0;
+      left: 60%;
+    }
+    .end-tip {
+      position: absolute;
+      top: 0;
+      right: 20px;
+      font-size: 14px;
+      line-height: 48px;
+      color: #9B9B9B;
+      text-align: right;
+      cursor: pointer;
+    }
+    .end-tip2 {
+      font-size: 12px;
+      color: #4D2EEA;
+    }
+  }
+}
+
+//个人中心 —我的账户 —算力明细 center-account finance select
+.el-select-dropdown__list{
+  padding: 0 !important;
+}
+.finance-select {
+  .el-select {
+    width: 100px;
+    .el-input .el-input--suffix {
+      width: 100%;
+      right: 0;
+      text-align: right;
+    }
+    .el-input__inner {
+      width: 100px;
+      padding-right: 26px;
+      font-size: 14px;
+      color: #4D2EEA;
+      line-height: 16px;
+      text-align: right !important;
+      border: none !important;
+    }
+    .el-select__caret {
+      width: 10px;
+      height: 10px;
+      margin: 15px 5px;
+      background: url('~/assets/image/dropdown.png') 50% 50% no-repeat;
+      background-size: 10px 6px;
+      &:before {
+        content: ''
+      }
+    }
+  }
+  .el-select-dropdown__item.selected {
+    font-weight: normal !important;
+  }
+  .el-popper[x-placement^="bottom"] .popper__arrow {
+    top: -6px;
+    left: 80%;
+    margin-right: 3px;
+    border-top-width: 0;
+    border-bottom-color: #4D2EEA;
+  }
+  .el-select-dropdown .el-scrollbar .el-select-dropdown__wrap .el-select-dropdown__list {
+    width: 104px;
+    height: 163px;
+  }
+  .el-popper[x-placement^="bottom"] {
+    margin-top: 0;
+  }
+}
+
+.el-select-dropdown {
+  border: 1px solid #4D2EEA !important;
+}
+
+.el-select-dropdown__list {
+  padding:0 !important;
+}
+
+.el-popper[x-placement^="bottom"] .popper__arrow {
+  border-bottom-color: #4D2EEA !important;
+}
+
+.el-select-dropdown__item.hover, .el-select-dropdown__item:hover {
+  background-color: #fff;
+}
+
+.el-select-dropdown__item.selected {
+  font-weight: normal !important;
+}
+
+.el-select-dropdown__item {
+  text-align: center;
+  border-bottom: 1px solid #EEEEEE;
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.popper__arrow {
+  top: -6px;
+  left: 70px !important;
+  border-top-width: 0;
+  border-bottom-color: #4D2EEA;
+}
+
+.el-select-dropdown__wrap {
+  margin-bottom: 0 !important;
+}
+
+//表格样式 table
+.common-table {
+  td > .cell {
+    text-align: left;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+  }
+  .active {
+    color: red;
+  }
+  th > .cell {
+    text-align: left;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    font-weight:400;
+  }
+  .el-table__header th {
+    padding-left: 20px;
+    font-weight:400;
+  }
+  .el-table__row td {
+    padding-left: 20px;
+  }
+  .el-table__row > .active {
+    color: red !important;
+  }
+  .el-table th > .cell {
+    font-weight: 400;
+  }
+}
+
+//分页器样式
+.el-pagination {
+  margin-top: 40px;
+}
+
+//动画
+/* 可以设置不同的进入和离开动画 */
+/* 设置持续时间和动画函数 */
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.slide-fade-enter, .slide-fade-leave-to
+  /* .slide-fade-leave-active for below version 2.1.8 */
+{
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+// 提示框的样式
+.el-message-box__header {
+  background: #010424;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);
+  padding: 19px 0px 19px 20px;
+}
+
+.el-message-box__title {
+  font-size: 16px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+}
+
+.el-message-box__headerbtn .el-message-box__close {
+  color: #DEDEE0;
+  // border-radius: 200px;
+  &:hover {
+    color: #DEDEE0;
+  }
+}
+
+.el-message-box__content {
+  padding: 30px 40px 30px 20px;
+  border-bottom: 1px solid #F5F5F7;
+}
+
+.el-button--primary {
+  // font-family: MicrosoftYaHei;
+  color: #FFFFFF;
+  // text-align: center;
+  background-image: linear-gradient(-153deg, #8557FF 0%, #4D2EEA 95%);
+  box-shadow: 0 4px 10px 0 rgba(77, 46, 234, 0.30);
+  letter-spacing: 0;
+}
+
+.el-button--small {
+  padding: 12px 40px;
+  border-radius: 0px;
+  font-size: 14px;
+}
+
+.el-message-box__btns {
+  padding: 14px 20px 4px;
+}
+
+.el-message-box {
+  border: 0px;
+}
+
+// 登陆
+.login-wrap {
+  .el-dialog {
+    background: transparent;
+  }
+  .el-dialog__header {
+    display: none;
+  }
+  .el-dialog__body {
+    padding: 0px;
+  }
+  .el-input__inner{
+    padding: 0 !important;
+    height: 35px;
+    line-height: 35px;
+  }
+}
+
+// el-scrollbar__wrap
+.el-scrollbar__wrap {
+  overflow: scroll;
+  overflow-x: auto;
+}
+
+
+// 个人中心 - 提币
+.withdraw-box-wrap {
+  .el-form-item.is-required .el-form-item__label:before {
+    display: none;
+  }
+}
+
+//头部下拉框
+.el-menu--horizontal{
+  .el-menu{
+    .el-menu-item:first-of-type{
+      border-bottom: 1px solid #EEEEEE;
+    }
+  }
+  .el-menu--popup{
+    width: 120px;
+  }
+}
+.el-menu--popup-bottom-start{
+  margin-top: 15px;
+}
+
+//面包屑
+//.breadcrumbs{
+//  .el-breadcrumb{
+//    .el-breadcrumb__item{
+//      font-size: 12px;
+//      color: #9B9B9B;
+//    }
+//    .el-breadcrumb__item.is-link{
+//      color: #9B9B9B;
+//      font-weight: normal;
+//    }
+//  }
+//}
+.el-breadcrumb__item,
+.el-breadcrumb__inner{
+  font-size: 12px !important;
+  color: #9B9B9B !important;
+}
+
+.el-breadcrumb__inner.is-link,
+.el-breadcrumb__inner a{
+  color: #9B9B9B !important;
+  font-weight: normal !important;
+}
+.el-breadcrumb__inner.is-link:hover{
+  color: #9B9B9B !important;
+}
+
+//弹窗
+.el-dialog__wrapper{
+  background-color: rgba(0,0,0,0.4);
+}
+
+//导航
+.el-tabs__nav-wrap::after {
+  height: 1px;
+}
+
+

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <title>お問い合わせ｜FinTo</title>
+    <meta name="keywords" content=" FinTo、フィント、フィント株式会社、ブロックチェーン、ビットコイン、イーサリアム、仮想通貨、仮想通貨ニュース、リップル、ウォレット、NEM、ライトコイン、LISK、ライトコイン、ICO、ハードフォーク、マイニング、マイニングマシン、仮想通貨分析、仮想通貨　今後、マイニング減少期、マイニングマシン、マイナー、クラウドマイニング、マイニング収益">
+    <meta name="description" content="フィント株式会社は、仮想通貨ソリューションカンパニーです。仮想通貨マイニングからブロックチェーン専門メディア、 ビッグデータ＋AIを用いた仮想通貨分析サービスをノンストップで行うことで、今世紀最大の機会がより多くの方々へ広がるようドライブします。">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="style/public.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/iosSelect.css">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <input type="checkbox" class="nav-select" id="nav-select">
+    <div class="header">
+        <div class="inner">
+            <div class="logo"></div>
+            <div class="menuicon">
+                <label for="nav-select">
+                <span class="menuicon-bread-tab menuicon-bread-top">
+                    <span></span>
+                </span>
+                    <span class="menuicon-bread-bottom menuicon-bread-tab">
+                    <span></span>
+                </span>
+                </label>
+            </div>
+            <div class="nav">
+                <div class="nav-item">
+                    <a href="index.html">
+                        <div class="text">ホーム</div>
+                        <div class="xline"></div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="office.html">
+                        <div class="text">会社概要</div>
+                        <div class="xline"></div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="product.html">
+                        <div class="text">事業概要</div>
+                        <div class="xline"></div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="contact.html">
+                        <div class="text">採用情報</div>
+                        <div class="xline"></div>
+                    </a>
+                </div>
+                <div class="nav-item  active">
+                    <a href="submit.html">
+                        <div class="text big-text">お問合せ</div>
+                        <div class="xline"></div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="sub-form">
+        <div class="tit-wrap">
+            <div class="tit-ball"></div>
+            <h2 class="tit-txt">お問合わせ</h2>
+        </div>
+        <ul class="form-list">
+            <li class="form-item">
+                <div class="tip-box">
+                    <p class="tip"><span>*</span>お問合わせ</p>
+                </div>
+                <div class="dropdown submit-select select-item" id="submit-select"></div>
+                <div class="wap-select">
+                    <!--<input type="hidden" name="select" id="visitedInput" value="取材・メディア掲載について">-->
+                    <!--<span id="visitedSelect">取材・メディア掲載について</span>-->
+                    <input type="hidden" name="select" id="visitedInput" value="">
+                    <span id="visitedSelect"></span>
+                </div>
+            </li>
+            <li class="form-item">
+                <div class="tip-box">
+                    <p class="tip">貴社名</p>
+                </div>
+                <input type="text" name="input1" class="input-item company-name">
+            </li>
+            <li class="form-item">
+                <div class="tip-box">
+                    <p class="tip">部署名</p>
+                </div>
+                <input type="text" name="input1" class="input-item department-name">
+            </li>
+            <li class="form-item">
+                <div class="tip-box">
+                    <p class="tip"><span>*</span>お名前</p>
+                    <p class="error" id="error-name">お名前をご入力ください</p>
+                </div>
+                <input type="text" name="input1" class="input-item" id="input-name">
+            </li>
+            <li class="form-item">
+                <div class="tip-box">
+                    <p class="tip"><span>*</span>メールアドレス</p>
+                    <p class="error" id="error-email">メールアドレスをご記入ください。</p>
+                </div>
+                <input type="text" name="input1" class="input-item" id="input-email">
+            </li>
+            <li class="form-item">
+                <div class="tip-box">
+                    <p class="tip"><span>*</span>電話番号</p>
+                </div>
+                <input type="text" name="input1" class="input-item" id="input-phone">
+            </li>
+            <li class="form-item">
+                <div class="tip-box">
+                    <p class="tip"><span>*</span>お問合わせ</p>
+                </div>
+                <textarea class="texterea-item" id="textarea"></textarea>
+                <div class="agreement">
+                    <input type="checkbox" class="agree-checkbox" id="input-agree">
+                    <div class="agree-txt">
+                        プライバシーポリシーに同意致します。<br>
+                        <span>弊社のプライバシーポリシー<em><a class="link-a" href="protocol.html">こちら</a></em>からご覧ください。</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <input type="button" class="form-btn disable-btn" value="送信" id="submit-btn"/>
+    </div>
+    <div class="w-footer">
+        <div class="w-footer-up">
+            <div class="w-fot-up-left"><img src="./img/icon/logo_new.png"></div>
+            <div class="w-fot-up-right">
+                <ul class="up-list">
+                    <li class="up-list-item">
+                        <input type="checkbox" id="select-1">
+                        <label for="select-1"></label>
+                        <span class="a-tit"><a href="product.html" target="_self">事業紹介</a></span>
+                        <!--<span><a href="product.html" target="_self">商品シリーズ</a></span>-->
+                        <span><a href="product.html#FintoIntro" target="_self">FinTo</a></span>
+                        <span><a href="product.html#FintoCube" target="_self">FinTo Cube</a></span>
+                        <span><a href="product.html#FintoIndex" target="_self">FinTo Index</a></span>
+                    </li>
+                    <li class="up-list-item">
+                        <input type="checkbox" id="select-2">
+                        <label for="select-2"></label>
+                        <span class="a-tit"><a href="office.html" target="_self">会社紹介</a></span>
+                        <span><a href="office.html#present" target="_self">代表挨拶</a></span>
+                        <span><a href="office.html#general" target="_self">会社概要 </a></span>
+                        <span><a href="office.html#map" target="_self">アクセス</a></span>
+                    </li>
+                    <li class="up-list-item">
+                        <input type="checkbox" id="select-3">
+                        <label for="select-3"></label>
+                        <span class="a-tit"><a href="contact.html" target="_self">ジョインする</a></span>
+                        <span><a href="contact.html#concept" target="_self">経営理念</a></span>
+                        <span><a href="contact.html#feature" target="_self">フィントとは</a></span>
+                        <span><a href="contact.html#welfare" target="_self">福利厚生</a></span>
+                        <span><a href="contact.html#emplo-box" target="_self">ジョインする</a></span>
+                    </li>
+                    <li class="up-list-item">
+                        <input type="checkbox" id="select-4">
+                        <label for="select-4"></label>
+                        <span class="a-tit"><a href="submit.html" target="_self">お問合せ</a></span>
+                        <span><a href="submit.html" target="_self">コンタクト</a></span>
+                    </li>
+                    <li class="up-list-item">
+                        <input type="checkbox" id="select-5">
+                        <label for="select-5"></label>
+                        <span class="a-tit"><a href="protocol.html" target="_self">プライバシーポリシー</a></span>
+                        <span><a href="protocol.html" target="_self">個人情報保護方針</a></span>
+                    </li>
+                    <li class="up-list-item">
+                        <input type="checkbox" id="select-6">
+                        <label for="select-6"></label>
+                        <span class="a-tit"><a href="javascript:;">SNS</a></span>
+                        <span><img class="sns-icon" src="img/icon/facebook_3x.png"><a href="javascript:;">Facebook</a></span>
+                        <span><img class="sns-icon" src="img/icon/twiter_3x.png"><a href="javascript:;">Twitter</a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="w-fot-line"></div>
+        <div class="w-footer-down">
+            <div class="w-fot-down-left"></div>
+            <div class="w-fot-down-right">
+                <ul class="w-fot-down-r1">
+                    <li><a href="index.html" target="_self" >フィント株式会社</a></li>
+                    <li><a href="javascript:;" class="no-hover">所在地：東京都千代田区丸の内1-11-1 <p>パシフィックセンチュリープレイス丸の内8F</p></a></li>
+                    <li><a href="javascript:;" class="no-hover">TEL：０３－６８６０－８２９８</a></li>
+                    <li><a href="javascript:;" class="no-hover">営業時間：平日 １０：００～１９：００</a></li>
+                </ul>
+                <div class="w-fot-down-r2">
+                    <!--<span class="w-fot-down-r2-a1"><a href="product.html" target="_self">商品シリーズ</a></span>-->
+                    <ul class="clearfix">
+                        <li><a href="product.html#FintoIntro" target="_self">FinTo</a></li>
+                        <li><a href="product.html#FintoCube" target="_self">FinTo Cube</a></li>
+                        <li><a href="product.html#FintoIndex" target="_self">FinTo Index</a></li>
+                    </ul>
+                    <span class="w-fot-down-r2-a2"><a href="javascript:;" class="no-hover">© 2018 FinTo Inc. All rights reserved.</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pop" id="submit-pop">
+        <div class="pop-box">
+            <div class="pop-in">
+                <div class="pop-left">
+                    <img src="./img/icon/success_3x.png">
+                </div>
+                <div class="web-pop-right">
+                    お問合せ内容が送信されました。<br>
+                    ２営業日以内に担当よりご連絡いたします。<br>
+                    誠にありがとうございました。
+                </div>
+                <div class="wap-pop-right">
+                    お問合せ内容が送信されました。
+                    ２営業日以内に担当よりご連絡いたします。
+                    誠にありがとうございました。
+                </div>
+                <div class="pop-close" id="submit-pop-close">
+                    <a href="index.html"><img src="./img/icon/pop-close.png"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="./js/submit.js"></script>
+<!--PC端下拉选择-->
+<script>
+    var _dataSub = [
+        {'value': 'マイニングマシンについて'},
+        {'value': 'イベントコラボレーションについて'},
+        {'value': 'FinToについて'},
+        {'value': 'FinTo　Cubeについて'},
+        {'value': 'FinTo　Indexについて'},
+        {'value': '事業提携などについて'},
+        {'value': '事業会社情報について'},
+        {'value': '採用について'},
+        {'value': 'その他'}
+    ]
+    var dropSub = new Dropdown({
+        selector: '.submit-select',
+        dataList: _dataSub,
+        // defaultValue: '取材・メディア掲載について'
+        defaultValue: ''
+    })
+</script>
+<!--移动端下拉选择-->
+<script type="text/javascript" src="js/iosSelect.js"></script>
+<script type="text/javascript">
+    var visitedDom = document.querySelector('#visitedSelect');
+    var visitedInputDom = document.querySelector('#visitedInput');
+
+    visitedDom.addEventListener('click', function () {
+        var visitedId = visitedDom.dataset['id'];
+        var visitedName = visitedDom.dataset['value'];
+
+        var visitedSelect = new IosSelect(1,
+            [data],
+            {
+                title: '',
+                oneLevelId: visitedId,
+                itemHeight: 0.7,
+                headerHeight: 0.88,
+                itemShowCount: 7,
+                cssUnit: 'rem',
+                sureText: '確定する',
+                closeText: '取り消す',
+                callback: function (selectOneObj) {
+                    visitedInputDom.value = selectOneObj.id;
+                    visitedDom.innerHTML = selectOneObj.value;
+                    visitedDom.dataset['id'] = selectOneObj.id;
+                    visitedDom.dataset['value'] = selectOneObj.value;
+                }
+            });
+    });
+    var data = [
+        {'id': '1', 'value': 'マイニングマシンについて'},
+        {'id': '2', 'value': 'イベントコラボレーションについて'},
+        {'id': '3', 'value': 'FinToについて'},
+        {'id': '4', 'value': 'FinTo　Cubeについて'},
+        {'id': '5', 'value': 'FinTo　Indexについて'},
+        {'id': '6', 'value': '事業提携などについて'},
+        {'id': '7', 'value': '事業会社情報について'},
+        {'id': '8', 'value': '採用について'},
+        {'id': '9', 'value': 'その他'}
+    ]
+
+</script>
+
+</html>
