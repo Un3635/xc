@@ -1,0 +1,437 @@
+@mixin _mine_rst_dialog() {
+    .el-dialog__header {
+        padding: 0;
+        line-height: 52px;
+        font-size: 16px;
+        color: #222222;
+        border-bottom: 1px solid #eeeeee;
+        .el-dialog__title {
+            font-size: 16px;
+            color: #222222;
+        }
+    }
+    .el-dialog__body {
+        // padding: 23px 56px 29px 45px;
+        padding: 0;
+        padding-top: 24px;
+        padding-bottom: 30px;
+        .err {
+            line-height: 24px;
+            height: 24px;
+            font-size: 12px;
+            color: #e33434;
+            opacity: 1;
+            text-align: left;
+            -webkit-transition: opacity 0.5s;
+            transition: opacity 0.5s;
+            margin-top: -20px;
+            &:empty {
+                opacity: 1;
+            }
+        }
+        .sub {
+            width: 116px;
+            line-height: 30px;
+            padding: 0;
+            background: #0063ee;
+            border-radius: 3px;
+            font-size: 14px;
+            color: #ffffff;
+            font-weight: 200;
+        }
+        .el-form-item__label {
+            color: #505050;
+            line-height: 30px;
+        }
+        .el-form-item__content {
+            line-height: 30px;
+        }
+        .el-form-item {
+            margin-bottom: 0;
+        }
+        .el-input__inner {
+            height: 30px;
+            line-height: 30px;
+        }
+        input,
+        button {
+            border-radius: 2px;
+            height: 30px;
+        }
+    }
+    input::-webkit-input-placeholder {
+        font-weight: 100;
+    }
+    input {
+        color: #222222;
+    }
+}
+
+.edit_headerimg {
+    @include _mine_rst_dialog();
+    .el-form {
+        margin-left: 30px;
+        >.el-form-item {
+            &:first-of-type {
+                margin-bottom: 18px;
+            }
+            &::last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .uploadheader {
+        padding: 0;
+        width: 248px;
+        line-height: 32px;
+        background: #ffffff;
+        border: 1px solid #0063ee;
+        border-radius: 2px;
+        font-size: 14px;
+        color: #0063ee;
+    }
+    .el-upload-list.el-upload-list--picture {
+        margin-right: 37px;
+        .el-icon-document {
+            color: white;
+        }
+    }
+    .sub {}
+}
+
+.edit_nickname {
+    @include _mine_rst_dialog();
+    .el-form {
+        margin-left: 11px;
+        .el-input {
+            width: 263px;
+        }
+        .el-form-item {
+            margin-bottom: 18px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.edit_introduce {
+    @include _mine_rst_dialog();
+    .el-form {
+        margin-left: 11px;
+        .el-textarea {
+            width: 263px;
+        }
+        .el-form-item {
+            margin-bottom: 18px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.edit_mail {
+    @include _mine_rst_dialog();
+    .activelayer.active {
+        .stepup {
+            .s2,
+            .line {
+                background: #0063ee;
+                color: white;
+            }
+        }
+        .stepddown {
+            .sr {
+                color: #222222;
+                font-size: 12px;
+                margin-right: 2px;
+            }
+        }
+        .stateform {
+            &:first-of-type {
+                display: none;
+            }
+            &:last-of-type {
+                display: block;
+            }
+        }
+    }
+    .stateform {
+        display: none;
+        &:first-of-type {
+            display: block;
+        }
+    }
+    .step {
+        margin-left: auto;
+        margin-right: auto;
+        width: 165px;
+        height: 45px;
+        margin-bottom: 13px;
+        &up {
+            padding: 0 18px;
+            height: 20px;
+            position: relative;
+            .s {
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                border-radius: 50%;
+                text-align: center;
+                background: #f0f0f0;
+            }
+            .s.s1 {
+                color: white;
+                background: #0063ee;
+                float: left;
+            }
+            .s2 {
+                float: right;
+                color: #acacac;
+            }
+            .line {
+                background: #f0f0f0;
+                height: 2px;
+                position: absolute;
+                left: 38px;
+                top: 9px;
+                width: 90px;
+            }
+        }
+        &down {
+            .sl {
+                font-size: 12px;
+                color: #222222;
+            }
+            .sr {
+                float: right;
+                font-size: 12px;
+                color: #acacac;
+                font-weight: 100;
+            }
+        }
+    }
+    .el-form {
+        margin-left: 34px;
+        margin-right: 34px;
+        .el-form-item {
+            &:first-of-type {
+                margin-bottom: 8px !important;
+            }
+        }
+    }
+    .el-form-item__label {
+        text-align: left;
+    }
+    .inputyzm {
+        width: 137px;
+    }
+    .getyzmbt {
+        width: 91px;
+        line-height: 30px;
+        padding: 0;
+        font-size: 12px;
+        color: #0063ee;
+        background: #ffffff;
+        border: 1px solid #0063ee;
+        border-radius: 2px;
+        float: right;
+    }
+    .err {
+        margin-top: 0 !important;
+        padding-left: 83px !important;
+        line-height: 18px !important;
+        height: 18px !important;
+    }
+}
+
+.dialog_account.dialog_editpwd {
+    .el-form-item__label {
+        text-align: left;
+    }
+    .el-form {
+        margin-left: 34px !important;
+        margin-right: 34px !important;
+        width: initial;
+    }
+    .el-input {
+        width: 232px !important;
+        &.inputyzm {
+            width: 144px !important;
+        }
+    }
+    .el-form-item:not(:last-of-type) {
+        margin-bottom: 18px !important;
+    }
+    .sub {
+        width: 116px !important;
+    }
+}
+
+.real_name_auth {
+    @include _mine_rst_dialog();
+    .el-dialog__body {
+        .el-form {
+            margin-left: 26px;
+            margin-right: 26px;
+        }
+        .el-form-item {
+            &:first-of-type {
+                margin-bottom: 18px;
+            }
+            &:nth-of-type(2) {
+                margin-bottom: 18px;
+            }
+        }
+        .el-form-item__label {
+            text-align: left;
+        }
+    }
+}
+
+.dialog_account {
+    @include _mine_rst_dialog();
+    .el-form {
+        margin-right: auto !important;
+        margin-left: auto !important;
+        width: 260px;
+    }
+    .el-dialog__body {
+        padding: 30px 0 30px 0;
+    }
+    .el-form-item {
+        margin-bottom: 18px !important;
+    }
+    .el-tabs__header {
+        margin: 0;
+    }
+    .el-tabs__nav {
+        margin-left: 105px;
+        .el-tabs__item {
+            font-size: 16px;
+            color: #acacac;
+            font-weight: 200;
+            &.is-active {
+                color: #222222;
+                font-weight: 400;
+            }
+        }
+    }
+    .inputyzm {
+        width: 170px;
+        margin-right: 5px;
+    }
+    .getyzmbt {
+        width: 85px;
+        line-height: 30px;
+        height: 30px;
+        padding: 0;
+        font-size: 12px;
+        color: #0063ee;
+        background: #ffffff;
+        border: 1px solid #0063ee;
+        border-radius: 5px;
+        display: inline-block;
+    }
+    .type2_radios {
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: -14px;
+        .el-radio__input.is-checked .el-radio__inner {
+            border-color: #0063ee;
+            background-color: #0063ee;
+        }
+        .el-radio__label {
+            font-size: 14px;
+            color: #505050;
+        }
+    }
+    .links {
+        width: 260px; // line-height: 12px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -11px;
+        line-height: 12px;
+        button {
+            font-size: 12px;
+            padding: 0;
+            color: #505050;
+            &:last-of-type {
+                float: right;
+            }
+        }
+    }
+    .phone_country {
+        width: 65px;
+        margin-right: 5px;
+        .el-input__inner {
+            padding: 5px;
+            line-height: normal;
+        }
+        &+.el-input {
+            width: 190px;
+        }
+    }
+    .sub {
+        width: 100% !important;
+        display: block;
+        border: none;
+        border-radius: 2px !important;
+    }
+    .checkedprotol {
+        margin-left: 5px;
+        span {
+            color: #0063ee;
+            cursor: pointer;
+            margin-left: -5px;
+        }
+    }
+}
+
+.writing-standard {
+    .el-dialog__header {
+        display: none;
+    }
+    .el-dialog__body {
+        padding: 30px 0 38px 0;
+        .writing-standard-title {
+            font-size: 20px;
+            color: #222222;
+            line-height: 28px;
+            text-align: center;
+        }
+        .writing-standard-content {
+            width: 812px;
+            margin: 22px auto 37px auto;
+            background: #f9f9f9;
+            border: 1px solid #efefef;
+            border-radius: 2px;
+            padding-top: 19px;
+            padding-left: 28px;
+            padding-right: 28px;
+            padding-bottom: 30px;
+            p {
+                font-size: 14px;
+                color: #222222;
+                margin-bottom: 10px;
+                line-height: 22px;
+            }
+        }
+        .writing-standard-close {
+            width: 335px;
+            height: 41px;
+            line-height: 41px;
+            text-align: center;
+            color: white;
+            background: rgba(77, 135, 234, 0.99);
+            border-radius: 4px;
+            font-size: 16px;
+            margin: 0 auto;
+            display: block;
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}

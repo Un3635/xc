@@ -1,0 +1,154 @@
+.mine_write {
+    background-color: #f4f4f4;
+    &_inner {
+        width: 1180px;
+        margin: 0 auto;
+        padding-top: 30px;
+        padding-bottom: 80px;
+    }
+    &_right {
+        background-color: white;
+        float: left;
+        width: 1000px;
+        margin-left: 20px;
+        padding: 50px 0 66px 100px;
+        position: relative;
+    }
+    .el-tabs {
+        margin-top: -18px;
+        &__header {
+            margin: 0 0 30px;
+        }
+        &__active-bar {
+            background: #5581E9;
+        }
+        &__item {
+            padding: 0 30px;
+            font-size: 18px;
+            color: #222222;
+            font-weight: 300;
+            height: 55px;
+            line-height: 55px;
+            &.is-active {
+                font-weight: bolder;
+            }
+        }
+        &__content {
+            margin-right: 80px;
+        }
+    }
+    &_form {
+        &>* {
+            margin-bottom: 20px;
+        }
+    }
+    &_inputtitle {
+        font-size: 24px;
+        display: block;
+        width: 100%;
+        outline: none;
+        border: none;
+        margin-right: 100px;
+        padding-bottom: 22px;
+        border-bottom: 1px solid #F4F4F4;
+        &.inEditor {
+            position: absolute;
+            top: 57px;
+            z-index: 10;
+            margin-left: 40px;
+            width: 740px;
+            padding-bottom: 0;
+            line-height: 54px;
+        }
+    }
+    &_title {
+        font-size: 16px;
+        line-height: 22px;
+        color: #505050;
+    }
+    &_btns {
+        margin-top: 14px;
+        .el-button+.el-button {
+            margin-left: 37px;
+        }
+        button {
+            padding: 0;
+            width: 92px;
+            height: 36px;
+            line-height: 36px;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        &_lt {
+            border: 1px solid #4d87ea;
+            border-radius: 4px;
+            background-color: white;
+            color: #4e88ea;
+            &:focus,
+            &:active,
+            &:hover {
+                background: rgba(78, 136, 234, 0.1);
+                border: 1px solid #4d87ea;
+                border-radius: 4px;
+                color: #4e88ea;
+            }
+        }
+        &_dk {
+            background: #4e88ea;
+            border: 1px solid #4e88ea;
+            color: #ffffff;
+            &:focus,
+            &:active,
+            &:hover {
+                background: #3d76d6;
+                border: 1px solid #3d76d6;
+                color: #ffffff;
+            }
+        }
+    }
+    &_state {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        z-index: 22222;
+        width: 80px;
+        img {
+            width: 80px;
+        }
+    }
+    .el-textarea {
+        >textarea {
+            height: 120px;
+            background: #FFFFFF;
+            border: 1px solid #EDEDED;
+            border-radius: 2px;
+        }
+    }
+    .ql-container {
+        min-height: 300px;
+        &.ql-snow {
+            border-color: #EDEDED
+        }
+        .ql-editor {
+            padding-top: 85px;
+            padding-left: 40px;
+        }
+        .ql-editor.ql-blank::before {
+            content: attr(data-placeholder);
+            font-style: normal;
+            left: 40px;
+            pointer-events: none;
+            position: absolute;
+            right: 40px;
+            color: blue;
+            font-size: 14px;
+            color: #cccccc;
+            line-height: 22px;
+        }
+    }
+    .ql-toolbar {
+        &.ql-snow {
+            border-color: #EDEDED
+        }
+    }
+}

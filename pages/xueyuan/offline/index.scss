@@ -1,0 +1,189 @@
+#xueyuan-offline {
+    width: 1180px;
+    margin: 0 auto;
+    padding-top: 28px;
+    padding-bottom: 100px;
+    .xueyuan-offline-up {
+        height: 372px;
+        overflow: hidden;
+        margin-bottom: 28px;
+        &-img {
+            float: left;
+            width: 758px;
+            height: 100%;
+            border-radius: 8px;
+        }
+        &-info {
+            position: relative;
+            float: right;
+            height: 372px;
+            width: 396px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 36px 36px 0 36px;
+            .title {
+                font-size: 24px;
+                color: #000000;
+                line-height: 30px;
+                margin-bottom: 29px;
+            }
+            .des {
+                font-size: 16px;
+                color: #505050;
+                line-height: 22px;
+                margin-bottom: 22px;
+                img {
+                    height: 14px;
+                    margin-right: 11px;
+                }
+            }
+            .bmbtn {
+                width: 324px;
+                line-height: 44px;
+                text-align: center;
+                background-image: -webkit-gradient(linear, right top, left top, color-stop(5%, #68a8ff), to(#5582f4));
+                background-image: linear-gradient(-90deg, #68a8ff 5%, #5582f4 100%);
+                border-radius: 3px;
+                font-size: 20px;
+                color: #ffffff;
+                display: inline-block;
+                position: absolute;
+                left: 36px;
+                bottom: 34px;
+                &.over {
+                    background: rgba(78, 136, 234, 0.5);
+                    background-image: initial;
+                }
+            }
+        }
+    }
+    .el-tabs__header {
+        margin: 0 0 28px;
+    }
+    .el-tabs__item {
+        // padding: 0 30px 0 0;
+        font-size: 16px;
+        color: #222222;
+        font-weight: 100;
+        height: initial;
+        padding-bottom: 16px;
+        line-height: 16px;
+        &.is-active {
+            font-size: 16px;
+            color: #0063ee;
+            font-weight: normal;
+        }
+    }
+    .el-tabs__active-bar {
+        background-color: #0063ee;
+        height: 2px;
+    }
+    .xueyuan-audio {
+        height: 88px;
+        margin-bottom: 28px;
+        background: #08051b;
+        border-radius: 6px;
+        padding: 12px 0 12px 33px;
+        line-height: 64px;
+        vertical-align: middle;
+        font-size: 0;
+        .playstate {
+            margin-right: 23px;
+            vertical-align: middle;
+            width: 62px;
+            height: 62px;
+            cursor: pointer;
+        }
+        .timenow {
+            font-size: 18px;
+            color: #ffffff;
+            vertical-align: middle;
+            width: 50px;
+            display: inline-block;
+        }
+        .timeall {
+            font-size: 18px;
+            color: #ffffff;
+            vertical-align: middle;
+            width: 50px;
+            display: inline-block;
+        }
+        .percent {
+            width: 460px;
+            height: 7px;
+            display: inline-block;
+            margin: 0 18px;
+            background: rgba(221, 221, 221, 0.5);
+            border-radius: 100px;
+            vertical-align: middle;
+            font-size: 0;
+            position: relative;
+            cursor: pointer;
+            .percentnow {
+                display: inline-block;
+                width: 0%;
+                height: 100%;
+                background: #4d87ea;
+                border-radius: 100px;
+                vertical-align: top;
+                -webkit-transition: all 0.5s;
+                transition: all 0.5s;
+            }
+            .ctrl {
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: white;
+                left: 0%;
+                top: -3px;
+                -webkit-transition: all 0.5s;
+                transition: all 0.5s;
+            }
+        }
+    }
+    .xueyuan-video {
+        height: 383px;
+        background: #08051b;
+        margin-bottom: 28px;
+    }
+    .edit {
+        &title {
+            font-size: 28px;
+            color: #000000;
+            line-height: 30px; // margin-bottom: 28px;
+        }
+        &html {
+            img {
+                width: 100%;
+                display: block;
+                margin-bottom: 25px;
+            }
+            p,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            div {
+                font-size: 16px;
+                color: #000000;
+                line-height: 28px;
+                margin-bottom: 25px;
+            }
+        }
+    }
+    .xueyuan-offline-down {
+        &-left {
+            float: left;
+            width: 758px;
+           
+        }
+        &-right {
+            float: right;
+            width: 396px;
+        }
+    }
+    
+}

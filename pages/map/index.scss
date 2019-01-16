@@ -1,0 +1,78 @@
+.page-zixun-map {
+  &-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding-top: 28px;
+    padding-bottom: 96px;
+  }
+  &-title {
+    font-size: 24px;
+    color: #333333;
+    line-height: 33px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eeeeee;
+  }
+  &-tags {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eeeeee;
+    &-tag {
+      font-size: 16px;
+      color: #666666;
+      line-height: 22px;
+      padding: 12px 22px;
+      display: inline-block;
+      &:hover,
+      &:focus {
+        color: #5581e9;
+      }
+    }
+  }
+  &-links {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eeeeee;
+    &-link {
+      font-size: 18px;
+      color: #666666;
+      line-height: 25px;
+      padding: 12px 22px;
+      display: inline-block;
+      &:hover,
+      &:focus {
+        color: #5581e9;
+      }
+    }
+  }
+  &-articles {
+    padding-top: 26px;
+    &-article {
+      margin-bottom: 16px;
+      position: relative;
+      &::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #222222;
+        margin-right: 7px;
+        position: absolute;
+        left: 0;
+        top: 12px;
+      }
+      &-title {
+        font-size: 20px;
+        color: #222222;
+        line-height: 30px;
+        font-weight: bold;
+        margin-left: 20px;
+        display: inline-block;
+        max-width: 1060px;
+      }
+      &-date {
+        float: right;
+        font-size: 14px;
+        color: #888888;
+        margin-top: 7px;
+      }
+    }
+  }
+}

@@ -1,0 +1,113 @@
+.page-video {
+    &-load {
+        text-align: center;
+        font-size: 14px;
+        color: #4d87ea;
+    }
+    &-inner {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding-top: 30px;
+        padding-bottom: 96px;
+    }
+    &-left {
+        width: 758px;
+        float: left;
+    }
+    &-right {
+        width: 372px;
+        float: right;
+    }
+    &-title1 {
+        font-size: 24px;
+        font-weight: 700;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #eeeeee;
+    }
+    &-item {
+        display: block;
+        height: 205px;
+        overflow: hidden;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #dfdfdf;
+        padding-top: 24px;
+        position: relative;
+        &:hover,
+        &:focus {
+          background: #fafafa;
+          .page-video-item-content-title a{
+            color: #4D87EA;
+          }
+        }
+        &-image {
+            float: left;
+            width: 258px;
+            height: 156px;
+            margin-right: 17px;
+            border-radius: 4px;
+        }
+        &-content {
+            overflow: auto;
+            position: relative;
+            height: 156px;
+            &-title {
+                font-size: 20px;
+                line-height: 30px;
+                max-height: 61px;
+                overflow: hidden;
+                margin-bottom: 5px;
+                a {
+                    color: #222222;
+                    font-weight: bold;
+                }
+            }
+            &-des {
+                font-size: 14px;
+                color: #888888;
+                line-height: 22px;
+                max-height: 44px;
+                overflow: hidden;
+            }
+            &-info {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                font-size: 12px;
+                color: #888888;
+                &-videoimg {
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 20px;
+                    vertical-align: -5px;
+                }
+                &-name {
+                    &::after {
+                        width: 2px;
+                        height: 12px;
+                        content: "";
+                        background-color: #dddddd;
+                        margin: 0 10px;
+                        display: inline-block;
+                    }
+                }
+                svg {
+                    margin-right: 4px;
+                }
+                &-time {
+                    margin-right: 20px;
+                }
+                &-tags {
+                    float: right;
+                    margin-top: 3.5px;
+                    a {
+                        float: left;
+                        font-size: 12px;
+                        color: #487fde;
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.c-tile-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.c-tile-list__item {
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.c-tile-list__item:last-child {
+    margin-bottom: 0;
+}

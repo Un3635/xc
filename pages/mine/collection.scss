@@ -1,0 +1,163 @@
+#mine_collection {
+  background-color: #f4f4f4;
+  .page {
+    width: 1180px;
+    margin: 0 auto;
+    padding-top: 30px;
+    
+    > .right {
+      width: 1000px;
+      min-height: 630px;
+      background-color: white;
+      float: right;
+      padding: 20px 30px;
+      position: relative;
+      margin-bottom: 30px;
+      .collection_list {
+        width: 900px;
+        margin: 20px auto 63px auto;
+        .getjia{
+          text-align: center;
+          font-size: 14px;
+          color: #4d87ea;
+          margin-top: 30px;
+          cursor: pointer;
+        }
+        &_item {
+          height: 114px;
+          border-bottom: 1px solid #f4f4f4;
+          padding: 16px 0;
+          position: relative;
+          .head {
+            width: 135px;
+            height: 82px;
+            margin-right: 10px;
+            float: left;
+            border-radius: 4px;
+          }
+        
+
+          .pwarpper {
+            float: left;
+            height: 82px;
+            width: 618px;
+            display: table;
+            position: relative;
+            .title{
+              font-size: 14px;
+              color: #000000;
+              line-height: 21px;
+              max-height: 66px;
+              overflow: hidden;
+            }
+            .time{
+              font-size: 12px;
+              color: #ACACAC;
+              line-height: 15px;
+              position: absolute;
+              bottom: 0;
+            }
+          }
+          
+          &_btns {
+            float: right;
+            cursor: pointer;
+            width: 99px;
+            opacity: 0;
+            -webkit-transition: opacity 0.5s;
+            transition: opacity 0.5s;
+            & > div {
+              display: none;
+              line-height: 36px;
+              text-align: center;
+              font-size: 16px;
+              border-radius: 44px;
+            }
+            .btn0 {
+              background: rgba(77, 135, 234, 0.99);
+              color: white;
+              width: 99px;
+              &:hover {
+                background: #366df0;
+              }
+              img {
+                width: 14px;
+                vertical-align: -1px;
+              }
+            }
+            .btn1,.but {
+              background: #f5f5f5;
+              color: #4d87ea;
+              width: 99px;
+              display: block;
+              img {
+                width: 13px;
+                vertical-align: -1px;
+              }
+            }
+            .btn-1 {
+              background: #f5f5f5;
+              color: #F95453;
+              width: 99px;
+            }
+            &.notfollow {
+              opacity: 1;
+              .btn0 {
+                display: block;
+              }
+            }
+            &.follow {
+              opacity: 1;
+              .btn1 {
+                display: block;
+              }
+              &:hover {
+                .btn-1 {
+                  display: block;
+                }
+                .btn1 {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+      .nonecon{
+        text-align: center;
+        padding-top: 120px;
+        img{
+          width: 135px;
+          height: 186px;
+        }
+        p{
+          font-size: 15px;
+          color: #CFCFCF;
+        }
+      }
+    }
+  }
+}
+
+.collection-follow {
+  width: 330px;
+  height: 88px;
+  padding: 24px 0 0 20px;
+  position: absolute;
+  left: 35%;
+  top:10px;
+  i {
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    color: #4e88ea !important;
+  }
+  .el-notification__group {
+    margin-left: 14px;
+    .el-notification__content {
+      font-size: 16px;
+      color: #333333;
+      margin-top: 9px;
+    }
+  }
+}

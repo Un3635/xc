@@ -1,0 +1,206 @@
+.page-live {
+    &-inner {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding-top: 30px;
+        padding-bottom: 96px;
+    }
+    &-left {
+        width: 758px;
+        float: left;
+    }
+    &-right {
+        width: 372px;
+        float: right;
+    }
+    &-hd {
+        padding-bottom: 15px;
+        border-bottom: 1px solid #eeeeee;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        &-title {
+            font-size: 24px;
+            color: #222222;
+            font-weight: 700;
+        }
+        &-ctrl {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            &-tags {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                margin-right: 20px;
+                &>div {
+                    color: #888888;
+                    font-size: 14px;
+                    padding-left: 10px;
+                    cursor: pointer;
+                    &.active,
+                    &:hover {
+                        color: #222222;
+                    }
+                    &:not(:last-of-type) {
+                        &:after {
+                            content: '|';
+                            margin-left: 10px;
+                            color: #CCCCCC;
+                            font-weight: 100;
+                        }
+                    }
+                }
+            }
+            &-notice {
+                cursor: pointer;
+                width: 20px;
+                &-set{
+                  width: 20px;
+                  height: 20px;
+                  background-image:url(../../assets/images/143/shezhi-2@2x.png);
+                  background-size: 20px;
+                }
+            }
+        }
+    }
+    &-list {
+        padding-top: 30px;
+        &-item {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            margin-bottom: 30px;
+           
+            &-author {
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+            &-content {
+                padding-bottom: 30px;
+                border-bottom: 1px solid #EEEEEE;
+                -webkit-box-flex:1;
+                    -ms-flex:1;
+                        flex:1;
+                &-info {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    margin-bottom: 17px;
+                    &-left {
+                        &-name {
+                            font-size: 14px;
+                            color: #222222;
+                            line-height: 1;
+                            margin-bottom: 5px;
+                        }
+                        &-date {
+                            font-size: 12px;
+                            color: #999999;
+                            line-height: 1;
+                        }
+                    }
+                    &-center {
+                        margin-left: 22px;
+                    }
+                    &-right {
+                        margin-left: 22px;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        &-1 {
+                            font-size: 12px;
+                            color: #7F7F7F;
+                            line-height: 15px;
+                        }
+                        &-2 {
+                            width: 177px;
+                            height: 4px;
+                            background: #EEEEEE;
+                            border-radius: 9px;
+                            margin-left: 9px;
+                            margin-right: 9px;
+                            background-size: 10% 100%;
+                            background-image: -webkit-gradient(linear, left top, left bottom, from(red));
+                            background-image: linear-gradient(red);
+                            background-repeat: no-repeat;
+                        }
+                        &-3 {
+                            font-size: 12px;
+                            color: #FA322B;
+                            line-height: 17px
+                        }
+                    }
+                }
+                h1 {
+                    line-height: 1;
+                    font-size: 20px;
+                    color: #000000;
+                    margin-bottom: 9px;
+                }
+                p {
+                    line-height: 24px;
+                    font-size: 14px;
+                    color: #666666;
+                }
+            }
+        }
+        &-loadmore{
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+color: #4D87EA;
+line-height: 20px;
+cursor: pointer;
+        }
+    }
+}
+
+.page-live-hd-ctrl-notice-el-dropdown {
+    width: 152px;
+    height: 82px;
+    margin: 0;
+    padding: 15px 0 0 0;
+    .el-dropdown-menu__item:not(.is-disabled):hover {
+      background-color: #ffffff;
+      color: #475669;
+    }
+    .el-dropdown-menu__item {
+        width: 124px;
+        height: 20px;
+        margin: 0 auto;
+        padding: 0;
+        line-height: 1;
+        font-size: 12px;
+        line-height: 20px;
+        color: #475669;
+        &:first-of-type {
+            margin-bottom: 12px;
+        }
+        &:focus,
+        &:hover {
+            background-color: white;
+            color: #475669;
+        }
+        .el-switch {
+            float: right;
+        }
+    }
+}

@@ -1,0 +1,372 @@
+.minefield{
+  &-head{
+    height: 500px;
+    background-image: url(../../assets/images/142/233333@2x.png);
+    background-size:auto 100%;
+    background-position-x: center;
+    .minefieldWt{
+      width: 1180px;
+      margin: 0 auto;
+      height: 500px;
+      position: relative;
+      &_left{
+        position: absolute;
+        left: 0;
+        top: 48px;
+        width: 320px;
+        height: 374px;
+        z-index: 10;
+        &-color{
+          width: 320px;
+          height: 374px;
+          left: 0;
+          top: 0;
+          position: absolute;
+          opacity: 0.8;
+          background-image: linear-gradient(-180deg, #0C204C 0%, #111F46 100%);
+          z-index: -20;
+        }
+        &-img{
+          width: 110px;
+          height: 110px;
+          background: rgba(255,255,255,0.20);
+          border-radius: 50%;
+          margin: 48px 108px 18px;
+          padding: 6px;
+          img{
+            border-radius: 50%;
+            width: 98px;
+            height: 98px;
+          }
+        }
+        &-imgn{
+          width: 110px;
+          height: 110px;
+          border-radius: 50%;
+          margin: 48px 108px 18px;
+          img{
+            border-radius: 50%;
+            width: 110px;
+            height: 110px;
+            opacity: 0.2
+          }
+        }
+        &-name{
+          font-size: 34px;
+          color: #FFFFFF;
+          text-align: center;
+          line-height: 48px;
+          margin-bottom: 40px;
+          &-nologin{
+            font-size: 16px;
+            line-height: 28px;
+          }
+        }
+        &-ranking{
+          display: -webkit-flex;
+          display: flex;
+          justify-content:space-around;
+          text-align: center;
+          p{
+            font-size: 14px;
+            color: #FFFFFF;
+            opacity: 0.6;
+            line-height: 24px;
+          }
+          span{
+            font-size: 26px;
+            color: #FFFFFF;
+            line-height: 26px;
+          }
+        }
+        &-longing{
+          width: 280px;
+          height:58px;
+          margin: 0 19px;
+          font-size: 24px;
+        }
+      }
+      &_right{
+        position: absolute;
+        left: 393px;
+        top: 48px;
+        font-size: 14px;
+        color: #FFFFFF;
+        width: 800px;
+        height: 500px;
+        background-image: url(../../assets/images/142/Group_65@2x.png);
+        background-repeat: no-repeat;
+        background-size: 775px 350px;
+        &_list{
+          width: 73px;
+          position: absolute;
+          height: 388px;
+          .minefieldWttop{
+            position: absolute;
+            font-size: 18px;
+          }
+          .minefieldWtround{
+            position: absolute;
+        
+            width: 14px;
+            height: 14px;
+            background: #4D87EA;
+            border: 2px solid rgba(255,255,255,0.51);
+            border-radius: 50%;
+          }
+          .minefieldWtcircular{
+            width: 16px;
+            height: 16px;
+            background: #8C27FF;
+            border: 2px solid #FFFFFF;
+            box-shadow:0 0 6px 6px rgba(77,135,234,0.60);
+          }
+          .minefieldWtbottom{
+            position: absolute;
+            text-align: center;
+            line-height: 24px;
+            height: 24px;
+            width: 74px;
+            bottom: 0;
+            left: 0;
+            border: 1px solid #4D87EA;
+            border-radius: 100px;
+            font-size: 12px;
+          }
+        }
+        &_list:nth-child(1){
+          left: 46px;
+          .minefieldWttop{
+            left: 32px;
+            bottom: 130px;
+          }
+          .minefieldWtround{
+            left: 30px;
+            bottom: 107px;
+          }
+        }
+        &_list:nth-child(2){
+          left: 204px;
+          .minefieldWttop{
+            left: 21px;
+            bottom: 162px;
+          }
+          .minefieldWtround{
+            left: 29px;
+            bottom: 135px;
+          }
+        }
+        &_list:nth-child(3){
+          left: 368px;
+          .minefieldWttop{
+            left: 15px;
+            bottom: 208px;
+          }
+          .minefieldWtround{
+            left: 29px;
+            bottom: 182px;
+          }
+        }
+        &_list:nth-child(4){
+          left: 530px;
+          .minefieldWttop{
+            left: 14px;
+            bottom: 272px;
+          }
+          .minefieldWtround{
+            left: 28px;
+            bottom: 248px;
+          }
+        }
+        &_list:nth-child(5){
+          left: 690px;
+          .minefieldWttop{
+            left: -20px;
+            bottom: 368px;
+          }
+          .minefieldWtround{
+            left: 16px;
+            bottom: 333px;
+          }
+        }
+      }
+    }
+    
+  }
+  &Rule{
+    height: 608px;
+    margin: 0 auto;
+    width: 1180px;
+    padding-top:32px;
+    padding-bottom: 78px; 
+    &-line{
+      background-image: linear-gradient(132deg, #4887FE 0%, #2F4BF4 97%);
+      width: 120px;
+      height: 4px;
+      margin:12px auto;
+    }
+    &-h1{
+      text-align: center;
+      font-size: 40px;
+      color: #333333;
+      line-height: 56px;
+    }
+    &-content{
+      display: -webkit-flex;
+      display: flex;
+      justify-content:space-between;
+      margin-top: 22px;
+      &-item{
+        width: 338px;
+        height: 410px;
+        background-color: #FFFFFF;
+        box-shadow: 0 2px 23px 18px rgba(0,0,0,0.02);
+        border-radius: 8px;
+        padding-left: 42px;
+        padding-right: 24px;
+        text-align: center;
+        &:nth-child(1) img{
+          width: 64px;
+        }
+        &:nth-child(2) img{
+          width: 50px;
+        }
+        &:nth-child(3) img{
+          width: 46px;
+        }
+        img{
+          padding-top: 69px;
+          padding-bottom: 31px;
+        }
+        h3{
+          font-size: 20px;
+          color: #333333;
+          margin-bottom:16px; 
+        }
+        p{
+          font-size: 13px;
+          color: #333333;
+          line-height: 26px;
+          position: relative;
+          text-align:left;
+        }
+        p:after { 
+          content: "";
+          position: absolute;
+          left: -18px;
+          top: 11px;
+          width: 6px;
+          height: 6px;
+          background: #4D87EA;
+          border-radius: 8px;
+        } 
+      }
+    }
+  }
+  &Task{
+    background-image:  url(../../assets/images/142/Group_15@2x.png);
+    background-size:auto 100%;
+    padding-bottom: 53px;
+    background-position-x: center;
+    &-marg{
+      margin: 0 auto;
+      width: 1180px;
+      padding-top:32px;
+      &-line{
+        background-image: linear-gradient(132deg, #4887FE 0%, #2F4BF4 97%);
+        width: 120px;
+        height: 4px;
+        margin:12px auto;
+      }
+      h1{
+        font-size: 40px;
+        color: #FFFFFF;
+        text-align: center;
+        line-height: 56px;
+        padding:40px 0;
+        padding-top:0;
+      }
+      &-content{
+        position: relative;
+        z-index: 1;
+        &-top{
+          height: 86px;
+          background-image: linear-gradient(90deg, #3E59DB 9%, #6E42DF 91%);
+          display: -webkit-flex;
+          display: flex;
+          justify-content: space-between;
+          
+          &-title{
+            width: 196px;
+            font-size: 24px;
+            color: #FFFFFF;
+            line-height: 86px;
+            text-align: center;
+          }
+        }
+        &-buttom{
+          height: 71px;
+          display: -webkit-flex;
+          display: flex;
+          justify-content: space-between;
+          
+          &_left{
+            width: 196px;
+            font-size: 16px;
+            color: #FFFFFF;
+            padding-left: 19px;
+            background: rgba(23,37,72,0.80);
+            img{
+              width: 18px;
+              height: 18px;
+              margin-right:9px; 
+            }
+          }
+          &_right{
+            width: 197px;
+            background: rgba(0,3,6,0.20);
+            font-size: 16px;
+            color: #FFFFFF;
+            padding:0 35px;
+            
+            border-right: 1px solid rgba(255, 255, 255 ,0.06);
+            border-bottom: 1px solid rgba(255, 255, 255 ,0.06);
+            .alink:hover{
+              color: #409eff;
+            }
+          }
+          .con{
+            display: flex;
+            align-items:center; 
+            
+          }
+          .te{
+            text-align: center;
+            padding: 0;
+            line-height: 71px;
+          }
+        }
+      }
+    }
+    
+  }
+  &Activity{
+    height: 438px;
+    text-align: center;
+    padding: 49px 0 40px;
+    img{
+      height: 280px;
+      width: 240px;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    p{
+      font-size: 20px;
+      color: #CFCFCF;
+      line-height: 42px;
+    }
+  }
+    
+
+ 
+}

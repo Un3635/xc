@@ -1,0 +1,46 @@
+{
+  "name": "wl-web",
+  "version": "1.4.4",
+  "description": "Nuxt.js project",
+  "author": "汤汤雪磊 <>",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "HOST=0.0.0.0 PORT=6000 nuxt build",
+    "start": "HOST=0.0.0.0 PORT=6000 nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint",
+    "mydeploy": "pm2 deploy dev update"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "bignumber.js": "^5.0.0",
+    "cookie": "^0.3.1",
+    "echarts": "^4.0.2",
+    "element-ui": "^2.0.11",
+    "html-loader": "^0.5.5",
+    "moment": "^2.20.1",
+    "node-sass": "^4.7.2",
+    "normalize.css": "^7.0.0",
+    "nuxt": "^1.0.0",
+    "qrcode": "^1.2.0",
+    "qs": "^6.5.1",
+    "quill-image-extend-module": "^1.1.2",
+    "ramda": "^0.25.0",
+    "sass-loader": "^6.0.6",
+    "vue-awesome-swiper": "^3.1.2",
+    "vue-echarts": "^3.0.1",
+    "vue-peity": "^0.5.0",
+    "vue-quill-editor": "^3.0.5",
+    "vue2-filters": "^0.2.2",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.15.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.0.0"
+  }
+}

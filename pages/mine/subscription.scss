@@ -1,0 +1,138 @@
+#mine_subscription {
+  background-color: #f4f4f4;
+  .page {
+    width: 1180px;
+    margin: 0 auto;
+    padding-top: 30px;
+    >.right {
+      width: 1000px;
+      min-height: 630px;
+      background-color: white;
+      float: right;
+      padding: 20px 30px;
+      position: relative;
+      margin-bottom: 30px;
+      .subscription_list {
+        width: 900px;
+        margin: 20px auto 63px auto;
+        &_item {
+          height: 73px;
+          border-bottom: 1px solid #f4f4f4;
+          margin-bottom: 16px;
+          position: relative;
+          .head {
+            width: 56px;
+            height: 56px;
+            margin-right: 24px;
+            float: left;
+            border-radius: 50%;
+          }
+          .headIdentity {
+            width: 13px;
+            height: 13px;
+            position: absolute;
+            left: 44px;
+            top: 36px;
+          }
+          .author {
+            font-size: 14px;
+            color: #222222;
+            margin-right: 38px;
+            float: left;
+            margin-top: 18px;
+            width: 56px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          .pwarpper {
+            float: left;
+            height: 56px;
+            width: 580px;
+            display: table;
+            position: relative;
+          }
+          p {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            font-size: 14px;
+            color: #505050;
+            line-height: 20px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+          }
+          &-btns {
+            float: right;
+            margin-top: 10px;
+            cursor: pointer;
+            width: 99px;
+            opacity: 0;
+            -webkit-transition: opacity 0.5s;
+            transition: opacity 0.5s;
+            &>div {
+              display: none;
+              line-height: 36px;
+              text-align: center;
+              font-size: 16px;
+              border-radius: 44px;
+            }
+            .btn0 {
+              background: rgba(77, 135, 234, 0.99);
+              color: white;
+              width: 99px;
+              &:hover {
+                background: #366df0;
+              }
+              img {
+                width: 14px;
+                vertical-align: -1px;
+              }
+            }
+            .btn1,
+            .but {
+              background: #f5f5f5;
+              color: #4d87ea;
+              width: 99px;
+              display: block;
+              img {
+                width: 13px;
+                vertical-align: -1px;
+              }
+            }
+            .btn-1 {
+              background: #f5f5f5;
+              color: #dd524d;
+              width: 99px;
+            }
+            &.notfollow {
+              opacity: 1;
+              .btn0 {
+                display: block;
+              }
+            }
+            &.follow {
+              opacity: 1;
+              .btn1 {
+                display: block;
+              }
+              &:hover {
+                .btn-1 {
+                  display: block;
+                }
+                .btn1 {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

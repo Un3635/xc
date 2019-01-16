@@ -1,0 +1,75 @@
+/* 全局样式文件 */
+
+body {
+    min-width: 1180px;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.c-form .c-field .el-select {
+    width: 50%;
+}
+
+.c-form .c-field .el-select .el-input .el-input__inner {
+    display: block;
+    border: 1px solid #ccc;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    text-align: left;
+    height: 2rem;
+}
+
+.rateUp {
+    color: #f95453;
+}
+
+.rateDown {
+    color: #3dc28c;
+}
+
+.magicimg {
+    overflow: hidden;
+}
+
+.magicimg img {
+    -webkit-transition: .7s;
+    transition: .7s;
+}
+
+.magicimg img:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+input[type='password'] {
+    letter-spacing: 5px;
+    font-size: 17px;
+}
+
+input[type='password']::-webkit-input-placeholder {
+    letter-spacing: initial;
+    font-size: 14px;
+    color: #cccccc;
+}
+
+input[type='password']:-ms-input-placeholder {
+    letter-spacing: initial;
+    font-size: 14px;
+    color: #cccccc;
+}
+
+input[type='password']::-ms-input-placeholder {
+    letter-spacing: initial;
+    font-size: 14px;
+    color: #cccccc;
+}
+
+input[type='password']::placeholder {
+    letter-spacing: initial;
+    font-size: 14px;
+    color: #cccccc;
+}

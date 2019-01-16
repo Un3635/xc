@@ -1,0 +1,223 @@
+.page-calculator {
+    .el-dropdown {
+        cursor: pointer;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none !important;
+        margin: 0;
+    }
+    &-inner {
+        width: 1180px;
+        margin: 0 auto;
+        padding-top: 30px;
+        padding-bottom: 80px;
+    }
+    &-title {
+        height: 48px;
+        line-height: 33px;
+        font-size: 0;
+        border-bottom: 1px solid #eeeeee;
+        &-coin {
+            font-size: 24px;
+            color: #333333;
+            margin-right: 15px;
+        }
+        &-change {
+            font-size: 14px;
+            color: #4d87ea;
+            vertical-align: 3px;
+            cursor: pointer;
+            img {
+                height: 20px;
+            }
+        }
+    }
+    &-cal {
+        margin-top: 35px;
+        &-right {
+            width: 812px;
+            float: right;
+            &-title {
+                line-height: 25px;
+                height: 25px;
+                margin-bottom: 15px;
+                &-input {
+                    float: left;
+                    font-size: 0;
+                    img {
+                        width: 12px;
+                        height: 14px;
+                        margin-right: 10px;
+                        vertical-align: -1px;
+                    }
+                    span {
+                        font-size: 18px;
+                        color: #333333;
+                    }
+                }
+            }
+            &-body {
+                background: #fafafa;
+                padding: 30px 12px 30px 20px;
+                &-node {
+                    font-size: 14px;
+                    color: #888888;
+                    line-height: 20px;
+                    padding-top: 15px;
+                    border-top: 1px solid #eeeeee;
+                }
+                &-tb {
+                    &-hd {
+                        height: 35px;
+                        &-item {
+                            font-size: 14px;
+                            color: #888888;
+                            line-height: 20px;
+                        }
+                    }
+                    &-bd {
+                        margin-bottom: 30px;
+                        &:last-of-type {
+                            margin-bottom: 83px;
+                        }
+                        &-item {
+                            font-size: 14px;
+                            color: #333333;
+                            line-height: 20px;
+                        }
+                    }
+                    &-hd,
+                    &-bd {
+                        >div {
+                            float: left;
+                            word-wrap: break-word;
+                            &:nth-of-type(1) {
+                                width: 104px;
+                            }
+                            &:nth-of-type(2) {
+                                width: 179px;
+                            }
+                            &:nth-of-type(3) {
+                                width: 188px;
+                            }
+                            &:nth-of-type(4) {
+                                width: 171px;
+                            }
+                            &:nth-of-type(5) {
+                                width: 130px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-left {
+            width: 318px;
+            float: left;
+            &-title {
+                line-height: 25px;
+                height: 25px;
+                margin-bottom: 15px;
+                &-input {
+                    float: left;
+                    font-size: 0;
+                    img {
+                        width: 10px;
+                        height: 10px;
+                        margin-right: 10px;
+                        vertical-align: 1px;
+                    }
+                    span {
+                        font-size: 18px;
+                        color: #333333;
+                    }
+                }
+                &-unit {
+                    float: right;
+                    .unitkey {
+                        font-size: 14px;
+                        color: #888888;
+                        margin-right: 10px;
+                    }
+                    .unitvalue {
+                        font-size: 14px;
+                        color: #fa8c2b;
+                        i {
+                            color: #222222;
+                        }
+                    }
+                }
+            }
+            &-body {
+                &-list {
+                    background: #fafafa;
+                    margin-bottom: 15px;
+                    padding: 30px 20px;
+                }
+                &-item {
+                    height: 30px;
+                    margin-bottom: 20px;
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                    >span {
+                        float: left;
+                        font-size: 14px;
+                        color: #333333;
+                        width: 75px;
+                        font-weight: bolder;
+                    }
+                    >div {
+                        float: left;
+                        width: 202px;
+                        border-bottom: 1px solid #eeeeee;
+                        input {
+                            width: 136px;
+                            border: 0px;
+                            height: 30px;
+                            background-color: transparent;
+                            font-size: 14px;
+                            color: #222222;
+                            margin-top: -10px;
+                        }
+                        span {
+                            font-size: 14px;
+                            color: #222222;
+                            float: right;
+                        }
+                        .el-dropdown {
+                            float: right;
+                        }
+                    }
+                }
+            }
+            &-footer {
+                .rstbtn {
+                    float: left;
+                    width: 92px;
+                    line-height: 40px;
+                    text-align: center;
+                    background: #eeeeee;
+                    border-radius: 4px;
+                    font-size: 16px;
+                    color: #4d87ea;
+                    border: 0px;
+                    cursor: pointer;
+                }
+                .calbtn {
+                    float: right;
+                    width: 211px;
+                    line-height: 40px;
+                    text-align: center;
+                    background: #4d87ea;
+                    border-radius: 4px;
+                    font-size: 16px;
+                    color: #ffffff;
+                    border: 0px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

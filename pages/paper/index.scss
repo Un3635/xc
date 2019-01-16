@@ -1,0 +1,278 @@
+#paper{
+  .paper_header{
+    height: 680px;
+    background-image: url(../../assets/images/142/Rectangle_16_Copy_3@2x.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    text-align: center;
+    color: #fff;
+    &_top{
+      padding-top: 175px;
+      padding-bottom: 34px;
+      img{
+        height: 50px;
+        line-height: 107px;
+        margin-bottom:30px;
+      }
+      span{
+        font-size: 76px;
+        line-height: 107px;
+        margin: 0 46px;
+      }
+    }
+    p{
+      font-size: 32px;
+      display: inline-block;
+      line-height: 45px;
+      opacity: 0.8;
+    }
+    .ruzhu{
+      width: 280px;
+      height: 58px;
+      font-size: 24px;
+      margin-top: 63px;
+      background-color: #4d87ea;
+      border: none;
+      &:hover{
+        background-color: #3b74d5;
+      }
+    }
+  }
+  .paper_about{
+    background: #0E1833;
+    height: 615px;
+    display: flex;
+    &_left{
+      flex: 1;
+      background: #fff;
+      height: 615px;
+    }
+    &_content{
+      flex: 800px;
+      height: 615px;
+      position: relative;
+      &_left{
+        height: 615px;
+        width: 1040px;
+        background: #fff;
+        padding: 112px 0 116px;
+        .xian{
+          background-image: linear-gradient(132deg, #4887FE 0%, #2F4BF4 97%);
+          height: 4px;
+          width: 120px;
+        }
+        h3{
+          font-size: 40px;
+          color: #333333;
+          line-height: 56px;
+          padding-top: 17px;
+        }
+        p{
+          font-size: 14px;
+          color: #333333;
+          line-height: 28px;
+          padding-top: 30px;
+          width: 590px;
+        }
+      }
+      img{
+        position: absolute;
+        width: 540px;
+        height: 364px;
+        left: 670px;
+        top: 126px;
+      }
+    }
+    &_right{
+      height: 615px;
+      flex: 1;
+    }
+  }
+  .paper_growth{
+    height: 703px;
+    background-image: url(../../assets/images/142/Rectangle_25@2x.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position-y: -1px;
+    &_content{
+      width: 1180px;
+      margin: 0 auto;
+      h1{
+        font-size: 40px;
+        color: #FFFFFF;
+        line-height: 56px;
+        padding: 70px 0 46px;
+      }
+      &_con{
+        display: flex;
+        justify-content: space-between;
+        &_list{
+          width: 281px;
+          height: 331px;
+          background-image: linear-gradient(132deg, rgba(72, 135, 254, 0.8) 0%, rgba(47, 75, 244, 0.8) 97%);
+          text-align: center;
+          &-img{
+            height: 132px;
+            padding: 50px 0 20px;
+          }
+          h3{
+            font-size: 18px;
+            color: #FFFFFF;
+            padding-bottom:31px; 
+          }
+          p{
+            opacity: 0.6;
+            font-size: 12px;
+            color: #FFFFFF;
+            line-height: 28px;
+            width: 200px;
+            display: inline-block;
+          }
+          &:nth-child(1) .paper_growth_content_con_list-img img{
+            height: 52px;
+          }
+          &:nth-child(2) .paper_growth_content_con_list-img img{
+            height: 56px;
+          }
+          &:nth-child(3) .paper_growth_content_con_list-img img{
+            height: 51px;
+          }
+          &:nth-child(4) .paper_growth_content_con_list-img img{
+            height: 61px;
+          }
+        }
+        
+      }
+    }
+  }
+  .paper_media{
+    padding: 49px 0 53px;
+    &_content{
+      margin: 0 auto;
+      width: 1180px;
+      height: 600px;
+      background-image: url(../../assets/images/142/Group_7@2x.png);
+      background-size: 100%;
+      position: relative;
+      &_right{
+        position: absolute;
+        right: 0;
+        top:154px;
+        width: 540px;
+        height: 319px;
+        background-image: url(../../assets/images/142/Group_16@2x.png);
+        background-size: 100%;
+        padding-top: 31px;
+        padding-left: 39px;
+        &-xian{
+          background-image: linear-gradient(132deg, #4887FE 0%, #2F4BF4 97%);
+          height: 4px;
+          width: 77px;
+        }
+        &-head{
+          overflow: hidden;
+          margin-top: 21px;
+          margin-bottom: 20px;
+          &-title{
+            float: left;
+            font-size: 36px;
+            color: #333333;
+            line-height: 38px;
+          }
+          &-lei{
+            float: right;
+            width: 120px;
+            height: 38px;
+            border-radius: 19px 0 0 19px;
+            background-image: linear-gradient(132deg, #4887FE 0%, #2F4BF4 97%);
+            font-size: 18px;
+            color: #FFFFFF;
+            text-align: center;
+            line-height: 38px;
+          }
+        }
+        &-contents{
+          padding-top: 34px;
+          &_top{
+            font-size: 14px;
+            color: #999999;
+          }
+          &_bottom{
+            font-size: 20px;
+            color: #333333;
+            line-height: 20px;
+            padding-top: 11px;
+          }
+        }
+      }
+    }
+  }
+  .paper_advantage{
+    height: 702px;
+    background-image: url(../../assets/images/142/Rectangle_25_Copy_2.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    &_content{
+      width: 1180px;
+      margin: 0 auto;
+      text-align: center;
+      &-xian{
+        width: 120px;
+        height: 4px;
+        background: #fff;
+        display: inline-block;
+        margin-top:67px;
+        margin-bottom: 12px;
+      }
+      h1{
+        font-size: 40px;
+        color: #FFFFFF;
+        line-height: 56px;
+        padding-bottom:67px;
+      }
+      &_con{
+        display: flex;
+        justify-content: space-between;
+        &_list{
+          width: 281px;
+          height: 370px;
+          background-color: #fff;
+          text-align: center;
+          &-img{
+            height: 132px;
+            padding: 50px 0 20px;
+          }
+          h3{
+            font-size: 20px;
+            color: #333333;
+            padding-bottom:28px; 
+          }
+          p{
+            opacity: 0.6;
+            font-size: 12px;
+            color: #333333;
+            line-height: 28px;
+            width: 200px;
+            display: inline-block;
+          }
+          &:nth-child(1) .paper_advantage_content_con_list-img img{
+            height: 36px;
+            margin-top: 12px;
+          }
+          &:nth-child(2) .paper_advantage_content_con_list-img img{
+            height: 56px;
+          }
+          &:nth-child(3) .paper_advantage_content_con_list-img img{
+            height: 36px;
+            margin-top: 12px;
+          }
+          &:nth-child(4) .paper_advantage_content_con_list-img img{
+            height: 36px;
+            margin-top: 12px;
+          }
+        }
+      }
+    }
+  }
+}

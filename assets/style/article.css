@@ -1,0 +1,55 @@
+.article {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.75;
+}
+
+.article h1 {
+    padding: 30px 25px 25px 25px;
+}
+
+.article .con {
+    clear: both;
+    padding: 10px 25px;
+    word-break: break-all;
+}
+
+.article p {
+    margin-bottom: 20px;
+    word-break: break-all;
+    text-align: justify;
+}
+
+.article h2,
+.article h3,
+.article h4 {
+    margin-top: 20px;
+    word-break: break-all
+}
+
+.article img {
+    width: 100% !important;
+    display: block;
+    margin: 0 auto;
+}
+
+.article a {
+    color: #2d6cff;
+    text-decoration: underline;
+}
+
+.article a:hover {
+    color: #222;
+}
+
+.article blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+.article iframe {
+    width: 640px !important;
+    height: 498px !important;
+}

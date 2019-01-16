@@ -1,0 +1,117 @@
+#mine {
+    background-color: #f4f4f4;
+    overflow: hidden;
+    padding-bottom: 80px;
+    .page {
+        width: 1180px;
+        margin: 0 auto;
+        padding-top: 30px;
+        
+        >.right {
+            width: 1000px;
+            background-color: white;
+            float: right;
+            padding: 20px 48px 70px 52px;
+            position: relative;
+            .lines {
+                .line {
+                    
+                    position: relative;
+                    height: 80px;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+                    padding-bottom: 13px;
+                    border-bottom: 1px solid #f4f4f4;
+                    margin-bottom: 13px;
+                    line-height: 80px;
+                    overflow: hidden;
+                    .des {
+                        width: 160px;
+                        font-size: 14px;
+                        color: #222222;
+                        font-weight: 700;
+                        float: left;
+                    }
+                    .str {
+                        font-size: 14px;
+                        color: #505050;
+                        width: 300px;
+                        overflow: hidden;
+                        float: left;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        .zuojia{
+                            background:#F29700;
+                        }
+                        .meiti{
+                            background:#4E88EA;
+                        }
+                        .biao{
+                            border-radius:50%;
+                            height:20px;
+                            width:20px;
+                            display: inline-block;
+                            line-height: 20px;
+                            text-align: center;
+                            font-weight: 700;
+                            color: #FFFFFF;
+                        }
+                    }
+                    .head {
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                    }
+                    button {
+                        padding: 0;
+                        float: right;
+                        font-size: 16px;
+                        line-height: 32px;
+                        margin-top: 22px;
+                        &.cando {
+                            width: 92px;
+                            height: 36px;
+                            background: #4E88EA;
+                            border-radius: 4px;
+                            font-size: 16px;
+                            color: #FFFFFF;
+                            line-height: 36px;
+                        }
+                        &.canotdo {
+                            color: #0063ee;
+                            width: 92px;
+                            text-align: center;
+                            border: none;
+                            color: #acacac;
+                            border-radius: initial;
+                            &:hover,
+                            &:focus {
+                                background-color: transparent;
+                            }
+                        }
+                    }
+                    .authortag {
+                        width: 127px;
+                        height: 54px;
+                        line-height: 54px;
+                        -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+                        border: 1px solid #ececec;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        font-size: 0;
+                        padding-left: 10px;
+                        img {
+                            height: 40px;
+                        }
+                        span {
+                            margin-left: 10px;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

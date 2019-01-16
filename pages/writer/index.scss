@@ -1,0 +1,360 @@
+.writer{
+    &-carousel{
+        height: 398px;
+        background-image: url(../../assets/images/143/Rectangle_3_Copy_10@2x.png);
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        &-title{
+            font-size: 24px;
+            color: #FFFFFF;
+            text-align: center;
+            line-height: 20px;
+            padding-top: 38px;
+            padding-bottom: 38px;
+            position: relative;
+            &:before {
+              content: "";
+              width: 21px;
+              height: 2px;
+              background: #ffffff;
+              display: inline-block;
+              margin-right: 10px;
+              margin-bottom: 7px;
+            }
+            &:after {
+              content: "";
+              width: 21px;
+              height: 2px;
+              background: #ffffff;
+              display: inline-block;
+              margin-left: 10px;
+              margin-bottom: 7px;
+            }
+        }
+        &-author{
+            width: 1180px;
+            margin: 0 auto;
+            .el-carousel__item{
+                display: flex;
+                justify-content: space-between;
+                .authorlist{
+                    width: 169px;
+                    height: 230px;
+                    background-color: #FFFFFF;
+                    border-radius: 4px;
+                    overflow: hidden;
+                    position: relative;
+                    cursor: pointer;
+                    &-img{
+                        width: 169px;
+                        height: 154px;
+                        img{
+                            width: 169px;
+                            height: 154px;
+                        }
+                    }
+                    &-name{
+                        text-align: center;
+                        padding-top: 12px;
+                        overflow: hidden;
+                        span{
+                            display: inline-block;
+                            max-width: 116px;
+                            overflow: hidden;
+                            text-overflow:ellipsis;
+                            white-space:nowrap;
+                            font-size: 16px;
+                            color: #333333;
+                            line-height: 16px;
+                        }
+                        img{
+                            width: 17px;
+                            height: 17px;
+                            margin-left:8px;
+                            margin-bottom:8px;
+                        }
+                    }
+                    p{
+                        padding-top: 14px;
+                        line-height: 17px;
+                        font-size: 12px;
+                        color: #888888;
+                        text-align: center;
+                    }
+                    &:hover .authorlist-intord{
+                        opacity: 1;
+                    }
+                    &-intord{
+
+                        -webkit-transition: opacity .5s ease-in-out;
+                        -moz-transition: opacity .5s ease-in-out;
+                        -o-transition: opacity .5s ease-in-out;
+                        transition: opacity .5s ease-in-out;
+
+                        position: absolute;
+                        opacity:0;
+                        top: 0;
+                        left: 0;
+                        z-index: 10;
+                        background-color: #FFFFFF;
+                        width: 169px;
+                        height: 230px;
+                        padding: 0 18px;
+                        &-top{
+                            font-size: 12px;
+                            color: #333333;
+                            text-align: center;
+                            line-height: 20px;
+                            height: 168px;
+                            width: 100%;
+                            &-content{
+                                vertical-align:middle;
+                                display: inline-block;
+                            }
+                            &:after{
+                                content:"";
+                                display:inline-block;
+                                vertical-align:middle;
+                                height:100%;
+                                width:0;
+                            }
+                        }
+                       &-bottom{
+                           text-align: center;
+                            .el-button{
+                                width: 92px;
+                                height: 28px;
+                                padding: 0;
+                                background-color: #4D87EA;
+                                border: none;
+                                span{
+                                    font-size: 14px;
+                                    line-height: 28px;
+                                    
+                                }
+                            }
+                       }
+
+                    }
+                }
+            }
+            
+             
+              .el-carousel__indicators{
+                .el-carousel__indicator{
+                    padding-top: 32px;
+                    .el-carousel__button{
+                        opacity: 1;
+                        background: #E6E6E6;
+                        border-radius: 50%;
+                    }
+                    
+                  }
+                .el-carousel__indicator.is-active{
+                    .el-carousel__button{
+                        background: #4F89EB;
+                        border-radius: 3px;
+                        width: 12px;
+                    }
+                }
+              }
+              
+        }
+    }
+    &-authors{
+        background-image: linear-gradient(180deg, #FFFFFF 45%, #EEEEEE 100%);
+        height: 56px;
+        line-height: 56px;
+        overflow: hidden;
+        font-size: 14px;
+        &-margin{
+            width: 1180px;
+            margin: 0 auto;
+        }
+        &-left{
+            float: left;
+            img{
+                width: 23px;
+                height: 23px;
+                margin-right: 6px;
+                margin-bottom:3px
+            }
+            span{
+                color: #333333;
+            }
+        }
+        &-right{
+            float: right;
+            color: #4C86E8;
+            &:hover,&:focus{
+                color: #4C86E8;
+            }
+        }
+    }
+    &-news{
+        width: 1180px;
+        margin: 0 auto;
+        overflow: hidden;
+        padding-top: 60px;
+        &-left{
+            float: left;
+            width: 758px;
+            margin-right: 48px;
+            &-title{
+                font-size: 24px;
+                color: #333333;
+                letter-spacing: -0.23px;
+                padding-bottom: 15px;
+                line-height: 33px;
+                border-bottom: 2px solid #EEEEEE;
+                font-weight: bold;
+            }
+        }
+        &-right{
+            float: left;
+            width: 372px;
+            &-more{
+                width: 372px;
+                height: 180px;
+                background-image: url(../../assets/images/143/banner@2x.png);
+                background-size: 100%;
+                .el-button{
+                    margin-top: 124px;
+                    margin-left: 20px;
+                    width: 116px;
+                    height: 34px;
+                    background: #4F89EB;
+                    padding: 0;
+                }
+            }
+            &-author{
+                .author-rankings {
+                    margin-top:60px;
+                    &-title{
+                      overflow: hidden;
+                      border-bottom: 1px solid #EEEEEE;
+                      margin-bottom: 10px;
+                      &-left{
+                        float: left;
+                        font-size: 24px;
+                        color: #333333;
+                        line-height: 33px;
+                        padding-bottom: 16px;
+                        font-weight: 700;
+                      }
+                      &-right{
+                        float: right;
+                        width: 100px;
+                        height: 24px;
+                        text-align: center;
+                        line-height: 26px;
+                        font-size: 14px;
+                        color: #333333;
+                        cursor: pointer;
+                        box-sizing:content-box;
+                        span{
+                          display: inline-block;
+                        }
+                        .ranking1{
+                          width:50px;
+                          background: #5581E9;
+                          color: #FFFFFF;
+                          border-radius:8px 0 0 8px;
+                
+                        }
+                        .ranking2{
+                          width:50px;
+                          border: 1px solid #5581E9;
+                          color: #333333;
+                          border: 1px solid #EEEEEE;
+                          border-radius:0 8px 8px 0;
+                        }
+                
+                        .rankings1{
+                          width:50px;
+                          border: 1px solid #EEEEEE;
+                          color: #333333;
+                          border-radius:8px 0 0 8px;
+                        }
+                        .rankings2{
+                          border-radius:0 8px 8px 0;
+                          width:50px;
+                          background: #5581E9;
+                          color: #FFFFFF;
+                        }
+                      }
+                    }
+                    &-item{
+                      &-list{
+                        overflow: hidden;
+                        padding: 10px 0;
+                        display: block;
+                        &-img{
+                          float: left;
+                          width: 64px;
+                          height: 64px;
+                          
+                          margin-right: 16px;
+                          position: relative;
+                          img{
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 50%;
+                          }
+                          
+                          &-num{
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            background: #7F7F7F;
+                            font-size: 12px;
+                            color: #FFFFFF;
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 50%;
+                            text-align: center;
+                            line-height: 20px;
+                          }
+                        }
+                        &-content{
+                          float: left;
+                          width: 290px;
+                          h3{
+                            font-size: 16px;
+                            color: #222222;
+                            padding-bottom: 9px;
+                          }
+                          p{
+                            font-size: 12px;
+                            color: #9B9B9B;
+                            line-height: 18px;
+                            max-height: 36px;
+                            overflow: hidden;
+                          }
+                        }
+                      }
+                      &-list:hover{
+                            background: #fafafa;
+                        .author-rankings-item-list-content{
+                          h3{
+                            color: #4d87ea !important;
+                          }
+                        }
+                      }
+                      &-list:nth-child(1) .author-rankings-item-list-img-num{
+                        background:  #FA322B;
+                      }
+                      &-list:nth-child(2) .author-rankings-item-list-img-num{
+                        background: #FA8C2B;
+                      }
+                      &-list:nth-child(3) .author-rankings-item-list-img-num{
+                        background: #2BAAFA;
+                      }
+                          
+                    }
+                  }
+            }
+        }
+    }
+}

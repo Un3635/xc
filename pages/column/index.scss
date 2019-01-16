@@ -1,0 +1,139 @@
+.column{
+  background-color: #f6f6f6;
+    &_banner{
+        height: 320px;
+        background-image: url(../../assets/images/143/pic2@2x.png);
+        background-size: auto 100%;
+        background-position-x: center;
+        background-repeat: no-repeat;
+        text-align: center;
+        color: #ffffff;
+        h3{
+            padding-top: 96px;
+            padding-bottom: 19px;
+            font-size: 36px;
+            letter-spacing: -0.39px;
+        }
+        p{
+            font-size: 16px;
+            line-height: 26px;
+        }
+    }
+    &_margin{
+        margin: 0 auto;
+        width: 1180px;
+        &_num{
+            padding-top: 31px;
+            padding-bottom: 20px;
+            font-size: 24px;
+            line-height: 33px;
+            color: #222222;
+            letter-spacing: -0.66px;
+            border-bottom: 1px solid #EEEEEE;
+        }
+        &_content{
+            padding-top: 18px;
+            overflow: hidden;
+            &_list{
+                width: 576px;
+                float: left;
+                border-radius: 8px;
+                overflow: hidden;
+                margin-bottom: 30px;
+                background-color: #ffffff;
+                &:hover{
+                  box-shadow: 2px 2px 12px #cccccc;
+                }
+                &:nth-child(odd){
+                    margin-right: 28px;
+                }
+                &-img{
+                    height: 242px;
+                    width: 100%;
+                    background: #cccccc;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+                &-message{
+                    padding:22px 20px 19px 34px;
+                    &-title{
+                        font-size: 22px;
+                        color: #333333;
+                        line-height: 22px;
+                        position: relative;
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            left: -14px;
+                            top: 0px;
+                            width: 3px;
+                            height: 20px;
+                            background: #487FDE;
+                        }
+                    }
+                    &-content{
+                        font-size: 14px;
+                        color: #666666;
+                        line-height: 14px;
+                        padding-top: 14px;
+                    }
+                    &-num{
+                        overflow: hidden;
+                        padding-top: 26px;
+                        line-height: 20px;
+                        font-size: 14px;
+                        &-left{
+                            float: left;
+                            color: #B6B6B6;
+                            span{
+                                color: #487FDE;
+                                margin: 0 3px;
+                            }
+                        }
+                        &-right{
+                            float: right;
+                            a{
+                                color: #487FDE;
+                            }
+                        }
+                    }
+                    &-list{
+                        border: 1px dashed #D2D2D2;
+                        border-radius: 4px;
+                        padding: 15px;
+                        padding-left: 30px;
+                        font-size: 14px;
+                        color: #222222;
+                        line-height: 30px;
+                        margin-top: 11px;
+                        height: 146px;
+                        overflow: hidden;
+                        &-new{
+                            cursor: pointer;
+                            position: relative;
+                            &:after {
+                                content: "";
+                                position: absolute;
+                                left: -16px;
+                                top: 13px;
+                                width: 4px;
+                                height: 4px;
+                                background: #222222;
+                                border-radius: 8px;
+                            }
+                            a{
+                                color: #222222;
+                            }
+                            a:hover{
+                                color: #4D87EA;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}

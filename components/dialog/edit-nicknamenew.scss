@@ -1,0 +1,96 @@
+.edit_nicknamenew{
+  .el-dialog__header{
+      text-align: left;
+      padding: 35px 33px 15px 33px;
+      font-weight: 700;
+  }
+  .el-dialog__body{
+    padding: 0 32px 50px 32px;
+    .el-form-item{
+     margin: 0;
+      .el-input__inner{
+        background: #F9F9F9;
+        border: 1px solid #D8D8D8;
+        border-radius: 4px;
+        margin-top: 20px;
+      }
+      .sub{
+        margin-top: 22px;
+        width: 100%;
+        font-size: 16px;
+        color: #FFFFFF;
+      }
+      .is-disabled{
+        background-color:#A7C4F5;
+      }
+    }
+  }
+  .err{
+      background: rgba(249, 84, 83, .1);
+      border: 1px solid #f95453;
+      border-radius: 4px;
+      font-size: 12px;
+      line-height: 17px;
+      color: #fa322b;
+      padding: 7px 0;
+      text-align: center;
+      margin-top: 22px;
+    }
+    .compact{
+      font-size: 14px;
+      color: #222222;
+      span{
+        font-size: 14px;
+        color: #4E88EA;
+        cursor: pointer;
+      }
+    }
+}
+
+
+.edit_nicknamenewcompact {
+  .el-dialog__header {
+      display: none;
+  }
+  .el-dialog__body {
+      padding: 30px 0 38px 0;
+      .edit_nicknamenewcompact-title {
+          font-size: 20px;
+          color: #222222;
+          line-height: 28px;
+          text-align: center;
+      }
+      .edit_nicknamenewcompact-content {
+          width: 812px;
+          margin: 22px auto 37px auto;
+          background: #f9f9f9;
+          border: 1px solid #efefef;
+          border-radius: 2px;
+          padding-top: 19px;
+          padding-left: 28px;
+          padding-right: 28px;
+          padding-bottom: 30px;
+          p {
+              font-size: 14px;
+              color: #222222;
+              margin-bottom: 30px;
+              line-height: 22px;
+          }
+      }
+      .edit_nicknamenewcompact-close {
+          width: 335px;
+          height: 41px;
+          line-height: 41px;
+          text-align: center;
+          color: white;
+          background: rgba(77, 135, 234, 0.99);
+          border-radius: 4px;
+          font-size: 16px;
+          margin: 0 auto;
+          display: block;
+          outline: none;
+          border: none;
+          cursor: pointer;
+      }
+  }
+}

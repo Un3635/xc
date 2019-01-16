@@ -1,0 +1,76 @@
+.page-zixun-tagcloud {
+    &-inner {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding-bottom: 96px;
+    }
+    &-left {
+        width: 758px;
+        float: left;
+        &-title {
+            font-size: 28px;
+            color: #000000;
+            line-height: 40px;
+            margin-bottom: 10px;
+        }
+        &-date {
+            font-size: 12px;
+            color: #888888;
+            line-height: 17px;
+            margin-bottom: 20px;
+        }
+        &-tags {
+            margin-bottom: 30px;
+            &-tag {
+                background: #f5f5f5;
+                border-radius: 100px;
+                line-height: 40px;
+                padding: 0 30px;
+                display: inline-block;
+                margin-right: 20px;
+                margin-bottom: 20px;
+                color: #222222;
+                font-size: 16px;
+            }
+        }
+        &-url {
+            font-size: 14px;
+            color: #333333;
+            line-height: 22px;
+            a {
+                font-size: 14px;
+                color: #3484f5;
+            }
+        }
+    }
+    &-right {
+        width: 366px;
+        float: right;
+    }
+    &-nav {
+        margin-bottom: 30px;
+        a:first-of-type {
+            font-size: 12px;
+            color: #888888;
+            line-height: 17px;
+        }
+        span {
+            color: #888888;
+            line-height: 17px;
+            margin: 0 2px;
+        }
+        a:last-of-type {
+            font-size: 12px;
+            color: #151515;
+            line-height: 17px;
+        }
+    }
+    &-advbannerleft {
+        margin-bottom: 60px;
+        img {
+            display: block;
+            width: 100%;
+            height: 235px;
+        }
+    }
+}
