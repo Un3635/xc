@@ -1,0 +1,25 @@
+{
+  "index.html": {
+    "resources": [
+      "home.html"
+    ],
+    "refer": [
+      "home.html",
+      "phone.html",
+      "newsflash.html",
+      "watch.html",
+      "quote.html"
+    ]
+  },
+  "home.html": {
+    "refer": [
+      "articleDetail.html"
+    ]
+  },
+  "watch.html": {
+    "refer": [
+      "articleDetail.html",
+      "videoDetail.html"
+    ]
+  }
+}

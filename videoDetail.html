@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	</head>
+	<style type="text/css">
+		html, body{
+			padding: 0;
+			margin: 0;
+			padding-left: 10px;
+			padding-right: 10px;
+			/*background: #ff0000;*/
+		}
+	</style>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">详情</h1>
+		</header>
+		<div class="mui-content" id="videoDetail">
+			<div class="articleDetail-header">
+				{{res.title}}
+			</div>
+			<div class="articleDetail-info">
+				<img :src='res.authorHead' style="height: 15px;width: 15px;border-radius: 10px;"/>
+				{{res.author}} {{res.pubTime}} {{res.totalHotNum}}人阅读
+			</div>
+			<div id="youkuplayer" type="video/mp4" style="width: 100%; height: 192px"></div>
+			<div class="articleDetail-content" v-html="res.contentApp"></div>
+			<div class="articleDetail-recommend" v-if='res'>
+				<div class="recommend">推荐阅读</div>
+				<ul class="mui-table-view">
+			    <li class="mui-table-view-cell mui-media" v-for="(item ,index) in rankList">
+		        <a href="javascript:;">
+		          <img class="mui-media-object mui-pull-left" :src="item.logo">
+		          <div class="mui-media-body">
+		            <span class="title">{{item.title}}</span>
+		            <!--<p class="mui-ellipsis">{{item.nickName}}    阅读数{{item.totalHotNum}}</p>-->
+		          </div>
+		        </a>
+			    </li>
+				</ul>
+			</div>
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="http://player.youku.com/jsapi"></script>
+	<script type="text/javascript">
+		
+		mui.init();
+		var vm = new Vue({
+			el: '#videoDetail',
+		  data: {
+		    videoId: 'Hello Vue!',
+		    res: '',
+		    rankList: []
+		  }
+		})
+		mui.ajax('https://api.walian.cn/video/video-details',{
+  			data: {
+  				id: 123
+  			},
+  			dataType:'json',//服务器返回json格式数据
+	      type:'get',//HTTP请求类型
+	      timeout:10000,//超时时间设置为10秒；
+	      success: function(res) {
+	      	vm.res = res.data;
+	      	var player = new YKU.Player('youkuplayer', {
+						styleid : '0',
+						client_id : '720492e7a62f84a4',
+						vid : vm.res.video,
+						autoplay : true
+					});
+					
+					console.log(document.getElementById('youkuplayer'))
+	      },
+	      error: function(e) {
+	      	console.log(e);
+	      }
+  		})
+		
+		mui.plusReady(function() {
+			var self = plus.webview.currentWebview();
+			vm.videoId = self.videoId;
+			mui.ajax('https://api.walian.cn/video/video-details',{
+  			data: {
+  				id: vm.videoId
+  			},
+  			dataType:'json',//服务器返回json格式数据
+	      type:'get',//HTTP请求类型
+	      timeout:10000,//超时时间设置为10秒；
+	      success: function(res) {
+	      	vm.res = res.data;
+	      	var player = new YKU.Player('youkuplayer', {
+						styleid : '0',
+						client_id : '720492e7a62f84a4',
+						vid : vm.res.video,
+						autoplay : true
+					});
+	      },
+	      error: function(e) {
+	      	console.log(e);
+	      }
+  		})
+			mui.ajax('https://api.walian.cn/api/news-rank-list',{
+  			data: {
+  				id: vm.videoId
+  			},
+  			dataType:'json',//服务器返回json格式数据
+	      type:'post',//HTTP请求类型
+	      timeout:10000,//超时时间设置为10秒；
+	      success: function(res) {
+	      	vm.rankList = res.data.result;
+	      },
+	      error: function(e) {
+	      	console.log(e);
+	      }
+  		})
+		});
+	</script>
+	<style type="text/css">
+		#articleDetail {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		.articleDetail-header {
+			width: 100%;
+			font-size: 1rem;
+			line-height: 1.5;
+			margin-top: 15px;
+			font-weight: bold;
+			color: #000000;
+    	line-height: 1.5;
+		}
+		.articleDetail-info {
+			width: 100%;
+			height: 20px;
+			line-height: 1;
+			font-size: .6rem;
+			margin-top: 10px;
+		}
+		.articleDetail-content {
+			width: 100%;
+			font-size: .8rem;
+			/*min-height: 800px;*/
+		}
+		.articleDetail-content img{
+			width: 100%;
+		}
+				.mui-table-view-cell a{
+			height: 100px;
+		}
+		.articleDetail-recommend {
+			margin-top: 20px;
+		}
+		.articleDetail-recommend .recommend {
+			width: 100%;
+			line-height: 1;
+			font: .9rem;
+			margin-bottom: 10px;
+			padding-top: 10px;
+			text-align: center;
+			border-top: 1px solid #c8c7cc;
+		}
+		.mui-table-view-cell img{
+			width: 125px;
+			max-width: 125px !important;
+			line-height: 100px !important;
+			height: 76px !important;
+		}
+		.mui-table-view-cell .mui-media-body {
+			height: 76px;
+			/*line-height: 25px;*/
+		}
+		.mui-table-view-cell .mui-media-body .title{
+			height: 50px;
+			max-height: 50px;
+			line-height: 25px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: normal;
+		}
+	</style>
+</html>

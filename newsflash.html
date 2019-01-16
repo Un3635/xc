@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	</head>
+	<style type="text/css">
+		html, body{
+			padding: 0;
+			margin: 0;
+			/*background: #ff0000;*/
+		}
+	</style>
+	<body>
+		<div class="main_content">
+		<!--下拉刷新容器-->
+		<!--https://static.walian.cn/wap/1.1.2018061915/img/common_shoucang_unclicked@3x.1f1950c.png-->
+		<!--https://static.walian.cn/wap/1.1.2018061915/img/common_shoucang_clicked@3x.34cae9a.png-->
+			<div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+			  <div class="mui-scroll">
+			    <!--数据列表-->
+			    <ul class="mui-table-view mui-table-view-chevron" id="newslist">
+			      <li class="mui-table-view-cell mui-media" v-for="(item, index) in newsList">
+			      	<div class="newshead">
+			      		<span style="font-size: .8rem;color: #999;">{{getDateDiff(item.pubTime)}}&nbsp;&nbsp;</span> 
+			      		<span style="font-size: .8rem;color: #000;">{{item.identityName}}</span> 
+			      		<span class="readstar">
+			      			<img src="https://static.walian.cn/wap/1.1.2018061915/img/common_shoucang_clicked@3x.34cae9a.png" v-if="n<=item.star" v-for="n in 5"/>
+			      			<img src="https://static.walian.cn/wap/1.1.2018061915/img/common_shoucang_unclicked@3x.1f1950c.png" v-else/>
+			      		</span>
+			      	</div>
+			      	<div class="newstitle">
+			      		{{item.title}}
+			      	</div>
+			      	<div class="newscontent">
+			      		{{item.content}}
+			      	</div>
+			      	<div class="newsfoot">
+			      		利好 {{item.voteGood}}&nbsp;&nbsp;&nbsp;&nbsp;利空{{item.voteNegative}}
+			      	</div>
+			      </li>
+			    </ul>
+			  </div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var vm = new Vue({
+		  el: '#newslist',
+		  data: {
+		    message: 'Hello Vue!',
+		    newsList: [],
+		    page: 1
+		  },
+		  methods: {
+		  	getDateDiff: function(dateTimeStamp) {
+					var minute = 1000 * 60;
+					var hour = minute * 60;
+					var day = hour * 24;
+					var halfamonth = day * 15;
+					var month = day * 30;
+					var now = new Date().getTime();
+					var diffValue = now - dateTimeStamp;
+					if(diffValue < 0){return;}
+					var monthC =diffValue/month;
+					var weekC =diffValue/(7*day);
+					var dayC =diffValue/day;
+					var hourC =diffValue/hour;
+					var minC =diffValue/minute;
+	//				if(monthC>=1){
+	//					result="" + parseInt(monthC) + "月前";
+	//				}
+	//				else if(weekC>=1){
+	//					result="" + parseInt(weekC) + "周前";
+	//				}
+					if ((monthC>=1) || (weekC>=1) || (dayC>=3)) {
+						result = timestampToTime(dateTimeStamp);
+					}
+					else if(dayC>=1){
+						result=""+ parseInt(dayC) + "天前";
+					}
+					else if(hourC>=1){
+						result=""+ parseInt(hourC) + "小时前";
+					}
+					else if(minC>=1){
+						result=""+ parseInt(minC) + "分钟前";
+					}else
+					result = "1分钟内";
+					return result;
+				}
+		  }
+		})
+		mui.init(
+			{
+				pullRefresh : {
+					container:"#refreshContainer",
+					down: {
+		    	contentdown : "下拉刷新",//可选，在下拉可刷新状态时，下拉刷新控件上显示的标题内容
+					contentover : "释放立即刷新",//可选，在释放可刷新状态时，下拉刷新控件上显示的标题内容
+					contentrefresh : "正在刷新...",//可选，正在刷新状态时，下拉刷新控件上显示的标题内容
+		      style:'circle',//必选，下拉刷新样式，目前支持原生5+ ‘circle’ 样式
+		      color:'#2BD009', //可选，默认“#2BD009” 下拉刷新控件颜色
+		      height:'50px',//可选,默认50px.下拉刷新控件的高度,
+		      range:'100px', //可选 默认100px,控件可下拉拖拽的范围
+		      offset:'0px', //可选 默认0px,下拉刷新控件的起始位置
+		      auto: true,//可选,默认false.首次加载自动上拉刷新一次
+						auto: true,
+						callback: pulltofresh
+					},
+					up: {
+						contentdown : "加载中。。。",
+						callback: pushtoloadmore
+					}
+				}
+			}
+		)
+		function pulltofresh() {
+			vm.page = 1;
+			mui.ajax('https://api.walian.cn/api/news-flash?identityId=0&rows=10&page=' + vm.page, {
+				type: 'get',
+				success: function(res){
+					vm.newsList = res.data.list;
+				},
+				error: function(e) {
+					
+				}
+			})
+			mui('#refreshContainer').pullRefresh().endPulldownToRefresh();
+		}
+		function pushtoloadmore() {
+			vm.page++;
+			mui.ajax('https://api.walian.cn/api/news-flash?identityId=0&rows=10&page=' + vm.page, {
+				type: 'get',
+				success: function(res){
+					vm.newsList = vm.newsList.concat(res.data.list);
+				},
+				error: function(e) {
+					
+				}
+			})
+			mui('#refreshContainer').pullRefresh().endPullupToRefresh();
+		}
+	</script>
+	<style type="text/css">
+		.main_content {
+			height: 100vh;
+			width: 100%;
+			position: relative;
+		}
+		.mui-table-view-cell{
+			padding-right: 10px !important;
+		}
+		.mui-table-view-chevron .mui-table-view-cell>a:not(.mui-btn) {
+			margin-right: 0;
+		}
+		.readstar  {
+			float: right;
+		}
+		.readstar img {
+			width: .55rem;
+			margin-left: .2rem;
+		}
+		.newstitle {
+			font: .8rem;
+			color: #000000;
+			font-weight: bold;
+		}
+		.newscontent {
+			font: .8;
+			line-height: 1.66;
+			color: #696969;
+			font-weight: 400;
+		}
+	</style>
+</html>
