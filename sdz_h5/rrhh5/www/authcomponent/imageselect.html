@@ -1,0 +1,15 @@
+<div class="plbox">
+    <div class="plboxwarn" ng-show="binddata.dowarn">{{binddata.warn}}</div>
+    <div class="box">
+        <label class="item item-input item-label item-borderless item-icon-right">
+            <div class="input-label"><span class='isrequire' ng-class="{'require':binddata.require}">*</span>{{binddata.name}}</div>
+           <ul mobiscroll-image="settings"  ng-model="binddata.value" style="display:none">
+                <li ng-repeat="item in binddata.datas" data-val="{{item.name}}">
+                    <img ng-src="{{item.img}}" />
+                    <p>{{item.p}}</p>
+                </li>
+            </ul>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+        </label>
+    </div>
+</div>

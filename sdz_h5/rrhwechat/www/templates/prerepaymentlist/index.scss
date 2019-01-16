@@ -1,0 +1,156 @@
+#prerepaymentlist {
+    .scroll-content,
+    .ionic-scroll {
+        background-color: white;
+    }
+    .hashasctrl {
+        bottom: p2r(74);
+    }
+    .nulldata {
+        text-align: center;
+        font-size: 0;
+        margin-top: 50%;
+        img {
+            width: p2r(121);
+            height: p2r(121);
+        }
+        h2 {
+            margin: 0;
+            line-height: 1;
+            font-size: p2r(14);
+            color: #828282;
+            margin-top: p2r(12);
+        }
+    }
+    .out {
+        height: p2r(91);
+        padding-left: p2r(48);
+        margin-top: p2r(10);
+        margin-bottom: p2r(10);
+        position: relative;
+        img.check {
+            width: p2r(23);
+            height: p2r(23);
+            position: absolute;
+            left: p2r(14);
+            top: p2r(7);
+        }
+        img.back {
+            width: p2r(6);
+            position: absolute;
+            right: p2r(29);
+            top: p2r(39);
+            z-index: 20;
+        }
+        .in {
+            background-color: white;
+            display: inline-block;
+            width: p2r(288);
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+            padding: p2r(22);
+            border-radius: p2r(5);
+            &:before {
+                content: '';
+                position: absolute;
+                right: p2r(15);
+                width: p2r(45);
+                height: p2r(45);
+                background-color: white;
+                border-radius: 50%;
+            }
+            h3 {
+                color: #303030;
+                font-size: p2r(16);
+                margin-bottom: p2r(20);
+                line-height: 100%;
+                .right {
+                    float: right;
+                    width: p2r(64);
+                    text-align: center;
+                    line-height: p2r(21);
+                    font-size: p2r(12);
+                    background-color: #FF5C5C;
+                    color: white;
+                    border-radius: p2r(10);
+                }
+            }
+            h2 {
+                font-size: p2r(13);
+                color: #7F7F7F;
+                margin: 0;
+                line-height: 100%;
+                .money {
+                    color: #F83C3C;
+                }
+                .right {
+                    float: right;
+                    color: #ACACAC;
+                    span {
+                        color: #F83C3C;
+                    }
+                }
+            }
+        }
+    }
+    .ctrl {
+        height: p2r(74);
+        border-top: 1px solid #E6E5E5;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        line-height: p2r(74);
+        background-color: white;
+        .yhqcheck {
+            width: p2r(8);
+            margin-left: p2r(20);
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+        .all {
+            font-size: p2r(14);
+            color: #414141;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: p2r(16);
+            margin-right: p2r(14);
+        }
+        .money {
+            display: inline-block;
+            vertical-align: middle;
+            height: p2r(74);
+            h2 {
+                line-height: 1;
+                font-size: p2r(16);
+                color: #FF5C5C;
+                margin-top: p2r(20);
+                margin-bottom: p2r(10);
+                span {
+                    color: #414141;
+                }
+            }
+            h3 {
+                line-height: 1;
+                font-size: p2r(13);
+                color: #818181;
+                margin: 0;
+            }
+        }
+        .right {
+            float: right;
+            .button {
+                width: p2r(90);
+                height: p2r(40);
+                background-color: #FF5C5C;
+                color: white;
+                font-size: p2r(16);
+                line-height: 1;
+                margin-top: p2r(18);
+                margin-right: p2r(18);
+                border-radius: p2r(30);
+                padding: 0;
+            }
+        }
+    }
+}

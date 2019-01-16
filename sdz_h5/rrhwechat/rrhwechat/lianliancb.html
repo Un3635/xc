@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>人人花</title>
+</head>
+
+<body>
+    <script>
+        function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var _search = decodeURIComponent(window.location.search);
+            var r = _search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
+        var url = decodeURIComponent(window.location.href);
+        var status = getQueryString('status');
+        var result = getQueryString('result');
+        if (status == 0000) {
+            var t = parent;
+            if (!t.rrhsesame) {
+                t.postMessage({
+                    type: 'lianlianbind',
+                    data: result
+                }, '*');
+            }
+            else {
+                t.lianlianbind({
+                    type: 'lianlianbind',
+                    data: result
+                });
+            }
+        } else {
+            var t = parent;
+            if (!t.rrhsesame) {
+                t.postMessage({
+                    type: 'lianlianbindwarn',
+                    data: result
+                }, '*');
+            }
+            else {
+                t.lianlianbindwarn({
+                    type: 'lianlianbindwarn',
+                    data: result
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>

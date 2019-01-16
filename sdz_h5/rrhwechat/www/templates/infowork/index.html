@@ -1,0 +1,80 @@
+<ion-view title="工作信息" class='rrhinfo'>
+    <ion-nav-buttons side="right">
+        <button class="button" ng-click="sub()">提交</button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="warn">信息越完善,借款成功率越高</div>
+        <div class="list rrhlabellist">
+            <div class="out rrhback">
+                <label class="item item-input infolabel">
+                    <span class="req">*  </span>
+                    <span class="input-label">参加工作的年限</span>
+                    <input ng-model="workingTime.input" mobiscroll-scroller="workingTime" type="text" ng-if="workingTime.wheels"/>
+                </label>
+            </div>
+            <div class="out rrhback">
+                <label class="item item-input infolabel">
+                    <span class="req">*  </span>
+                    <span class="input-label">当前工作状态</span>
+                    <input ng-model="status.input" mobiscroll-scroller="status" type="text" ng-if="status.wheels"/>
+                </label>
+            </div>
+            <div class="out">
+                <label class="item item-input infolabel">
+                    <span class="req reqhide">*  </span>
+                    <span class="input-label">现单位名称</span>
+                    <input type="text"  ng-model="userWork.companyName">
+                </label>
+            </div>
+            <div class="out rrhback">
+                <label class="item item-input infolabel">
+                    <span class="req reqhide">*  </span>
+                    <span class="input-label">现单位工作年限</span>
+                    <input ng-model="currentWorkingTime.input" mobiscroll-scroller="currentWorkingTime" type="text" ng-if="currentWorkingTime.wheels"/>
+                </label>
+            </div>
+            <div class="out rrhback">
+                <label class="item item-input infolabel">
+                    <span class="req reqhide">*  </span>
+                    <span class="input-label">现单位地址</span>
+                     <span class="addresskeng">{{address.showinput}}</span>
+                     <input ng-model="address.input" mobiscroll-scroller="address" type="text" ng-if="address.wheels" id="infoaddress" style="display:none"/>
+                </label>
+            </div>
+            <div class="out">
+                <label class="item item-input infolabel">
+                    <span class="req reqhide">*  </span>
+                     <input ng-model="address.input1" type="text" placeholder="所在街道、门牌号" class="address"/>
+                </label>
+            </div>
+            <div class="out">
+                <label class="item item-input infolabel">
+                    <span class="req reqhide">*  </span>
+                    <span class="input-label">现单位电话</span>
+                    <input type="text"  ng-model="userWork.companyPhone" maxlength="13">
+                </label>
+            </div>
+            <div class="out rrhback">
+                <label class="item item-input infolabel">
+                    <span class="req reqhide">*  </span>
+                    <span class="input-label">单位性质</span>
+                    <input ng-model="companyType.input" mobiscroll-scroller="companyType" type="text" ng-if="companyType.wheels"/>
+                </label>
+            </div>
+            <div class="out rrhback">
+                <label class="item item-input infolabel">
+                    <span class="req reqhide">*  </span>
+                    <span class="input-label">当前职业</span>
+                    <input ng-model="position.input" mobiscroll-scroller="position" type="text" ng-if="position.wheels"/>
+                </label>
+            </div>
+            <div class="out rrhback">
+                <label class="item item-input infolabel">
+                    <span class="req reqhide">*  </span>
+                    <span class="input-label">个人月收入</span>
+                    <input ng-model="monthEarning.input" mobiscroll-scroller="monthEarning" type="text" ng-if="monthEarning.wheels"/>
+                </label>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

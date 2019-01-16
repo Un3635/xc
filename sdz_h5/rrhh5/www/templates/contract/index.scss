@@ -1,0 +1,21 @@
+#contract {
+    ul {
+        padding-left: 36px;
+        list-style: disc;
+    }
+    table {
+        width: 100%;
+        tr {
+            td {
+                border: 1px solid black;
+                line-height: 3;
+                text-align: center;
+            }
+            &:first-of-type {
+                td:first-of-type {
+                    width: 100px;
+                }
+            }
+        }
+    }
+}

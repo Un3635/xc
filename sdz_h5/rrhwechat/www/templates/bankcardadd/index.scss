@@ -1,0 +1,81 @@
+#bankcardadd {
+    .scroll-content,
+    .ionic-scroll {
+        background-color: white;
+    }
+    .warn {
+        font-size: p2r(13);
+        line-height: p2r(36);
+        background-color: #FFCD40;
+        padding-left: p2r(15);
+        color: white;
+    }
+    .sfz {
+        background-color: #F4F4F4;
+        color: #828282;
+        div {
+            padding-left: p2r(18);
+            font-size: p2r(13);
+            line-height: p2r(13);
+            &.d1 {
+                padding-top: p2r(18);
+            }
+            &.d2 {
+                padding-top: p2r(18);
+                padding-bottom: p2r(18);
+            }
+        }
+    }
+    .out {
+        padding-left: p2r(18);
+        .infolabel {
+            border: none;
+            border-bottom: 1px solid #E6E5E5;
+            height: p2r(50);
+            line-height: p2r(50);
+            .input-label {
+                font-size: p2r(14);
+                color: #7F7F7F;
+            }
+        }
+        .yzmbt {
+            height: p2r(30);
+            padding: 0 p2r(12);
+            box-sizing: border-box;
+            min-width: p2r(86);
+            font-size: p2r(12);
+            line-height: p2r(12);
+            border: 1px solid #FF5C5C;
+            background-color: white;
+            border-radius: p2r(15);
+            color: #FF5C5C;
+            position: absolute;
+            right: p2r(10);
+        }
+        .yzminput {
+            max-width: p2r(115);
+        }
+        .item-input-wrapper {
+            background-color: white;
+            padding-left: 0;
+            margin-top: 0;
+        }
+        .yzmlabel {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+    .addbt {
+        width: p2r(346);
+        height: p2r(45);
+        background-color: #FF5C5C;
+        color: white;
+        font-size: p2r(18);
+        line-height: p2r(45);
+        border: 1px solid #FF5C5C;
+        margin: p2r(40) auto;
+        display: block;
+        border-radius: p2r(25);
+        box-shadow: 3px 3px 21px 0px #FDD3D3;
+    }
+}

@@ -1,0 +1,37 @@
+#message {
+    .messageout {
+        margin-top: p2r(20);
+        padding-left: p2r(31);
+        padding-right: p2r(14);
+        &:last-of-type {
+            margin-bottom: p2r(100);
+        }
+        .up {
+            font-size: p2r(12);
+            color: #ACACAC;
+            position: relative;
+            margin-bottom: p2r(5);
+            &::before {
+                content: '';
+                position: absolute;
+                left: p2r(-20);
+                top: p2r(6);
+                width: p2r(6);
+                height: p2r(6);
+                background-color: #E13131;
+                border-radius: 50%;
+            }
+        }
+        .down {
+            padding: p2r(6) p2r(12);
+            background-color: white;
+            border-radius: p2r(4);
+            h2 {
+                color: #303030;
+                font-size: p2r(14);
+                line-height: 1.5;
+                margin: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+.prehide {
+    display: none;
+    text-align: center;
+    margin-top: 5.85rem;
+}
+
+.prehide img {
+    width: 40%;
+}
+
+.prehide .info {
+    color: #414141;
+    font-size: 0.9rem;
+}
+
+#time {
+    text-align: center;
+    font-size: 0.55rem;
+    margin-top: 0.75rem;
+    color: #CCCCCC;
+    margin-bottom: 1.7rem;
+}
+
+#goBtn {
+    display: block;
+    width: 14.65rem;
+    height: 2.5rem;
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 1.2rem;
+    font-size: 0.85rem;
+    line-height: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    background: -webkit-linear-gradient(left, #FF7200, #F72828);
+    background: linear-gradient(left, #FF7200, #F72828);
+}

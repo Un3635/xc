@@ -1,0 +1,35 @@
+<ion-view title="微信授权绑定" id="wechatauth" hide-nav-bar='true'>
+    <ion-content>
+        <div class="logo" ng-if="show">
+            <img src="img/icon_weixin_normal.png" alt="" class="limgwx">
+            <img src="img/icon_lianjie_normal.png" alt="" class="limglink">
+            <img src="img/icon_renrenhua_normal.png" alt="" class="limgrrh">
+            <div class="warn">请绑人人花账号，便于下次快速登录</div>
+        </div>
+        <div class="form" ng-if="show">
+            <div class="finput">
+                <span>手机号</span>
+                <input type="tel" placeholder="请输入11位手机号码" ng-model="item.phone" maxlength="11">
+            </div>
+            <div class="finput">
+                <span>手机验证码</span>
+                <input class="shot" type="tel" placeholder="请输入手机验证码" ng-model="item.code" maxlength="4">
+                <button class="button code" ng-click="getcode()" ng-disabled="!item.phone||djs.time>0">{{djs.time?(djs.time+'s'):'发送验证码'}}</button>
+            </div>
+            <div id="captcha1"></div>
+            <div class="finput" ng-if="!_isFromWechatAuthHasReg">
+                <span>密码</span>
+                <input type="tel" placeholder="登录密码(6-16位数字字母组合)" maxlength="16" ng-model="item.password">
+            </div>
+            <div class="finput" ng-if="!_isFromWechatAuthHasReg">
+                <span>邀请码</span>
+                <input type="tel" placeholder="请输入邀请码(非必填)" ng-model="item.recommend_id" maxlength="9">
+            </div>
+            <div class="info">
+                <img src="img/icon_xuanze_pressed.png" alt=""> 绑定即同意
+                <span ng-click="jump(0)">《平台借款人费用表》</span>、<span ng-click="jump(1)">《征信调查授权协议》</span>及<span ng-click="jump(2)">《注册使用服务协议》</span>
+            </div>
+            <button class="button sub" ng-click="reg()" ng-disabled="!item.phone||!item.code">完成绑定</button>
+        </div>
+    </ion-content>
+</ion-view>

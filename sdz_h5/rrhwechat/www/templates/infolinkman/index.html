@@ -1,0 +1,66 @@
+<ion-view title="联系人信息" class='rrhinfo'>
+    <ion-nav-buttons side="right">
+        <button class="button" ng-click="sub()">提交</button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="warn">正常还款时,我们不会联系下述联系人</div>
+        <div class="list rrhlabellist">
+            <div class="out">
+                <label class="item item-input infolabel">
+                    <span class="req  reqhide">*  </span>
+                    <span class="input-label">联系人1</span>
+                </label>
+            </div>
+            <div class="out">
+                <label class="item item-input infolabel">
+                    <span class="req  reqhide">*  </span>
+                    <span class="input-label">直系亲属姓名</span>
+                    <input type="text"  ng-model="linkmaninfo1.name" placeholder="直系亲属姓名" class="taleft" maxlength="20">
+                </label>
+            </div>
+            <div class="out rrhback">
+                <label class="item item-input infolabel">
+                    <span class="req  reqhide">*  </span>
+                    <span class="input-label">与您的关系</span>
+                    <input ng-model="linkman1.input" mobiscroll-scroller="linkman1" type="text" placeholder="与您的关系" ng-if="linkman1" class="taleft"/>
+                </label>
+            </div>
+            <div class="out">
+                <label class="item item-input infolabel">
+                    <span class="req  reqhide">*  </span>
+                    <span class="input-label" >联系电话</span>
+                    <input type="text"  ng-model="linkmaninfo1.mobile" placeholder="联系电话" class="taleft" maxlength="11">
+                </label>
+            </div>
+        </div>
+        <div class="list rrhlabellist">
+            <div class="out">
+                <label class="item item-input infolabel">
+                    <span class="req  reqhide">*  </span>
+                    <span class="input-label">联系人2</span>
+                </label>
+            </div>
+            <div class="out">
+                <label class="item item-input infolabel">
+                    <span class="req  reqhide">*  </span>
+                    <span class="input-label">直系亲属姓名</span>
+                    <input type="text"  ng-model="linkmaninfo2.name" placeholder="直系亲属姓名" class="taleft" maxlength="20">
+                </label>
+            </div>
+            <div class="out rrhback">
+                <label class="item item-input infolabel">
+                    <span class="req  reqhide">*  </span>
+                    <span class="input-label">与您的关系</span>
+                    <input ng-model="linkman2.input" mobiscroll-scroller="linkman2" type="text" placeholder="与您的关系" ng-if="linkman2" class="taleft"/>
+                </label>
+            </div>
+            <div class="out">
+                <label class="item item-input infolabel">
+                    <span class="req  reqhide">*  </span>
+                    <span class="input-label">联系电话</span>
+                    <input type="text"  ng-model="linkmaninfo2.mobile" placeholder="联系电话" class="taleft" maxlength="11">
+                </label>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

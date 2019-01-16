@@ -1,0 +1,9 @@
+<div class="plbox">
+    <div class="plboxwarn" ng-show="binddata.dowarn">{{binddata.warn}}</div>
+    <div class="box">
+        <label class="item item-input item-label range item-borderless">
+            <div class="input-label"><span class='isrequire' ng-class="{'require':binddata.require}">*</span>{{binddata.name}}{{binddata.value}}</div>
+            <input type="range"  min="1000" max="2000"  ng-model="binddata.value" placeholder="{{binddata.description}}">
+        </label>
+    </div>
+</div>

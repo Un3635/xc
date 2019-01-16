@@ -1,0 +1,130 @@
+#authlist {
+    .scroll-content {
+        padding: p2r(16) p2r(14);
+        background-color: #F4F4F4;
+    }
+    .warn {
+        font-size: p2r(13);
+        line-height: p2r(17);
+        padding-left: p2r(25);
+        color: #ACACAC;
+        background-image: url(img/tips_warning@3x.png);
+        background-repeat: no-repeat;
+        background-size: p2r(12) p2r(12);
+        background-position: p2r(3) center;
+        margin-bottom: p2r(12);
+    }
+    .out {
+        padding-right: p2r(13);
+        background-color: white;
+        margin-bottom: p2r(5);
+        &.rrhback {
+            background-position: p2r(330) center;
+        }
+    }
+    .authitem {
+        height: p2r(65);
+        position: relative;
+        padding-left: p2r(80);
+        line-height: p2r(65);
+        font-size: p2r(16);
+        color: #414141;
+        img {
+            width: p2r(41);
+            height: p2r(41);
+            position: absolute;
+            left: p2r(18);
+            top: p2r(13);
+        }
+        span {
+            width: p2r(61);
+            height: p2r(23);
+            display: inline-block;
+            text-align: center;
+            line-height: p2r(23);
+            font-size: p2r(11);
+            color: white;
+            border-radius: p2r(15);
+            position: absolute;
+            right: p2r(10);
+            top: p2r(21);
+            &.s0 {
+                background-color: #e8e8e8
+            }
+            &.s1 {
+                background-color: #fb9393
+            }
+            &.s2 {
+                background-color: #fb9393
+            }
+            &.s3 {
+                background-color: #90deff
+            }
+            &.s3 {
+                background-color: #fb9393
+            }
+        }
+    } // .authitem {
+    //     font-size: p2r(16);
+    //     color: #303030;
+    //     line-height: p2r(91);
+    //     margin: p2r(9) 0;
+    //     padding-left: p2r(18);
+    //     border-radius: p2r(10);
+    //     &.hasauth {
+    //         background-image: url(img/authentication_seal.png);
+    //         background-repeat: no-repeat;
+    //         background-size: p2r(54) auto;
+    //         background-position: p2r(280) center;
+    //     }
+    //     img {
+    //         width: p2r(64);
+    //         height: p2r(64);
+    //         vertical-align: middle;
+    //         margin-right: p2r(22);
+    //     }
+    //     span {
+    //         font-size: p2r(12);
+    //         float: right;
+    //         width: p2r(61);
+    //         height: p2r(23);
+    //         line-height: p2r(23);
+    //         text-align: center;
+    //         margin-top: p2r(33);
+    //         color: white;
+    //         border-radius: p2r(12);
+    //         &.fail {
+    //             background-color: #FF5C5C;
+    //         }
+    //         &.in {
+    //             background-color: #22BEFF;
+    //         }
+    //     }
+    //     .channelspan {
+    //         color: white;
+    //         &.must {
+    //             background-color: #FF5C5C;
+    //         }
+    //         &.suc {
+    //             background-color: #47DB06;
+    //         }
+    //         &.fail {
+    //             background-color: red;
+    //         }
+    //         &.in {
+    //             background-color: #22BEFF;
+    //         }
+    //     }
+    // }
+    .sub {
+        width: p2r(344);
+        height: p2r(44);
+        font-size: p2r(17);
+        line-height: p2r(44);
+        color: white;
+        background-color: #F52F2F;
+        border-radius: p2r(30);
+        margin: p2r(13) auto 0 auto;
+        display: block;
+    }
+}

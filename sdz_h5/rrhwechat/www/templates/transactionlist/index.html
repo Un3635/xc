@@ -1,0 +1,23 @@
+<ion-view title="交易记录" id="transactionlist">
+    <ion-nav-buttons side="right">
+        <button class="button" ng-click="sel($event)">筛选</button>
+    </ion-nav-buttons <ion-content class="has-rrhtab">
+    <ion-content>
+        <div class="nulldata" ng-if="nullbg">
+            <img src="img/img_1@3x.png" alt="">
+            <h2>君子两清,江湖再见</h2>
+        </div>
+        <div class="month" ng-repeat="(k,v) in data" ng-if="data">
+            <div class="title">{{k==thismonth?"本月":k}}</div>
+            <div class="out">
+                <div class="in {{'type'+ii.tranType}}" ng-repeat="ii in v">
+                    <h2>{{ii.note}} <span>{{ii.logType>0?'+':'-'}}{{ii.changeMoney|number:2}}元</span></h2>
+                    <h3>{{ii.createdAt| date:"yyyy-MM-dd"}} <span>成功</span></h3>
+                </div>
+                <div class="total">
+                    合计:{{data[k].total|number:2}}元
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

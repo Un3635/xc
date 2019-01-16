@@ -1,0 +1,139 @@
+#rrhcoins {
+    .scroll-content,
+    .ionic-scroll {
+        background-color: white;
+    }
+    .coinimg {
+        width: p2r(115);
+        display: block;
+        margin: p2r(50) auto p2r(20) auto;
+    }
+    .coins {
+        text-align: center;
+        font-size: p2r(26);
+        color: #333333;
+        line-height: p2r(26);
+        margin-bottom: p2r(3);
+        span {
+            font-size: p2r(18);
+        }
+    }
+    .coinsdes {
+        font-size: p2r(15);
+        color: #666666;
+        text-align: center;
+        margin-bottom: p2r(27);
+    }
+    .sub {
+        width: p2r(287);
+        height: p2r(46);
+        display: block;
+        min-height: initial;
+        line-height: p2r(46);
+        padding: 0;
+        color: white;
+        font-size: p2r(17);
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: p2r(25);
+        border-radius: p2r(50);
+        background: -webkit-linear-gradient(left, #F52F2F, #FF5353);
+        background: linear-gradient(left, #F52F2F, #FF5353);
+    }
+    .coinslist {
+        text-align: center;
+        margin-bottom: p2r(93);
+        span {
+            font-size: p2r(14);
+            color: #2175FF;
+            border-bottom: 1px solid;
+        }
+    }
+    .info {
+        width: p2r(290);
+        margin-left: auto;
+        margin-right: auto;
+        .title {
+            font-size: p2r(16);
+            line-height: p2r(16);
+            color: #666666;
+            text-align: center;
+            margin-bottom: p2r(15);
+        }
+        ul {
+            border-top: 1px solid #E9E8E8;
+            padding-top: p2r(15);
+            li {
+                font-size: p2r(14);
+                line-height: p2r(21);
+                color: #666666;
+            }
+        }
+    }
+}
+
+.poprrhcoinslist {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: p2r(119);
+    width: p2r(290);
+    position: relative;
+    .close {
+        position: absolute;
+        right: p2r(-10);
+        top: p2r(-10);
+        width: p2r(26);
+        height: p2r(26);
+        border-radius: 50%;
+        background-color: white;
+        transform: rotate(45deg);
+        &::hover {
+            transform: rotate(405deg);
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            width: p2r(15);
+            height: p2r(15);
+            border-bottom: 2px solid #FB6126;
+            margin-left: p2r(6);
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            width: p2r(15);
+            height: p2r(15);
+            border-left: 2px solid #FB6126;
+            margin-left: p2r(12.5);
+            margin-top: p2r(5.5);
+        }
+    }
+    .title {
+        line-height: p2r(54);
+        font-size: p2r(18);
+        color: #FFFFFF;
+        text-align: center;
+        background: -webkit-linear-gradient(left, #FA5146, #FF6906);
+        background: linear-gradient(left, #FA5146, #FF6906);
+    }
+    .poprrhcoinslistlist {
+        background-color: white;
+        height: p2r(250);
+        ul {
+            height: p2r(250);
+            width: p2r(2101);
+            margin-left: p2r(40);
+            overflow: scroll;
+            li {
+                width: p2r(210);
+                font-size: p2r(14);
+                color: #666666;
+                line-height: p2r(54);
+                border-bottom: 1px dashed #CCCCCC;
+                span {
+                    float: right;
+                }
+            }
+        }
+    }
+}

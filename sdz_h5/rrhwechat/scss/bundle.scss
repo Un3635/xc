@@ -1,0 +1,42 @@
+@function p2r($px) {
+    @return $px / 20 * 1rem;
+}
+
+$ionicons-font-path: "lib/ionic/fonts" !default;
+@import "www/lib/ionic/scss/ionic";
+@import "scss/util";
+@import "www/templates/home/index";
+@import "www/templates/reg/index";
+@import "www/templates/my/index";
+@import "www/templates/autonym/index";
+@import "www/templates/infobase/index";
+@import "www/templates/modallogin/index";
+@import "www/templates/popwaveloginreg/index";
+@import "www/templates/popqrcode/index";
+@import "www/templates/bankcard/index";
+@import "www/templates/bankcardadd/index";
+@import "www/templates/recharge/index";
+@import "www/templates/rechargeerror/index";
+@import "www/templates/rechargesuc/index";
+@import "www/templates/set/index";
+@import "www/templates/about/index";
+@import "www/templates/help/index";
+@import "www/templates/opinion/index";
+@import "www/templates/authlist/index";
+@import "www/templates/order/index";
+@import "www/templates/borrowlist/index";
+@import "www/templates/repaymentlist/index";
+@import "www/templates/prerepaymentlist/index";
+@import "www/templates/orderdetail/index";
+@import "www/templates/contract/index";
+@import "www/templates/contractsuc/index";
+@import "www/templates/message/index";
+@import "www/templates/accountlist/index";
+@import "www/templates/svg/index";
+@import "www/templates/mobileauth/index";
+@import "www/templates/transactionlist/index";
+@import "www/templates/downloadchannel/index";
+@import "www/templates/ticket/index";
+@import "www/templates/rrhcoins/index";
+@import "www/templates/modalticket/index";
+@import "www/templates/wechatauth/index";

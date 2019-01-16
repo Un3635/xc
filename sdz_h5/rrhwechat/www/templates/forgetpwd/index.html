@@ -1,0 +1,23 @@
+<ion-view title="忘记密码" id="reg">
+    <ion-content>
+        <div class="empty rrhbg"></div>
+        <div class="list">
+            <label class="item item-input bordertopnone rrhbdcolor">
+                <input type="tel" placeholder="请输入帐号" ng-model="item.phone" maxlength="11">
+            </label>
+            <div class="item item-input rrhbdcolor">
+                <input type="text" placeholder="验证码" ng-model="item.sms_code">
+                <button class="button  yzmbt" ng-click="getcode()" ng-disabled="!item.phone||djs.time>0">{{djs.time?(djs.time+'s'):'发送验证码'}}</button>
+            </div>
+            <div class="item item-input rrhbdcolor">
+                <input type="{{inputtype}}" placeholder="请输入密码" ng-model="item.password" maxlength="16">
+                <img ng-src="{{imgurl}}" alt="" ng-click="changeimg()">
+            </div>
+            <div class="item item-input rrhbdcolor">
+                <input type="{{inputtype1}}" placeholder="请再次输入密码" ng-model="item.password1" maxlength="16">
+                <img ng-src="{{imgurl1}}" alt="" ng-click="changeimg1()">
+            </div>
+        </div>
+        <button class="button regbt forget" ng-click="reg()" ng-disabled="!item.phone||!item.sms_code||!item.password||!item.password1">完成</button>
+    </ion-content>
+</ion-view>

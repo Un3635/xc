@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>nav</title>
+    <style>
+        a {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="registerProtocol.html">注册使用服务协议!</a>
+    <a href="creditAuthorizationProtocol.html">征信调查授权协议</a>
+    <a href="cost.html">任我花平台借款人费用表</a>
+    <a href="staticcontract.html">借款合同</a>
+    <a href="help.html">常见问题</a>
+    <a href="alipayRepayExplain.html">支付宝转账</a>
+    <a href="violate1.html">逾期后果</a>
+    <a href="bank.html">还款银行</a>
+    <a href="payServiceProtocol.html">支付服务协议</a>
+    <a href="serviceChargePro.html">服务费收取协议</a>
+    <button onclick="cw()">closewindow</button>
+    <button onclick="do123()">测试ios传参回调</button>
+    <button onclick="wx()" id="wx">微信测试用</button>
+    <a href="rrh://www.renrenhua.com/credit/myCertification">安卓浏览器测试</a>
+    <div id="show"></div>
+    <script>
+        n = 10;
+        function do123() {
+            document.getElementById('show').innerHTML = document.getElementById('show').innerHTML + '调用ios开始,发送' + n + '<br>';
+            window.webkit.messageHandlers.test123.postMessage(n);
+        }
+
+        function shareResult(a) {
+            n = a;
+            document.getElementById('show').innerHTML = document.getElementById('show').innerHTML + '进入回调,回调参数是' + n + '<br>'
+        }
+
+
+        function cw() {
+            window.location.href = 'js://com.renwohua.conch/closeWindow'
+        }
+
+        function wx() {
+            document.getElementById('wx').innerHTML = window.location.href
+
+
+        }
+    </script>
+</body>
+
+</html>

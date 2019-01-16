@@ -1,0 +1,77 @@
+<ion-view title="我的" id="my" hide-back-button='true' hide-nav-bar='true'>
+    <ion-content class="has-rrhtab">
+        <input type="file" class="hideinputfile" id="myfile1" capture="camera" accept="image/*">
+        <div class="up">
+            <div class="bg"></div>
+            <div class="contain">
+                <div class="needlogin" ng-if="!user">
+                    <div class="title">
+                        <img src="img/icon_weidenglutishi_normal.png" alt=""> Hi, 等你好久了！
+                    </div>
+                    <div class="bts">
+                        <button class="button reg" ui-sref='reg'>注册</button>
+                        <button class="button login" ng-click="gologin()">登录</button>
+                    </div>
+                </div>
+                <div class="neednotlogin" ng-if="user">
+                    <div class="info">
+
+                        <img ng-src="{{!user?'img/weidenglutouxiang_normal.png':user.headImg}}" alt="" ng-click="trgfile()">
+                        <span class="i1">{{user.certification?user.realName:'未实名'}}</span>
+                        <span class="i2" ng-if="!user.certification" ui-sref='autonym'>实名认证</span>
+                        <span class="i3">{{user.mobile|hidemobile}}</span>
+                    </div>
+                    <div class="money">
+                        <h2>{{user.balanceMoney|number:2}}</h2>
+                        <h3>账户余额(元)</h3>
+                        <button class="button withdraw" ng-click="mygo2('withdraw')">提现</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="mid row row-no-padding row-wrap">
+            <div class="col col-50" ng-click="mygo1('authlist')">
+                <img src="img/icon_woderenzheng_normal.png" alt=""> 我的认证
+            </div>
+            <div class="col col-50" ng-click="mygo('borrowlist')">
+                <img src="img/icon_jekuanjilu_normal.png" alt=""> 借款记录
+            </div>
+            <div class="col col-50" ng-click="mygo1('bankcard')">
+                <img src="img/icon_wode-yinhangka_normal.png" alt=""> 我的银行卡
+            </div>
+            <div class="col col-50" ng-click="wxinvitation()" ng-if="inwx">
+                <img src="img/icon_yaoqinghaoyou_normal.png" alt=""> 邀请好友
+            </div>
+            <div class="col col-50" ng-click="mygo1('ticket')">
+                <img src="img/icon_youhuiquan_normal.png" alt=""> 我的优惠券
+            </div>
+            <div class="col col-50" ng-click="mygo1('rrhcoins')">
+                <img src="img/icon_wodehuabi_normal.png" alt=""> 我的花币
+            </div>
+
+        </div>
+        <div class="down">
+            <div class="out rrhback" ui-sref='set'>
+                <div class="in">设置</div>
+            </div>
+            <div class="out rrhback" ui-sref='help'>
+                <div class="in">帮助中心</div>
+            </div>
+        </div>
+    </ion-content>
+    <div class="rrh-tab bar bar-footer row row-no-padding">
+        <div class="col" ui-sref='home'>
+            <img ng-src="img/tabhome.png" alt="">
+            <h2>首页</h2>
+        </div>
+        <div class="col" ui-sref='prerepaymentlist'>
+            <img ng-src="img/taborder.png" alt="">
+            <h2>还款</h2>
+        </div>
+        <div class="col" ui-sref='my'>
+            <img ng-src="img/tabmy1.png" alt="">
+            <h2 class="active">我的</h2>
+        </div>
+    </div>
+</ion-view>

@@ -1,0 +1,33 @@
+<div class="plbox">
+    <div class="box">
+        <label class="item item-input item-label item-borderless">
+                <div class="input-label" style="color: #414141;font-size: 0.7rem"><span class='isrequire' ng-class="{'require':binddata.require}">*</span>联系人</div>
+        </label>
+    </div>
+    <div class="plboxwarn" ng-show="binddata.domanwarn">{{binddata.manwarn}}</div>
+    <div class="box">
+        <label class="item item-input item-label item-borderless item-icon-right">
+                <div class="input-label"><span class='isrequire' ng-class="{'require':binddata.require}">*</span>直系亲属名</div>
+                <input type="text" ng-model="binddata.man" placeholder="{{binddata.mandescription}}" ng-change="manchange()" ng-model-options="{debounce:1000}">
+                 <i class="icon ion-chevron-right icon-accessory"></i>
+        </label>
+
+    </div>
+    <div class="plboxwarn" ng-show="binddata.dowarn">{{binddata.warn}}</div>
+    <div class="box">
+        <label class="item item-input item-select item-borderless">
+      <div class="input-label">
+          <span class='isrequire' ng-class="{'require':binddata.require}">*</span>和你的关系
+      </div>
+      <select ng-model="binddata.value"> </select>
+      </label>
+    </div>
+    <div class="plboxwarn" ng-show="binddata.dophonewarn">{{binddata.phonewarn}}</div>
+    <div class="box">
+        <label class="item item-input item-label item-borderless item-icon-right">
+                <div class="input-label"><span class='isrequire' ng-class="{'require':binddata.require}">*</span>联系电话</div>
+                <input type="text" ng-model="binddata.phone" placeholder="{{binddata.phonedescription}}" ng-change="phonechange()" ng-model-options="{debounce:1000}" ng-disabled="true">
+                 <i class="icon ion-plus-circled" style="color: #789BFF"></i>
+        </label>
+    </div>
+</div>

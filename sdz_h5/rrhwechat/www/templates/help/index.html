@@ -1,0 +1,31 @@
+<ion-view title="客服与反馈" id="help">
+    <ion-content>
+        <div class="top">
+            <a href="tel:400-006-0918">
+                <img src="img/ie_phone@3x.png" alt="">
+            </a>
+
+            <div>
+                <h2>
+                    <a href="tel:400-006-0918">400-016-6868</a>
+                </h2>
+                <h3>服务时间:9:00-21:00</h3>
+            </div>
+        </div>
+        <div class="center">
+            <div ng-click="showqrcode()">
+                微信公众号
+                <span>renrenhuacom</span>
+            </div>
+            <div ngclipboard data-clipboard-text='help@renrenhua.com' ng-click="copywarn('客服邮箱已复制')">
+                客服邮箱
+                <span>help@renrenhua.com</span>
+            </div>
+        </div>
+        <div class="down">
+            <div class="d1 rrhback" ng-click="goiframe('app.renrenhua.com/rrhprotocolh5/help.html')">常见问题</div>
+            <div class="d1 rrhback" ui-sref='opinion'>意见反馈</div>
+            <div class="d1 rrhback" ng-click="goiframe('app.renrenhua.com/rrhprotocolh5/alipayRepayExplain.html')">人人花支付宝还款</div>
+        </div>
+    </ion-content>
+</ion-view>

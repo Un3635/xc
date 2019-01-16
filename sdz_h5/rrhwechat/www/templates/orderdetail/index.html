@@ -1,0 +1,113 @@
+<ion-view title="借款详情" id="orderdetail">
+    <ion-nav-buttons side="right">
+        <button class="button" ng-click="pdfcontractFee()" ng-if="data.status==7||data.status==6||data.status==8">借款合同</button>
+    </ion-nav-buttons>
+    <ion-content ng-class="{'hasctrl':(data.status==6||data.status==8)}" overflow-scroll="{{scroll}}">
+        <div class="mainlayer">
+            <div class="main">
+                <div class="up">
+                    <div class="upup">
+                        <img src="img/order_detail_icon.png" alt="">
+                        <span class="pname">{{data.productName}}</span>
+                        <span class="time">{{data.date}}</span>
+                    </div>
+                    <div class="updown">
+                        <span class="orderlabel">订单号</span>
+                        <span class="orderno">{{data.orderNo}}</span>
+                        <span class="state s1" ng-if="[1,2,4,9].indexOf(data.status)>=0">审核中</span>
+                        <span class="state s2" ng-if="[3,5,10,11].indexOf(data.status)>=0">被驳回</span>
+                        <span class="state s3" ng-if="[7].indexOf(data.status)>=0">已还清</span>
+                        <span class="state s4" ng-if="[6,8].indexOf(data.status)>=0">还款中</span>
+                    </div>
+                </div>
+                <div class="down row row-no-padding">
+                    <div class="col col-33">
+                        <h2>贷款总额(元)</h2>
+                        <h3>{{data.reqMoney|number:2}}</h3>
+                    </div>
+                    <div class="col col-33">
+                        <h2>综合服务费(元)</h2>
+                        <h3>{{data.serversFee|number:2}}</h3>
+                    </div>
+                    <div class="col col-33">
+                        <h2>剩余待还(元)</h2>
+                        <h3>{{data.pendingRepayment|number:2}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="repayment" ng-if="data.status==6||data.status==8">
+            <div class="title">
+                还款计划 <span>已还{{data.repayment|number:2}}元,待还{{data.pendingRepayment|number:2}}</span>
+            </div>
+            <div class="repaymentlist">
+                <div class="repaymentitem" ng-repeat="i in data.paybackPlans" ng-click="changecheck()">
+                    <div class="in" ng-class="{'hasborder':!(i.overdueDays>0||i.daysRemaining>=0)}">
+                        <img ng-src="{{check?('img/icon_duoxuan_pressed.png'):('img/icon_duoxuan_normal.png')}}" alt="">
+                        <span class="money">{{i.balance|number:2}}元</span>
+                        <span class="time" ng-if="i.daysRemaining>=0">剩余
+                            <span class="day"> {{i.daysRemaining}}</span> 天
+                        </span>
+                        <span class="time" ng-if="i.overdueDays>0">已逾期
+                            <span class="day"> {{i.overdueDays}}</span> 天
+                        </span>
+                    </div>
+                    <div class='t13' ng-if="i.overdueDays>0||i.daysRemaining>=0">最后还款日:{{i.repaymentTime|date:"yyyy-MM-dd"}}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fail" ng-if="[3,5,10].indexOf(data.status)>=0">
+            <div class="steps">
+                <div class="step1 step">
+                    <img src="img/icon_shenghe_normal.png" alt="">
+                    <span class="info1">提交贷款申请</span>
+                    <span class="time">{{data.orderFlow[0].date|date:"yyyy-MM-dd"}}</span>
+                </div>
+                <div class="step2 step">
+                    <img src="img/icon_sbutongguo_normal.png" alt="">
+                    <span class="info2">审核未通过</span>
+                    <span class="time">{{data.orderFlow[1].date|date:"yyyy-MM-dd"}}</span>
+                </div>
+            </div>
+            <div class="yj">审核意见:{{data.rejectReason||'暂无审核意见'}}</div>
+            <div class="warn">更多认证信息可提升审核通过率哦~</div>
+            <div class="auth" ui-sref='authlist'>认证信息</div>
+            <button class="button rebt" ui-sref='home'>重新申请</button>
+        </div>
+
+        <div class="wait" ng-if="[1,2,4,9].indexOf(data.status)>=0">
+            <div class="steps">
+                <div class="step" ng-repeat="i in data.orderFlow">
+                    <img src="img/icon_shenghe_normal.png" alt="" ng-if="i.date">
+                    <span ng-if="!i.date" class="waitimg"></span>
+                    <span class="info1">{{i.stepName}}</span>
+                    <span class="time">{{i.date|date:"yyyy-MM-dd"}}</span>
+                </div>
+            </div>
+            <!--<button class="button qianyuebt" ng-if="data.status==4&&!data.contractFee" ng-click="gocontract()">马上签约</button>-->
+        </div>
+
+        <div class="payoff" ng-if="data.status==7">
+            <div class="in">
+                <img src="img/1242-icon_huanqingtishi_normal.png" alt="">
+                <h2>贷款已还清，希望我们能继续帮到您</h2>
+            </div>
+
+        </div>
+    </ion-content>
+    <div ng-if="data.status==6||data.status==8" ng-class="{'ctrl':data.status==6||data.status==8}">
+        <div class="all" ng-click="changecheck()">{{!check?'全选':'取消'}}</div>
+        <div class="money">
+            <h2><span>合计:</span>{{check?(data.paybackPlans[0].balance-(modal&&modal.item?modal.item.deduction:0)|number:2):(0|number:2)}}<span>元</span></h2>
+            <h3 ng-click="modalyhq()" ng-if="!(modal&&modal.item)">选择优惠券 <img src="img/rrhback.png" alt="" class="yhqcheck"></h3>
+            <h3 ng-if="modal&&modal.item" ng-click="modalyhq()">抵用{{modal.item.deduction}}元 <img src="img/rrhback.png" alt="" class="yhqcheck"></h3>
+
+        </div>
+        <button class="button" ng-click="repayment()">马上还款</button>
+
+    </div>
+
+</ion-view>

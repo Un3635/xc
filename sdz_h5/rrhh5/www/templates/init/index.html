@@ -1,0 +1,22 @@
+<ion-view title="任我花初始化" id="init">
+    <ion-nav-bar class="bar-assertive">
+        <ion-nav-buttons side="primary">
+            <button class="button ion-ios-arrow-back" ng-click="BACK()"></button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+
+    <ion-content class="light-bg">
+        <button class="button green" ui-sref='infocollection'>infocollection</button>
+        <button class="button" ui-sref='init'>init</button>
+        <button class="button" ui-sref='auth'>认证</button>
+        <button class="button" ng-click="do()">登录</button>
+        <button class="button" ng-click="do1()">查询个人信息</button>
+        <button class="button" ng-click="do2()">load</button>
+        <button class="button" ng-click="do3()">loginmodal</button>
+        <button class="button" ng-click="do4()">清除登录</button>
+        <div class="item" ng-if="USER">
+            {{USER}}
+        </div>
+        </div>
+    </ion-content>
+</ion-view>

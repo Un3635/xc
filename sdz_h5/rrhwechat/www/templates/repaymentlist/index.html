@@ -1,0 +1,20 @@
+<ion-view title="还款列表" id="repaymentlist">
+    <ion-content>
+        <div class="nulldata" ng-if="nullbg">
+            <img src="img/img_1@3x.png" alt="">
+            <h2>君子两清,江湖再见</h2>
+        </div>
+        <div class="month" ng-repeat="(k,v) in data">
+            <div class="title">{{k==thismonth?"本月":k}}</div>
+            <div class="out">
+                <div class="in" ng-repeat="ii in v">
+                    <h2>还款 <span>-{{ii.actualRepaymentAmount}}元</span></h2>
+                    <h3>{{ii.actualRepaymentTime| date:"yyyy-MM-dd"}} <span>成功</span></h3>
+                </div>
+                <div class="total">
+                    合计:{{data[k].total}}元
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

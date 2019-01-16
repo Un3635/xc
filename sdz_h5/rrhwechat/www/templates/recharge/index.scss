@@ -1,0 +1,117 @@
+#recharge,
+#withdraw {
+    .scroll-content,
+    .ionic-scroll {
+        background-color: white;
+    }
+    .up {
+        padding: p2r(40) 0;
+        text-align: center;
+        background-image: url(img/bk_right@3x.png);
+        background-repeat: no-repeat;
+        background-size: p2r(66) p2r(14);
+        background-position: center center;
+        font-size: 0;
+        &>div {
+            display: inline-block;
+            font-size: 0;
+        }
+        .bank {
+            text-align: center;
+            margin-right: p2r(136);
+            img {
+                width: p2r(40);
+                height: p2r(40);
+            }
+            &name {
+                font-size: p2r(13);
+                line-height: 100%;
+                color: #414141;
+                margin-bottom: p2r(12);
+            }
+            &no {
+                font-size: p2r(13);
+                line-height: 100%;
+                color: #818181;
+            }
+        }
+        .account {
+            text-align: center;
+            img {
+                width: p2r(40);
+                height: p2r(40);
+            }
+            &name {
+                font-size: p2r(13);
+                line-height: 100%;
+                color: #414141;
+                margin-bottom: p2r(12);
+            }
+            &no {
+                font-size: p2r(18);
+                line-height: 100%;
+                color: #818181;
+            }
+        }
+    }
+    .input {
+        padding-left: p2r(28);
+        .i1 {
+            border-bottom: 1px solid #E6E5E5;
+            display: block;
+            font-size: 0;
+            &.bordernone {
+                border: none;
+            }
+            .yuan {
+                font-size: p2r(36);
+                color: #414141;
+            }
+            .m1 {
+                font-size: p2r(36);
+            }
+            input {
+                display: inline-block;
+                width: p2r(160);
+                height: p2r(38);
+                padding: 0;
+            }
+            .op0 {
+                opacity: 0;
+                margin-left: p2r(40);
+                line-height: p2r(56);
+            }
+            button {
+                border: 1px solid #FF5C5C;
+                background-color: white;
+                box-sizing: border-box;
+                color: #FF5C5C;
+                box-shadow: 1px 1px 4px 0px #FF5C5C;
+                width: p2r(100);
+                height: p2r(30);
+                font-size: p2r(14);
+                line-height: p2r(14);
+                border-radius: p2r(18);
+                vertical-align: middle;
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+    .warn2yuan {
+        color: red;
+        padding-left: p2r(68);
+        margin-top: p2r(10);
+    }
+    .subbt {
+        width: p2r(290);
+        height: p2r(45);
+        margin: p2r(80) auto;
+        display: block;
+        border: 1px solid #FF5C5C;
+        background-color: #FF5C5C;
+        color: white;
+        border-radius: p2r(50);
+        font-size: p2r(18);
+    }
+}

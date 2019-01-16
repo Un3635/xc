@@ -1,0 +1,100 @@
+#wechatauth {
+    .scroll-content,
+    .ionic-scroll {
+        background-color: white;
+    }
+    .logo {
+        text-align: center;
+        background-color: #f4f4f4;
+        height: p2r(157);
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-top: p2r(38);
+        font-size: 0;
+        .limgwx {
+            width: p2r(63);
+            height: p2r(63);
+        }
+        .limglink {
+            width: p2r(21);
+            vertical-align: p2r(24);
+            margin-left: p2r(15);
+            margin-right: p2r(15);
+        }
+        .limgrrh {
+            width: p2r(63);
+            height: p2r(63);
+        }
+        .warn {
+            margin-top: p2r(20);
+            line-height: 1;
+            font-size: p2r(13);
+            color: #7F7F7F;
+            text-align: left;
+            padding-left: p2r(18);
+        }
+    }
+    .form {
+        padding-left: p2r(18);
+        .finput {
+            border-bottom: 1px #f4f4f4 solid;
+            span {
+                color: #7F7F7F;
+                width: p2r(92);
+                font-size: p2r(15);
+                display: inline-block;
+            }
+            input {
+                width: p2r(240);
+                line-height: p2r(20);
+                height: p2r(50);
+                font-size: p2r(15);
+                color: #7F7F7F;
+                display: inline-block;
+                &.shot {
+                    width: p2r(140);
+                }
+            }
+            button {
+                width: p2r(95);
+                height: p2r(30);
+                min-height: initial;
+                text-align: center;
+                line-height: p2r(30);
+                border: 1px solid #FA4717;
+                color: #FA4319;
+                font-size: p2r(14);
+                background-color: white;
+                padding: 0;
+                border-radius: p2r(15);
+                margin-top: p2r(10);
+            }
+        }
+        .info {
+            margin-top: p2r(10);
+            color: #414141;
+            font-size: p2r(14);
+            line-height: 1.5;
+            img {
+                width: p2r(14);
+                height: p2r(14);
+            }
+            span {
+                color: #FA4319;
+            }
+        }
+        .sub {
+            width: p2r(345);
+            height: p2r(45);
+            min-height: initial;
+            padding: 0;
+            line-height: p2r(45);
+            color: white;
+            font-size: p2r(17);
+            background: -webkit-linear-gradient(left, #FF7200, #F72828);
+            background: linear-gradient(left, #FF7200, #F72828);
+            border-radius: p2r(30);
+            margin-top: p2r(35);
+        }
+    }
+}

@@ -1,0 +1,28 @@
+<ion-modal-view id="studysecurity" ng-controller="studysecurity">
+    <ion-content class="bg">
+        <div class="list card">
+            <label class="item item-input">
+                <input type="text" placeholder="学信网帐号" ng-model="studysecuritydata.chsi_username">
+            </label>
+        </div>
+        <div class="list card">
+            <label class="item item-input">
+                <input type="password" placeholder="密码" ng-model="studysecuritydata.chsi_password">
+            </label>
+        </div>
+        <div class="list bg">
+            <div class="item bg item-borderless">
+                <button class="button button-assertive button-block" ng-click="studysecuritydatapost()" ng-disabled="!studysecuritydata.chsi_username||!studysecuritydata.chsi_password">确认</button>
+            </div>
+            <div class="item bg item-borderless">
+                <h6>
+                    <a href="http://jingyan.baidu.com/article/48b37f8d1e69fd1a64648894.html" class="assertive">如何获得学信码？</a>
+                </h6>
+                <h6>
+                    <a href="https://account.chsi.com.cn/passport/login?service=http%3A%2F%2Fmy.chsi.com.cn%2Farchive%2Fj_spring_cas_security_check"
+                        class="assertive">登录学信网进行认证</a>
+                </h6>
+            </div>
+        </div>
+    </ion-content>
+</ion-modal-view>

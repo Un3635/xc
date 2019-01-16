@@ -1,0 +1,18 @@
+<ion-view title="常见问题" id="about231" on-swipe-left="onSwipeRight()" on-swipe-right="onSwipeLeft()">
+    <div class="bar bar-subheader">
+        <div class="row {{'s'+active}}">
+            <div class="col col-25" ng-repeat="i in data" ng-class="{'active':i.active==1}" ng-click="change(i,$index)">{{i.title}}</div>
+        </div>
+    </div>
+    <ion-content class="has-subheader haha">
+        <div class="greyline"></div>
+        <div class="aboutlist" ng-repeat="i in data">
+            <div class="aboutitem" ng-if="i.active==1" ng-repeat="ii in i.list" ng-class="{'open':ii.open}" ng-click="open(ii,i)">
+                <div class="title">
+                    {{ii.title}}
+                </div>
+                <div class="info" ng-bind-html='ii.info'></div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,74 @@
+#login {
+    .scroll-content,
+    .ionic-scroll {
+        background-color: white;
+    }
+    .bg {
+        width: 100%;
+    }
+    .bgconetnt {
+        position: relative;
+    }
+    .back {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        width: 15px;
+        height: 15px;
+        border-left: 1px solid white;
+        border-bottom: 1px solid white;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        &:before {
+            content: '';
+            width: p2r(40);
+            height: p2r(40);
+            display: block;
+            position: absolute;
+            left: -50%;
+            top: -50%
+        }
+    }
+    .list {
+        margin-top: 0;
+        margin-bottom: 0;
+        img {
+            width: 20px;
+            margin-right: 10px;
+        }
+    }
+    .loginbt {
+        width: 293px;
+        height: 46px;
+        background: -webkit-linear-gradient(left, #FF7200, #F72828);
+        background: linear-gradient(left, #FF7200, #F72828);
+        font-size: 17px;
+        color: white;
+        margin-top: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        border-radius: 30px;
+    }
+    .other {
+        margin-top: 33px;
+        text-align: center;
+        font-size: 0;
+        .forget {
+            color: #7F7F7F;
+            font-size: 14px;
+            &::after {
+                content: '';
+                width: 1px;
+                height: 13px;
+                display: inline-block;
+                background-color: #cccccc;
+                margin: 0 10px -2px 10px;
+            }
+        }
+        .reg {
+            color: #FB4816;
+            font-size: 14px;
+        }
+    }
+}

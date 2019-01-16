@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>人人花</title>
+</head>
+
+<body>
+    <script>
+        function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var _search = decodeURIComponent(window.location.search);
+            var r = _search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
+        var t = parent;
+        try {
+            if (JSON.parse(getQueryString('res_data')).result_pay == 'SUCCESS') {
+                if (!t.rrhsesame) {
+                    t.postMessage({
+                        type: 'lianlianrecharge',
+                        data: 'suc'
+                    }, '*');
+                }
+                else {
+                    t.lianlianrecharge({
+                        type: 'lianlianrecharge',
+                        data: 'suc'
+                    });
+                }
+            }
+        } catch (error) {
+            if (!t.rrhsesame) {
+                t.postMessage({
+                    type: 'lianlianrecharge',
+                    data: 'err'
+                }, '*');
+            }
+            else {
+                t.lianlianrecharge({
+                    type: 'lianlianrecharge',
+                    data: 'err'
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>

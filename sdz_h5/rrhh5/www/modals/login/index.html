@@ -1,0 +1,14 @@
+<ion-modal-view id="login" ng-controller="login">
+    <!--<ion-header-bar class="stable-bg">
+        <div class="buttons">
+            <button class="button ion-ios-arrow-back" ng-click="loginmodal.remove()"></button>
+        </div>
+    </ion-header-bar>-->
+    <ion-content>
+        <div class="list">
+            <input type="text" ng-model="item.phone"><input type="text" ng-model="item.password">
+            <button class="button" ng-click="do()">登录</button>
+            <button class="button" ng-click="loginmodal.remove()">关闭登录</button>
+        </div>
+    </ion-content>
+</ion-modal-view>

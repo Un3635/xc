@@ -1,0 +1,25 @@
+#contract231b .scroll-content {
+    padding: 15px;
+    table {
+        width: 100%;
+        tr {
+            td {
+                border: 1px solid black;
+                text-align: left;
+            }
+            &:first-of-type {
+                td:first-of-type {
+                    width: 100px;
+                }
+            }
+        }
+    }
+    ul {
+        li {
+            margin-left: 20px;
+        }
+    }
+    .textindent {
+        text-indent: 28px;
+    }
+}

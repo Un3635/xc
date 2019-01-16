@@ -1,0 +1,77 @@
+.rrhinfo {
+    .scroll-content,
+    .ionic-scroll {
+        background-color: white;
+    }
+    .out {
+        padding-left: p2r(16);
+        .infolabel {
+            border: none;
+            border-bottom: 1px solid #E6E5E5;
+            height: p2r(50);
+            line-height: p2r(50);
+            .input-label {
+                font-size: p2r(14);
+                color: #7F7F7F;
+            }
+            .req {
+                color: #FF5C5C;
+                font-size: p2r(14);
+                margin-right: p2r(5);
+                padding-top: p2r(6);
+                &.reqhide {
+                    opacity: 0;
+                }
+            }
+            input[readonly]:not(.cloned-text-input) {
+                background-color: transparent;
+            }
+            input {
+                text-align: right;
+                padding-right: p2r(40);
+            }
+            input.taleft {
+                text-align: left;
+            }
+            .address {
+                text-align: right;
+                padding-right: p2r(20);
+            }
+            .address::-ms-input-placeholder {
+                text-align: right;
+                padding-right: p2r(20);
+            }
+            .address::-webkit-input-placeholder {
+                text-align: right;
+                padding-right: p2r(20);
+            }
+            .addresskeng {
+                text-align: right;
+                padding-right: 2rem;
+                line-height: 1;
+                font-size: 14px;
+                display: block;
+                vertical-align: middle;
+                flex: 1 220px;
+                -webkit-box-flex: 1;
+                color: #111;
+            }
+        }
+    }
+    .warn {
+        font-size: p2r(13);
+        line-height: p2r(36);
+        background-color: #FFCD40;
+        padding-left: p2r(15);
+        color: white;
+        &.channel {
+            color: #ACACAC;
+            background-color: #F4F4F4;
+            background-image: url(img/tips_warning@3x.png);
+            background-repeat: no-repeat;
+            background-size: p2r(17) p2r(17);
+            background-position: p2r(16) center;
+            padding-left: p2r(38);
+        }
+    }
+}

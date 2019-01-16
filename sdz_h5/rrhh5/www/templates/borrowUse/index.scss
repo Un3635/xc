@@ -1,0 +1,89 @@
+#borrowUse {
+    .scroll-content,
+    .ionic-scroll {
+        background-color: #F4F4F4;
+    }
+    .up {
+        background-color: white;
+        padding-top: p2r(30);
+        padding-bottom: p2r(10);
+        margin-bottom: p2r(10);
+        .title {
+            padding-left: p2r(16);
+            font-size: p2r(14);
+            line-height: p2r(14);
+            color: #383840;
+            margin-bottom: p2r(20);
+        }
+        ul {
+            padding-left: p2r(30);
+            padding-right: p2r(30);
+            margin-bottom: p2r(20);
+            li {
+                float: left;
+                height: p2r(35);
+                line-height: p2r(35);
+                color: #383840;
+                font-size: p2r(15);
+                border: 1px solid #C8C7CC;
+                border-radius: p2r(20);
+                text-align: center;
+                box-sizing: border-box;
+                &.active {
+                    border-color: #FA4319;
+                    color: white;
+                    background-color: #FA4319;
+                }
+            }
+        }
+        .u1 {
+            li {
+                width: p2r(95);
+                &:nth-of-type(2) {
+                    margin: 0 p2r(15);
+                }
+            }
+        }
+        .u2 {
+            li {
+                width: p2r(67);
+                &:nth-of-type(2),
+                &:nth-of-type(4) {
+                    margin: 0 p2r(10);
+                }
+            }
+        }
+    }
+    .center {
+        background-color: white;
+        height: p2r(50);
+        line-height: p2r(50);
+        input {
+            display: inline-block;
+            width: p2r(280);
+            float: right;
+            height: p2r(50);
+        }
+        span {
+            width: p2r(72);
+            text-align: right;
+            display: inline-block;
+            font-size: p2r(14);
+        }
+    }
+    .down {
+        text-align: center;
+        margin-top: p2r(70);
+        .bt {
+            width: p2r(343);
+            height: p2r(44);
+            font-size: p2r(17);
+            line-height: p2r(44);
+            color: white;
+            background-color: #FA4319;
+            border: none;
+            border-radius: p2r(30);
+            min-height: initial;
+        }
+    }
+}

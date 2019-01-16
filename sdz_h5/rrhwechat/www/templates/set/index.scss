@@ -1,0 +1,21 @@
+#set {
+    .d1 {
+        background-color: white;
+        font-size: p2r(14);
+        line-height: p2r(14);
+        padding: p2r(10);
+        margin-top: p2r(10);
+        margin-bottom: p2r(10);
+    }
+    .button {
+        width: p2r(290);
+        height: p2r(45);
+        margin: p2r(80) auto;
+        display: block;
+        border: 1px solid #FF5C5C;
+        background-color: #FF5C5C;
+        color: white;
+        border-radius: p2r(50);
+        font-size: p2r(18);
+    }
+}

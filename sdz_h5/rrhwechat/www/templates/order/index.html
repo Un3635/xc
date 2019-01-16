@@ -1,0 +1,46 @@
+<ion-view title="订单" id="order" hide-back-button='true'>
+    <ion-nav-buttons side="right">
+        <button class="button" ng-click="gotransactionlist()">资金记录</button>
+    </ion-nav-buttons <ion-content class="has-rrhtab">
+    <ion-content>
+        <div class="row row-no-padding threeup">
+            <div class="col col-33" ng-click="goprerepaymentlist(0)">
+                <img src="img/1242-icon_xianjidai_normal.png" alt="">
+                <h2>全部待还(元)</h2>
+                <h3>{{data.amount||0.00 | number:2}}</h3>
+            </div>
+            <div class="col col-33" ng-click="goprerepaymentlist(30)">
+                <img src="img/1242-icon_benyuedai_normal.png" alt="">
+                <h2>本月待还(元)</h2>
+                <h3>{{data.currentMonthAmount||0.00 | number:2}}</h3>
+            </div>
+            <div class="col col-33" ng-click="goprerepaymentlist(7)">
+                <img src="img/1242-icon_qitaidai_normal.png" alt="">
+                <h2>近7日待还(元)</h2>
+                <h3>{{data.sevenDaysAmount||0.00 | number:2}}</h3>
+            </div>
+        </div>
+        <div class="threecenter">借款记录</div>
+        <div class="threedown">
+            <div class="in" ng-repeat="i in data.status" ng-click="go(i.status)">
+                <img ng-src="{{i.icon}}" alt="">
+                <div class="count">{{i.count}}</div>
+                <div class="name">{{i.name}}</div>
+            </div>
+        </div>
+    </ion-content>
+    <div class="rrh-tab bar bar-footer row row-no-padding">
+        <div class="col" ui-sref='home' ui-sref>
+            <img ng-src="img/tabhome.png" alt="">
+            <h2>首页</h2>
+        </div>
+        <div class="col" ui-sref='prerepaymentlist'>
+            <img ng-src="img/taborder1.png" alt="">
+            <h2 class="active">还款</h2>
+        </div>
+        <div class="col" ui-sref='my'>
+            <img ng-src="img/tabmy.png" alt="">
+            <h2>我的</h2>
+        </div>
+    </div>
+</ion-view>

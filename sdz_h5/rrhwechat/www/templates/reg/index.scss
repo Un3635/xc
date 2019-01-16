@@ -1,0 +1,87 @@
+#reg {
+    .scroll-content,
+    .ionic-scroll {
+        background-color: white;
+    }
+    .empty {
+        height: 10px;
+    }
+    .item {
+        padding-right: 20px;
+        .input-label {
+            width: 80px;
+        }
+    }
+    .list {
+        margin-top: 0;
+        margin-bottom: 0;
+        img {
+            width: 20px;
+            margin-right: 10px;
+            &.codeimg {
+                height: 30px;
+                width: initial;
+            }
+        }
+        .yzmbt {
+            margin-right: 10px;
+            width: 80px;
+            height: 30px;
+            min-width: initial;
+            padding: 5px;
+            color: #FA4717;
+            font-size: 13px;
+            background-color: white;
+            border: 1px solid #FA4717;
+            border-radius: 15px;
+            text-align: center;
+        }
+    }
+    .tipstext {
+        margin-top: 18px;
+        margin-bottom: 40px;
+        padding: 0 21px;
+        font-size: 12px;
+        img {
+            width: 13px;
+            height: 13px;
+            vertical-align: middle;
+        }
+        span {
+            color: #FA4319;
+        }
+    }
+    .regbt {
+        width: 300px;
+        height: 40px;
+        margin: 0 auto 86px auto;
+        display: block;
+        background: -webkit-linear-gradient(left, #F72828, #FF7200);
+        background: linear-gradient(left, #F72828, #FF7200);
+        color: white;
+        border-radius: 50px;
+        font-size: 18px;
+        &.forget {
+            margin-top: 40px;
+        }
+    }
+    .hasaccount {
+        font-size: 12px;
+        color: #F83C3C;
+        line-height: 1;
+        margin-top: 0;
+        margin-bottom: 14px;
+        text-align: center;
+    }
+    .loginbt {
+        width: 150px;
+        height: 40px;
+        margin: 0 auto;
+        display: block;
+        color: #FA4717;
+        background-color: white;
+        border: 1px solid #FA4717;
+        border-radius: 50px;
+        font-size: 16px;
+    }
+}

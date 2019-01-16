@@ -1,0 +1,28 @@
+<ion-view title="提现" id="withdraw">
+    <ion-content>
+        <div class="up">
+            <div class="bank">
+                <img src="img/mine_account_balance@3x.png" alt="">
+
+                <div class="accountname">账户余额</div>
+                <div class="accountno">{{user.balanceMoney|number:2}}</div>
+            </div>
+            <div class="account">
+                <img ng-src="{{data.bankIcon}}" alt="" ng-if="data">
+                <img src="img/ic_bank_card_default.png" alt="" ng-if="!data">
+                <div class="bankname">{{data.bankname}}</div>
+                <div class="bankno" ng-if="data">尾号{{data.cardno.substring(data.cardno.length-4,data.cardno.length)}}</div>
+                <div class="bankno">银行</div>
+            </div>
+
+        </div>
+        <div class="input">
+            <label class="i1 bordernone">
+                <span class="m1">￥{{user.balanceMoney|number:2}}</span>
+           
+                <!--<input type="number" placeholder="请输入提现金额" ng-model="item.num" rrhmoney>-->
+            </label>
+        </div>
+        <button class="button subbt" ng-click="sub()" ng-disabled="!item.num">确认提现</button>
+    </ion-content>
+</ion-view>

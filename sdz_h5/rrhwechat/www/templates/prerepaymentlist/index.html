@@ -1,0 +1,51 @@
+<ion-view title="还款" id="prerepaymentlist" hide-back-button='true'>
+    <ion-content>
+        <!-- <ion-content class="has-rrhtab" ng-class="{'hasctrl':data&&data.list.length>0}"> -->
+        <div class="nulldata" ng-if="nullbg">
+            <img src="img/img_1@3x.png" alt="">
+            <h2>君子两清,江湖再见</h2>
+        </div>
+        <div class="out rrhback" ng-repeat="i in data.list">
+            <img ng-src="{{check?('img/icon_duoxuan_pressed.png'):('img/icon_duoxuan_normal.png')}}" alt="" ng-click="changecheck()"
+                class="check">
+            <img src="img/rrhback.png" alt="" class="back">
+            <div class="in" ui-sref='orderdetail({id:i.id})'>
+                <h3>[{{i.period}}/{{i.loanPeriods}}]{{i.productName}}
+                    <div class="right" ng-if="i.daysRemaining<=2&&i.daysRemaining>=0">
+                        临近还款
+                    </div>
+                    <div class="right" ng-if="i.overdueDays>0">
+                        已逾期
+                    </div>
+                </h3>
+                <h2>待还款(元) <span class="money">{{i.balance|number:2}}</span>
+                    <div class="right" ng-if="i.daysRemaining>=0">剩余<span>{{i.daysRemaining}}</span>天</div>
+                    <div class="right" ng-if="i.overdueDays>0">已逾期<span>{{i.overdueDays}}</span>天</div>
+                </h2>
+            </div>
+        </div>
+    </ion-content>
+    <!-- <div class="ctrl" ng-if="data&&data.list.length>0">
+        <div class="all" ng-click="changecheck()">{{!check?'全选':'取消'}}</div>
+        <div class="money">
+            <h2><span>合计:</span>{{check?(data.list[0].balance-(modal&&modal.item?modal.item.deduction:0)|number:2):(0|number:2)}}<span>元</span></h2>
+            <h3 ng-click="modalyhq()" ng-if="!(modal&&modal.item)">选择优惠券<img src="img/rrhback.png" alt="" class="yhqcheck"></h3>
+            <h3 ng-if="modal&&modal.item" ng-click="modalyhq()">抵用{{modal.item.deduction}}元 <img src="img/rrhback.png" alt="" class="yhqcheck"></h3>
+        </div>
+        <div class="right"><button class="button" ng-click="sub()">马上还款</button></div>
+    </div> -->
+    <!-- <div class="rrh-tab bar bar-footer row row-no-padding">
+        <div class="col" ui-sref='home' ui-sref>
+            <img ng-src="img/tabhome.png" alt="">
+            <h2>首页</h2>
+        </div>
+        <div class="col" ui-sref='prerepaymentlist'>
+            <img ng-src="img/taborder1.png" alt="">
+            <h2 class="active">还款</h2>
+        </div>
+        <div class="col" ui-sref='my'>
+            <img ng-src="img/tabmy.png" alt="">
+            <h2>我的</h2>
+        </div>
+    </div> -->
+</ion-view>

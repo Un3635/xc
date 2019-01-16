@@ -1,0 +1,24 @@
+<ion-view title="我的花币" id="rrhcoins">
+    <ion-content>
+        <img src="img/goldcoin_img@3x.png" alt="" class="coinimg">
+        <div class="coins">
+            {{user.coins}}<span>花币</span>
+        </div>
+        <div class="coinsdes">
+            （价值{{user.coins/100}}元）
+        </div>
+        <button class="sub button" ng-click="sub()">提现</button>
+        <div class="coinslist">
+            <span ng-click="getlist()">花币记录</span>
+        </div>
+        <div class="info">
+            <div class="title">提现说明</div>
+            <ul>
+                <li>1、每周可申请1次提现，申请提现后花币将换算成现金打入账户余额</li>
+                <li>2、累计满5000花币（价值50元）才可提现且为全额提现</li>
+                <li>3、处于逾期状态的用户需先还款后才可提现</li>
+                <li>4、逾期天数大于等于30天的用户将永久无法将花币提出</li>
+            </ul>
+        </div>
+    </ion-content>
+</ion-view>

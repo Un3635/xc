@@ -1,0 +1,36 @@
+#rechargeerror {
+    .scroll-content,
+    .ionic-scroll {
+        background-color: white;
+    }
+    img {
+        width: p2r(60);
+        height: p2r(60);
+        display: block;
+        margin: p2r(75) auto p2r(53) auto;
+    }
+    h2 {
+        font-size: p2r(18);
+        line-height: p2r(18);
+        color: #414141;
+        margin-bottom: p2r(23);
+        text-align: center;
+    }
+    h3 {
+        font-size: p2r(14);
+        line-height: p2r(14);
+        color: #818181;
+        margin-bottom: p2r(40);
+        text-align: center;
+    }
+    button {
+        width: p2r(141);
+        height: p2r(41);
+        border: 1px solid #414141;
+        background-color: white;
+        font-size: p2r(14);
+        line-height: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+}

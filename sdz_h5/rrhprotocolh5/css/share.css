@@ -1,0 +1,328 @@
+body {
+    padding-bottom: 1rem
+}
+
+#mark {
+    display: none
+}
+
+.mark {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0
+}
+
+.formValidation {
+    font-size: .6rem;
+    background-color: #fff;
+    width: 70%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 10px 30px
+}
+
+.formValidation input {
+    border: 1px solid #ccc
+}
+
+.like,
+.share {
+    width: 80%;
+    background-color: #ff5252;
+    font-size: .7rem;
+    text-align: center;
+    line-height: 2rem;
+    margin: auto;
+    display: block;
+    border-radius: 4px;
+    color: #fff;
+    margin-bottom: 1rem
+}
+
+.like:active,
+.share:active {
+    background-color: rgba(255, 82, 82, 0.6)
+}
+
+.data {
+    text-align: center;
+    font-size: .7rem;
+    color: #00838f;
+    margin-bottom: .6rem
+}
+
+.data span {
+    font-size: 1.2rem;
+    color: #ff5252
+}
+
+#formValidation h1 {
+    color: #00838f;
+    font-size: .8rem;
+    font-weight: 400;
+    text-align: center;
+    line-height: 2rem;
+    margin-bottom: .5rem
+}
+
+#formValidation input {
+    display: block;
+    border-radius: 2px;
+    height: 1.8rem;
+    border: 1px solid #ccc;
+    font-size: .7rem;
+    text-indent: 5px
+}
+
+#formValidation input[name="phone"] {
+    width: 100%
+}
+
+#formValidation input[name="verificationCode"],
+#formValidation input[type="button"] {
+    display: inline
+}
+
+#formValidation input[name="verificationCode"] {
+    width: 50%
+}
+
+#formValidation input[type="button"] {
+    background-color: #039be5;
+    float: right;
+    color: #fff;
+    font-size: .7rem;
+    width: 40%;
+    text-align: center
+}
+
+#formValidation input[type="button"]:active {
+    background-color: rgba(3, 155, 229, 0.6)
+}
+
+#formValidation input[type="submit"] {
+    margin-top: 2rem;
+    width: 100%;
+    background-color: #ff5252;
+    font-size: .7rem;
+    text-align: center;
+    line-height: 2rem;
+    border-radius: 4px;
+    color: #fff;
+    height: 2rem
+}
+
+#formValidation input[type="submit"]:active {
+    background-color: rgba(255, 82, 82, 0.6)
+}
+
+#formValidation .true {
+    border-color: #8CEA00
+}
+
+#formValidation .false {
+    border-color: #FFBB77
+}
+
+#formValidation>div {
+    position: relative;
+    margin-bottom: .7rem
+}
+
+#formValidation>div .div {
+    position: absolute;
+    color: #FFBB77;
+    font-size: .7rem;
+    margin-top: .2rem
+}
+
+#shareF {
+    background-color: #f0f7fa
+}
+
+.shareF img,
+.yzShare img,
+.appDown img {
+    width: 100%;
+    display: block;
+    margin: auto
+}
+
+.cl {
+    color: #999;
+    text-align: center;
+    font-size: .6rem
+}
+
+#appDown {
+    background-color: #f0f7fa
+}
+
+.appDown p {
+    color: #666;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: .8rem;
+    margin-top: -10rem
+}
+
+.btn {
+    position: relative;
+    z-index: 5;
+    display: block;
+    width: 40%;
+    margin: auto;
+    border-radius: 4px;
+    user-select: none;
+    color: #fff
+}
+
+.btn img {
+    width: 100%;
+    height: auto
+}
+
+.btn-android {
+    background-color: #82cd4b;
+    border-color: #82cd4b
+}
+
+.btn-android:active {
+    background-color: rgba(130, 205, 75, 0.6);
+    border-color: rgba(130, 205, 75, 0.6)
+}
+
+.btn-ios {
+    background-color: #dc554f;
+    border-color: #d8403a
+}
+
+.btn-ios:active {
+    background-color: rgba(220, 85, 79, 0.6);
+    border-color: rgba(220, 85, 79, 0.6)
+}
+
+#yzShare {
+    background-color: #ffcc00
+}
+
+.yzShare {
+    position: relative
+}
+
+.yzShare .tg {
+    width: 40%;
+    background: url(/static/api/images/trustShare/png1.png) no-repeat;
+    height: 8rem;
+    background-size: 100% auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 4rem
+}
+
+.yzShare .tg>div {
+    margin: .2rem;
+    position: relative;
+    z-index: 3;
+    height: 6.2rem;
+    overflow: hidden
+}
+
+.yzShare .tg img {
+    width: auto;
+    height: auto;
+    background-color: #ccc;
+    max-width: 100%;
+    max-height: 100%
+}
+
+.yzShare .tg:after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 8rem;
+    background: url(/static/api/images/trustShare/png2.png) no-repeat;
+    background-size: 100% auto;
+    padding-right: .5rem;
+    top: 0
+}
+
+.yzShare .tg:after img {
+    width: 100%
+}
+
+.yzShare p {
+    text-align: center;
+    color: #660000;
+    font-size: .8rem;
+    margin-bottom: 2rem
+}
+
+.yzShare a {
+    display: block;
+    background-color: #F73E3E;
+    width: 80%;
+    text-align: center;
+    line-height: 2rem;
+    color: #fff;
+    font-size: .8rem;
+    border-radius: 4px;
+    margin: auto;
+    margin-bottom: .6rem
+}
+
+.yzShare a:active {
+    background-color: rgba(247, 62, 62, 0.7)
+}
+
+#userAgreement,
+#loginAgreement {
+    font-size: .6rem;
+    padding: .5rem
+}
+
+#userAgreement em,
+#loginAgreement em {
+    font-weight: 700
+}
+
+#userAgreement p,
+#loginAgreement p {
+    text-indent: .8rem;
+    margin-bottom: .2rem;
+    line-height: 1.8;
+    text-align: justify
+}
+
+#userAgreement h1,
+#loginAgreement h1 {
+    font-size: 1rem;
+    margin-bottom: .5rem;
+    text-align: center;
+    line-height: 1.8
+}
+
+#userAgreement h2,
+#loginAgreement h2 {
+    font-size: .8rem;
+    margin-bottom: .4rem;
+    text-align: center;
+    line-height: 1.8
+}
+
+#userAgreement h3,
+#loginAgreement h3 {
+    font-size: .6rem;
+    margin-bottom: .3rem;
+    line-height: 1.8
+}

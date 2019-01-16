@@ -1,0 +1,25 @@
+#about {
+    .d1 {
+        background-color: white;
+        font-size: p2r(14);
+        line-height: p2r(14);
+        padding: p2r(10);
+        margin-top: p2r(10);
+        margin-bottom: p2r(10);
+    }
+    .d0 {
+        text-align: center;
+        padding-top: p2r(20);
+        padding-bottom: p2r(20);
+        img {
+            width: p2r(60);
+            height: p2r(60);
+        }
+        h2 {
+            font-size: p2r(14);
+            line-height: 100%;
+            margin: 0;
+            color: #FF5C5C;
+        }
+    }
+}

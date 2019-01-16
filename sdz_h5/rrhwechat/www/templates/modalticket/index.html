@@ -1,0 +1,34 @@
+<ion-modal-view id="modalticket" ng-controller="modalticket">
+    <ion-header-bar>
+        <div class="buttons">
+            <button ng-click="modal.hide()" class="button back-button buttons button-light header-item modalticketback"><i class="icon ion-ios-arrow-back"></i>  </button>
+        </div>
+        <h2 class="title light">选择优惠券</h2>
+    </ion-header-bar>
+    <ion-content>
+        <div class="nulldata" ng-if="modaldata&&modaldata.length==0">
+            <img src="img/noticket_img@3x.png" alt="">
+            <h2>暂无优惠券</h2>
+        </div>
+        <div class="cpitem" ng-click="sel(i)" ng-repeat="i in modaldata" ng-class="{'red':i.type=='0','blue':i.type=='1','orange':(i.type!=0&&i.type!=1),
+        'grey':s==2,'greyhis':s==3}">
+            <div class="left">
+                <h2 class="money orange">
+                    {{i.deduction}}
+                </h2>
+                <div class="type">
+                    {{types[i.source]}}
+                </div>
+            </div>
+            <div class="right">
+                <div class="typename">{{i.type==0?'还款抵用券 ':'还款折扣券'}}
+                    <!-- <span>券</span> -->
+                </div>
+                <div class="des">{{i.notes}}</div>
+                <div class="date">{{i.begin_time}}-{{i.end_time}}</div>
+            </div>
+            <img ng-src="{{modal.item==i?('img/bill_selected@3x.png'):('img/bill_unselected@3x.png')}}" alt="" class="check">
+
+        </div>
+    </ion-content>
+</ion-modal-view>

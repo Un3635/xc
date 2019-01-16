@@ -1,0 +1,30 @@
+#rechargesuc {
+    .scroll-content,
+    .ionic-scroll {
+        background-color: white;
+        text-align: center;
+    }
+    img {
+        width: p2r(60);
+        height: p2r(60);
+        margin-top: p2r(75);
+        margin-bottom: p2r(53);
+    }
+    h2 {
+        color: #414141;
+        font-size: p2r(18);
+        line-height: 100%;
+        margin-bottom: p2r(23);
+        span {
+            color: #FF5C5C;
+        }
+    }
+    h2 {
+        color: #818181;
+        font-size: p2r(14);
+        line-height: 100%;
+        span {
+            color: #FF5C5C;
+        }
+    }
+}

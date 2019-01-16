@@ -1,0 +1,29 @@
+#contractsuc {
+    .scroll-content,
+    .ionic-scroll {
+        background-color: white;
+    }
+    img {
+        width: p2r(137);
+        height: p2r(137);
+        display: block;
+        margin: p2r(96) auto 0 auto;
+    }
+    h2 {
+        line-height: 1.2;
+        margin: 0;
+        padding: 0 p2r(43);
+        color: #303030;
+        font-size: p2r(16);
+        text-align: center;
+        margin-top: p2r(46);
+        margin-bottom: p2r(30);
+    }
+    h3 {
+        line-height: 1;
+        margin: 0;
+        font-size: p2r(14);
+        color: #FF5C5C;
+        text-align: center;
+    }
+}

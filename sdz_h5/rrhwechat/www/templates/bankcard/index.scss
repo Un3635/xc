@@ -1,0 +1,23 @@
+#bankcard {
+    .scroll-content,
+    .ionic-scroll {
+        background-color: white;
+    }
+    .addbt {
+        width: p2r(308);
+        height: p2r(44);
+        background-color: white;
+        color: #303030;
+        font-size: p2r(14);
+        line-height: p2r(44);
+        border: 1px solid #FF5C5C;
+        margin: p2r(40) auto;
+        display: block;
+        border-radius: p2r(25);
+        background-image: url(img/icon_tianjiafuhao_normal-3.png);
+        background-repeat: no-repeat;
+        background-size: p2r(26) p2r(26);
+        background-position: p2r(70) center;
+        box-shadow: 3px 3px 21px 0px #FDD3D3;
+    }
+}

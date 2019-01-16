@@ -1,0 +1,12 @@
+<ion-view title="消息" id="message">
+    <ion-content>
+        <div class="messageout" ng-repeat="i in data">
+            <div class="up">
+                {{i.createdAt| date:'yyyy-MM-dd HH:mm:ss'}}
+            </div>
+            <div class="down">
+                <h2>{{i.content}}</h2>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

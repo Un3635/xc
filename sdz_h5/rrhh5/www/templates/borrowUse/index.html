@@ -1,0 +1,24 @@
+<ion-view title="借款用途" id="borrowUse">
+    <ion-content>
+        <div class="up">
+            <div class="title">请选择你的借款用途</div>
+            <ul class="clearfix u1">
+                <li ng-repeat="i in checklist1" ng-class="{'active':i.check}" ng-click="check(i)">{{i.name}}</li>
+            </ul>
+            <ul class="clearfix u2">
+                <li ng-repeat="i in checklist2" ng-class="{'active':i.check}" ng-click="check(i)">{{i.name}}</li>
+            </ul>
+        </div>
+        <div class="center">
+            <span>工作单位</span>
+            <input type="text" ng-model="postdata.company_name" placeholder="请填写你当前所在单位的名称">
+        </div>
+        <div class="center">
+            <span>单位地址</span>
+            <input type="text" ng-model="postdata.company_address" placeholder="请填写你当前所在单位的地址">
+        </div>
+        <div class="down">
+            <button class="bt button" ng-disabled="!postdata.company_name||!postdata.usage_type||!postdata.company_address" ng-click="post()">提交</button>
+        </div>
+    </ion-content>
+</ion-view>

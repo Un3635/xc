@@ -1,0 +1,27 @@
+<ion-modal-view id="mobilesecurity" ng-controller="mobilesecurity">
+    <ion-content>
+        <div class="inputlist">
+            <div class="inputitem">
+                <input type="text" placeholder='手机号' ng-model="mobilesecuritydata.account" ng-disabled="true">
+            </div>
+            <div class="inputitem">
+                <input type="password" placeholder='请输入服务密码' ng-model="mobilesecuritydata.password" maxlength="8" ng-disabled="mobilesecuritydata.inStep2">
+            </div>
+            <div class="inputitem" ng-if="mobilesecuritydata.inStep2&&mobilesecuritydata.type=='sms'">
+                <input type="text" placeholder="请输入短信验证码" ng-model="mobilesecuritydata.smscode" maxlength="8">
+            </div>
+            <div class="codeitem" ng-if="mobilesecuritydata.inStep2&&mobilesecuritydata.type=='img'">
+                <input type="text" placeholder="请输入图形验证码" ng-model="mobilesecuritydata.imgcode">
+                <img ng-src="{{mobilesecuritydata.imgurl}}" alt="" ng-click="codeget('img')" maxlength="8">
+            </div>
+        </div>
+        <button class="nextbt button" ng-click="next1()" ng-if="!mobilesecuritydata.inStep2" ng-disabled="!mobilesecuritydata.password">{{buttontext}}</button>
+        <button class="nextbt button" ng-click="next2()" ng-disabled="!mobilesecuritydata.smscode&&!mobilesecuritydata.imgcode" ng-if="mobilesecuritydata.inStep2">{{buttontext}}</button>
+        <div class="warn">
+            <div class="title">温馨提示:</div>
+            <div class="info">请输入正确的运营商(移动、联通、电信)服务密码,若忘记可通过拨打
+                <span class="red" ng-click="pop()">《运营商服务电话》</span>或者登陆网上营业厅找回密码</div>
+        </div>
+    </ion-content>
+
+</ion-modal-view>

@@ -1,0 +1,45 @@
+<ion-view title="芝麻认证" id="autonym">
+    <ion-content>
+        <input type="file" class="hideinputfile" id="cardfile1" accept="image/*">
+        <div class="warn">身份认证信息保存后将无法修改，请务必保证正确</div>
+        <div class="list rrhlabellist">
+            <div class="out">
+                <label class="item item-input cardinput">
+                    <span class="req">* </span>
+                    <span class="input-label">姓名</span>
+                    <input type="text" ng-model="data.realName" ng-disabled="data.status==1" placeholder="请填写真实姓名">
+                </label>
+            </div>
+            <div class="out">
+                <label class="item item-input cardinput">
+                    <span class="req">* </span>
+                    <span class="input-label">身份证</span>
+                    <input type="text" ng-model="data.idcardNum" ng-disabled="data.status==1" maxlength="18" placeholder="请填写身份证号码">
+                </label>
+            </div>
+            <div class="out">
+                <div class="cardimginput">
+                    <div class="left">
+                        <div class="l1">
+                            <span class="req">*</span>身份证正面照</div>
+                        <div class="l2">
+                            <span class="notreq">*</span>(证件号清晰可见)</div>
+                    </div>
+                    <div class="right">
+                        <img src="img/img_succeed@3x.png" alt="" class="suc" ng-if="img.hascheck">
+                        <img ng-src="{{data.idcardKey?data.idcardKey:(img.hascheck?img.data.img_url:'img/icon_paizhao_normal.png')}}" alt="" ng-click="img.post()"
+                            ng-disabled="data.status==1" class="cardimg">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="zhima">
+            <img src="img/icon_zhimaxinyong_normal.png" alt="">
+            <h2>芝麻信用</h2>
+            <h3>我们需要您授权芝麻信用</h3>
+            <h3>良好的信用记录会加速审核和提高额度</h3>
+            <button class="button" ng-click="zmop()" ng-disabled="!data.zmopUrl">授权</button>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,49 @@
+<ion-modal-view id="socialsecurity" ng-controller="socialsecurity">
+    <ion-content class="bg">
+        <div class="list l1">
+            <div class="item item-input item-select">
+                <div class="input-label" ng-if="shebaogjjflag==1">
+                    社保地区
+                </div>
+                <div class="input-label" ng-if="shebaogjjflag==2">
+                    公积金地区
+                </div>
+                <select ng-change="shebao.change()" ng-model="shebao.value" ng-options="x.name for x in shebao.data"></select>
+            </div>
+
+            <div class='item row' ng-if="data.loginFields&&data.loginFields.length>0">
+                <div class="col" ng-repeat="i in data.loginFields">
+                    <button class="button" ng-class="{'button-assertive':i.active==true}" ng-click="data.changeactive(i)">{{i.label}}</button>
+                </div>
+            </div>
+            <div class="item item-input" ng-if="data.loginFields&&data.loginFields.length>0" ng-repeat=" i in data.activeloginFields.fields">
+                <span class="input-label">{{i.label}}</span>
+                <input type="text" placeholder="{{i.label}}" class="{{i.name}}">
+            </div>
+            <div class="item item-input" ng-if="data.activeloginFields.captcha=='true'">
+                <span class="input-label">验证码</span>
+                <input type="text" placeholder="验证码" ng-model="yzm.value">
+                <img ng-src='{{yzm.yzm1+yzm.yzm2}}' alt="获取验证码" class="yzm" ng-click="yzm.get()">
+            </div>
+            <div class="item" ng-if="data.loginFields&&data.loginFields.length>0">
+                <button class="button button-block button-assertive" ng-click="data.sub()">确定</button>
+            </div>
+        </div>
+        <div class="warn">
+            <h6>温馨提示</h6>
+            <ul class="u1">
+                <li>1 若您已有帐号，请输入账户名、密码。</li>
+                <li>2 若您暂无帐号，您可通过如下方式查找您的帐号：
+                    <ul class="u2">
+                        <li>&bull;&nbsp;&nbsp;个人携带身份证、{{shebaogjjflag1}}卡到{{shebaogjjflag1}}管理中心查询。</li>
+                        <li>&bull;&nbsp;&nbsp;用身份证号在当地{{shebaogjjflag1}}中心网站查询。</li>
+                    </ul>
+                </li>
+                <li>3 授权人人花查看您的{{shebaogjjflag1}}信息，可提高80%的审核通过率。</li>
+            </ul>
+        </div>
+    </ion-content>
+    <div class="warnfooter">
+        <h6>小花提示：您的个人信息仅用于评估您的个人信用，<br>人人花不会以任何形式泄露您的信息。</h6>
+    </div>
+</ion-modal-view>

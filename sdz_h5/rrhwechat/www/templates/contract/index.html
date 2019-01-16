@@ -1,0 +1,37 @@
+<ion-view title="审核通过" id="contract">
+    <ion-content>
+        <div class="warn">您的借款申请已经通过了，请确认以下信息</div>
+        <div class="out">
+            <div class="in">
+                贷款金额(元)
+                <span>{{data.req_money|number:2}}</span>
+            </div>
+        </div>
+        <div class="out">
+            <div class="in">
+                贷款期限
+                <span>{{data.loan_term}}天</span>
+            </div>
+        </div>
+        <div class="out">
+            <div class="in">
+                到期应还(元)
+                <span>{{data.req_money|number:2}}</span>
+            </div>
+        </div>
+        <div class="out">
+            <div class="in">
+                服务费(元)
+                <span>{{data.service_cost|number:2}}</span>
+            </div>
+        </div>
+        <div class="out">
+            <div class="in">
+                运营费(元)
+                <span>{{data.month_cost|number:2}}</span>
+            </div>
+        </div>
+        <button class="button sub" ng-click="sub()">确定借款</button>
+        <div class="gocontract" ng-click="goh5contract()">确认同意即代表同意签订 <span>《人人花借款协议》</span></div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,174 @@
+#invitation {
+    .scroll-content,
+    .ionic-scroll {
+        background-color: #eb4a4a;
+    }
+    /* .wxpoint {*/
+    /*     position: absolute;*/
+    /*     left: 0;*/
+    /*     top: 0;*/
+    /*     width: 100%;*/
+    /* }*/
+    .wxpointlayer {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #000000;
+        opacity: 0.85;
+        z-index: 9999;
+        .wxpoint {
+            width: 100%;
+        }
+    }
+    .main {
+        background-image: url(../img/bg@3x.png);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        /* background-color: #eb4a4a;*/
+        min-height: p2r(946);
+        height: p2r(946);
+        padding-top: p2r(354);
+    }
+    .btlayer {
+        img {
+            width: p2r(290);
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .infolayer {
+        padding-top: p2r(18);
+        padding-bottom: p2r(32);
+        text-align: center;
+        .i1 {
+            font-size: 0;
+            line-height: p2r(34);
+            height: p2r(34);
+            padding-left: p2r(80);
+            margin-bottom: p2r(18);
+            &left {
+                font-size: p2r(13);
+                color: white;
+                float: left;
+                margin-right: p2r(16);
+            }
+            &right {
+                font-size: p2r(24);
+                color: #333333;
+                width: p2r(150);
+                padding-left: p2r(10);
+                background-color: #DDDBC0;
+                float: left;
+            }
+        }
+        .i2 {
+            font-size: p2r(14);
+            line-height: p2r(20);
+            color: white;
+            span {
+                color: #FFCC00;
+            }
+        }
+    }
+    .tablayer {
+        position: relative;
+        .arrow {
+            position: absolute;
+            width: p2r(33);
+            height: p2r(11);
+            background-image: url(../img/up@3x.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            top: p2r(53);
+            left: p2r(100);
+            &.right {
+                left: p2r(244);
+            }
+        }
+        .tabheader {
+            height: p2r(44);
+            text-align: center;
+            font-size: 0;
+            margin-bottom: p2r(18);
+            &item {
+                width: p2r(128);
+                height: p2r(44);
+                line-height: p2r(44);
+                display: inline-block;
+                color: white;
+                font-size: p2r(13);
+                background-image: url(../img/btn_red@3x.png);
+                background-repeat: no-repeat;
+                background-size: p2r(128) p2r(44);
+                text-align: center;
+                &.active {
+                    color: #333333;
+                    background-image: url(../img/btn_white@3x.png);
+                }
+                &:first-of-type {
+                    margin-right: p2r(14);
+                }
+            }
+        }
+        .tabbody {
+            width: p2r(320);
+            height: p2r(270);
+            box-sizing: border-box;
+            background-color: white;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: p2r(16);
+            padding: p2r(25);
+            .leftbody {
+                h2 {
+                    font-size: p2r(13);
+                    color: #666666;
+                    line-height: p2r(22);
+                    margin: 0;
+                    span {
+                        color: #EB4A4A;
+                    }
+                }
+            }
+            .rightbody {
+                height: p2r(230);
+                overflow: hidden;
+                position: relative;
+                &.empty {
+                    background-image: url(../img/noinviter@3x.png);
+                    background-repeat: no-repeat;
+                    background-size: p2r(95) auto;
+                    background-position: center p2r(30);
+                    .emptywarn {
+                        color: #666666;
+                        font-size: p2r(12);
+                        text-align: center;
+                        margin-top: p2r(140);
+                    }
+                }
+                &itemlayer {
+                    position: relative;
+                    -webkit-transition: all .5s;
+                    transition: all .5s;
+                }
+                &item {
+                    color: #666666;
+                    font-size: p2r(12);
+                    line-height: p2r(30);
+                    .i3 {
+                        float: right;
+                        &.red {
+                            color: #EB4A4A;
+                        }
+                    }
+                    .i1 {
+                        margin-right: p2r(20);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,98 @@
+#about231 {
+    .bar-subheader {
+        top: 0;
+        padding: 0;
+        .row {
+            padding: 0;
+            background-repeat: no-repeat;
+            background-size: p2r(60) 2px;
+            background-image: url(../img/bgpoint.png);
+            -webkit-transition: all .5s;
+            transition: all .5s;
+            background-position: p2r((375/4-60)/2) bottom;
+            &.s0 {
+                background-position: p2r((375/4-60)/2) bottom;
+            }
+            &.s1 {
+                background-position: p2r(((375/4-60)/2)+375/4*1) bottom;
+            }
+            &.s2 {
+                background-position: p2r(((375/4-60)/2)+375/4*2) bottom;
+            }
+            &.s3 {
+                background-position: p2r(((375/4-60)/2)+375/4*3) bottom;
+            }
+            .col {
+                padding: 0;
+                text-align: center;
+                line-height: p2r(45);
+                font-size: p2r(14);
+                color: #303030;
+                &.active {
+                    color: #FA421A;
+                }
+            }
+        }
+    }
+    .has-subheader {
+        top: p2r(45);
+    }
+    .greyline {
+        height: p2r(10);
+        background-color: #f4f4f4;
+    }
+    .aboutitem {
+        .title {
+            line-height: p2r(50);
+            font-size: p2r(15);
+            color: #303030;
+            padding-left: p2r(15);
+            position: relative;
+            border-bottom: 1px solid #f4f4f4;
+            &::after {
+                content: '';
+                position: absolute;
+                right: p2r(21);
+                top: 50%;
+                width: p2r(10);
+                height: p2r(10);
+                border: 1px solid #D4D5D4;
+                border-top: none;
+                border-right: none;
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                -webkit-transform-origin: center;
+                transform-origin: center;
+                margin-top: p2r(-8);
+            }
+        }
+        .info {
+            height: 0;
+            display: none;
+            padding: p2r(13) p2r(16);
+            background-color: #f4f4f4;
+            font-size: p2r(14);
+            line-height: p2r(20);
+            color: #7F7F7F;
+        }
+        &.open {
+            .info {
+                display: block;
+                height: auto;
+            }
+            .title {
+                &::after {
+                    margin-top: p2r(1); // width: p2r(10);
+                    -webkit-transform: rotate(135deg);
+                    transform: rotate(135deg);
+                }
+            }
+        }
+        table {
+            text-align: center;
+            td {
+                border: 1px solid;
+            }
+        }
+    }
+}

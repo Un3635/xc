@@ -1,0 +1,34 @@
+<!--<ion-view title="充值" id="recharge">-->
+<ion-view title="还款" id="recharge">
+    <ion-content>
+        <div class="up">
+            <div class="bank">
+                <img ng-src="{{data.bankIcon}}" alt="" ng-if="data">
+                <img src="img/ic_bank_card_default.png" alt="" ng-if="!data">
+                <div class="bankname">{{data.bankname}}</div>
+                <div class="bankno" ng-if="!data">银行</div>
+                <div class="bankno" ng-if="data">尾号{{data.cardno.substring(data.cardno.length-4,data.cardno.length)}}</div>
+            </div>
+            <div class="account">
+                <img src="img/mine_account_balance@3x.png" alt="">
+                <div class="accountname">账户余额</div>
+                <div class="accountno">{{user.balanceMoney|number:2}}</div>
+            </div>
+        </div>
+        <div class="input">
+            <label class="i1">
+                <span class="yuan">￥</span>
+                <span class="m1"> {{item.num|number:2}}</span>
+                <!--<input type="number" placeholder="请输入充值金额" ng-model="item.num" maxlength="5" rrhmoney ng-disabled="true" />-->
+            </label>
+            <div class="i1" ng-if="paytype==0">
+                <span class="op0">￥</span>
+                <input type="text" placeholder="请输入验证码" ng-model="yzm.data" maxlength="10">
+                <button class="button" ng-click="yzm.getyzm()" ng-disabled="!item.num||djs.time>0">{{djs.time?(djs.time+'s'):'发送验证码'}}</button>
+            </div>
+        </div>
+        <div class="warn2yuan">还款充值金额单次不得小于2元</div>
+        <button class="button subbt" ng-if="paytype==1" ng-click="sub()" ng-disabled="!item.num">立即还款</button>
+        <button class="button subbt" ng-if="paytype==0" ng-click="sub()" ng-disabled="!item.num||!yzm.data">立即还款</button>
+    </ion-content>
+</ion-view>

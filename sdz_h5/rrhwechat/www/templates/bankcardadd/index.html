@@ -1,0 +1,35 @@
+<ion-view title="绑定银行卡" id="bankcardadd">
+    <ion-nav-buttons side="right">
+        <button class="button" ng-click="supportbank()">支持银行</button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="warn">小花提示:银行卡必须为借款人本人所有</div>
+        <div class="sfz" ng-if="data">
+            <div class="d1">持卡人姓名:{{data.realName}}</div>
+            <div class="d2">身份证号码:{{data.idcardNum|hidebankcard}}</div>
+        </div>
+        <div class="rrhlabellist">
+            <div class="out" ng-if="paytype=='0'">
+                <label class="item item-input infolabel">
+                    <span class="input-label">银行卡预留手机号</span>
+                    <input type="text" placeholder="请输入银行卡预留手机号" ng-model="item.phone"  maxlength="11"/>
+                </label>
+            </div>
+            <div class="out">
+                <label class="item item-input infolabel">
+                    <span class="input-label">银行卡号</span>
+                    <input type="text" placeholder="请输入本人的银行卡号" ng-model="item.cardno"/>
+                </label>
+            </div>
+            <div class="out" ng-if="paytype=='0'">
+                <div class="item infolabel item-input-wrapper">
+                    <span class="input-label yzmlabel">短信验证码</span>
+                    <input type="text" placeholder="请输入验证码" class="yzminput" ng-model="yzm.data" />
+                    <button class="button yzmbt" ng-click="yzm.getyzm()" ng-disabled="!item.phone||!item.cardno||djs.time>0">{{djs.time?(djs.time+'s'):'发送验证码'}}</button>
+                </div>
+            </div>
+        </div>
+        <button ng-if="paytype=='1'" class="button addbt" ng-click="sub()" ng-disabled="!item.phone||!item.cardno">确定绑卡</button>
+        <button ng-if="paytype=='0'" class="button addbt" ng-click="sub()" ng-disabled="!item.phone||!item.cardno||!yzm.data">确定绑卡</button>
+    </ion-content>
+</ion-view>

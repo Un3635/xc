@@ -1,0 +1,38 @@
+<ion-view title="家庭信息" class='rrhinfo'>
+    <ion-nav-buttons side="right">
+        <button class="button" ng-click="sub()">提交</button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="warn">家庭信息仅用于信用评估,我们不会泄露您的信息</div>
+        <div class="list rrhlabellist">
+            <div class="out rrhback">
+                <label class="item item-input infolabel">
+                    <span class="req reqhide">*  </span>
+                    <span class="input-label">子女数量</span>
+                    <input ng-model="child.input" mobiscroll-scroller="child" type="text" ng-if="child.wheels"/>
+                </label>
+            </div>
+            <div class="out rrhback">
+                <label class="item item-input infolabel">
+                    <span class="req reqhide">*  </span>
+                    <span class="input-label">是否有房</span>
+                    <input ng-model="house.input" mobiscroll-scroller="house" type="text" ng-if="house.wheels"/>
+                </label>
+            </div>
+            <div class="out rrhback">
+                <label class="item item-input infolabel">
+                    <span class="req reqhide">*  </span>
+                    <span class="input-label">是否有车</span>
+                    <input ng-model="car.input" mobiscroll-scroller="car" type="text" ng-if="car.wheels"/>
+                </label>
+            </div>
+            <div class="out">
+                <label class="item item-input infolabel">
+                    <span class="req reqhide">*  </span>
+                    <span class="input-label">车牌号</span>
+                    <input type="text"  ng-model="data.carNumber" ng-disabled="car.input=='无'">
+                </label>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,210 @@
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline
+}
+
+div,
+h1 {
+    margin-bottom: 1rem
+}
+
+h1,
+p:nth-of-type(1) {
+    padding-top: 1.4375rem
+}
+
+html {
+    line-height: 1
+}
+
+ol,
+ul {
+    list-style: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+caption,
+td,
+th {
+    text-align: left;
+    font-weight: 400;
+    vertical-align: middle
+}
+
+blockquote,
+q {
+    quotes: none
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+    content: "";
+    content: none
+}
+
+a img {
+    border: none
+}
+
+a {
+    color: #333;
+    text-decoration: none
+}
+
+img {
+    vertical-align: top
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block
+}
+
+@media screen and (max-width:414px) {
+    html {
+        font-size: 18px
+    }
+}
+
+@media screen and (max-width:375px) {
+    html {
+        font-size: 16px
+    }
+}
+
+@media screen and (max-width:320px) {
+    html {
+        font-size: 14px
+    }
+}
+
+body,
+html {
+    text-align: center;
+    font-family: 'Microsoft YaHei';
+    background-color: #efeff4;
+    height: 100%
+}
+
+h1 {
+    font-size: 1.0625rem;
+    color: #686871
+}
+
+div,
+p {
+    font-size: .8125rem
+}
+
+h1 span {
+    color: #f73e3e
+}
+
+div {
+    color: #c8c7cc
+}
+
+p {
+    color: #8e8e93
+}

@@ -1,0 +1,19 @@
+<ion-view title="借款列表" id="borrowlist">
+    <ion-content>
+        <div class="nulldata" ng-if="nullbg">
+            <img src="img/img_2@3x.png" alt="">
+            <h2>君子无近忧</h2>
+        </div>
+        <div class="out" ng-repeat="i in data.list" ui-sref='orderdetail({id:i.id})' ng-class="{'t1':i.overdueDays>0&&(i.status==6||i.status==8),'t2':(i.daysRemaining>=0&&i.daysRemaining<=2)&&(i.status==6||i.status==8)}">
+            <h2> {{i.productName}}</h2>
+            <h3> 订单号:{{i.orderNo}}</h3>
+            <h4>
+                <span class="left" ng-if="[3,5].indexOf(i.status)<0">{{i.balance|number:2}}元</span>
+                <span class="right" ng-if="[1,2,4,9].indexOf(i.status)>=0">{{i.updatedAt|date:"yyyy-MM-dd"}}申请</span>
+                <span class="right" ng-if="[3,5,10,11].indexOf(i.status)>=0">{{i.updatedAt|date:"yyyy-MM-dd"}}驳回</span>
+                <span class="right" ng-if="[7].indexOf(i.status)>=0">{{i.updatedAt|date:"yyyy-MM-dd"}}还清</span>
+                <span class="right" ng-if="[6,8].indexOf(i.status)>=0">{{i.updatedAt|date:"yyyy-MM-dd"}}放款</span>
+            </h4>
+        </div>
+    </ion-content>
+</ion-view>

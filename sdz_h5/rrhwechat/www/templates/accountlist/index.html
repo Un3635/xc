@@ -1,0 +1,20 @@
+<ion-view title="账户明细" id="accountlist">
+    <ion-content>
+        <div class="nulldata" ng-if="!data">
+            <img src="img/icon_empty_normal@3x.png" alt="">
+            <h2>暂无数据</h2>
+        </div>
+        <div class="out" ng-repeat="i in data">
+            <div class="in">
+                <div class="up">
+                    {{i.createdAt| date:'yyyy-MM-dd HH:mm:ss'}}
+                    <span>{{i.logType==1?'+':'-'}}{{i.changeMoney|number:2}}元</span>
+                </div>
+                <div class="down">
+                    {{i.note}}
+                    <span>余额:{{i.afterMoney|number:2}}</span>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

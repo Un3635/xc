@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>邀请好友</title>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        ; (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    docEl.style.fontSize = 20 * (clientWidth / 375) + 'px';
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script src="angular.min.js"></script>
+</head>
+
+<body ng-controller="ctrl">
+    <img src="img/bg_img02.png" alt="" class="logo">
+    <div class="form">
+        <div class="rmb10">你的好友送你10元现金红包</div>
+        <div class="item">
+            <img src="img/icon_shoujihao_normal.png" alt="">
+            <input type="tel" placeholder="请输入手机号" class="full" ng-model="item.phone" maxlength="11">
+        </div>
+        <div class="item">
+            <img src="img/icon_yanzhengma_normal.png" alt="">
+            <input type="tel" placeholder="短信验证码" ng-model="item.code">
+            <span class="itembr"></span>
+            <button class="codebt" ng-click="getcode()" ng-disabled="!item.phone||djs.time>0">{{djs.time?(djs.time+'s'):'发送验证码'}}</button>
+        </div>
+        <div id="captcha"></div>
+        <div class="item">
+            <img src="img/icon_mima_normal.png" alt="">
+            <input type="password" placeholder="登录密码(6-16位数字字母组合)" class="full" maxlength="16" ng-model="item.password">
+        </div>
+        <div class="item">
+            <img src="img/icon_yanzhengma_normal.png" alt="">
+            <input type="text" placeholder="请输入邀请码(非必填)" class="full" ng-model="item.recommend_id" ng-maxlength="9">
+        </div>
+        <div class="warn">
+            <img ng-src="{{check?'img/selectbox_yes_icon.png':'img/selectbox_no_icon.png'}}" alt="" ng-click="check=!check">我已阅读并同意
+            <span ng-click="jump(0)">《平台借款人费用表》</span>、<span ng-click="jump(1)">《征信调查授权协议》</span>及<span ng-click="jump(2)">《注册使用服务协议》</span>
+        </div>
+        <button class="buttonsub" ng-click="reg()" ng-disabled="!item.phone||!item.code||!item.password||!check">马上拿钱</button>
+        <div class="go" ng-click="go()">已有帐号</div>
+    </div>
+
+
+    <div class="loading lhide" ng-class="{'lhide':!showloading}">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAABECAYAAAA4E5OyAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA35pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo4MmQ4MTY4MC1jMjY2LWI1NGItYjcwMC1iMmE2Zjk5YzBkOTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6REMyRDU5QUYwRUM5MTFFNzhEMEVEQUY5REM5OEEwQzYiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6REMyRDU5QUUwRUM5MTFFNzhEMEVEQUY5REM5OEEwQzYiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjc1RkNFQkJEMjIyMDY4MTE4OEM2RkY1RTkzQTc0MjdFIiBzdFJlZjpkb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6OGNlMGI2N2MtZjM0MC0xMWU2LWE4ZTMtOGNkYzE5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"
+            alt="">
+    </div>
+    <div class="warning whide" ng-class="{'whide':!showwarn}">
+        <span>{{showwarntext}}</span>
+    </div>
+    <script src="http://cstaticdun.126.net/load.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

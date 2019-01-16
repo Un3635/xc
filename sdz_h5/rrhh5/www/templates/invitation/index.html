@@ -1,0 +1,59 @@
+<ion-view title="邀请好友" id="invitation">
+    <div class="wxpointlayer" ng-click="changeshowpoint()" ng-if="showpoint">
+        <img src="img/sharepoint1.png" alt="" class="wxpoint">
+    </div>
+    <ion-content>
+        <div class="main">
+            <div class="btlayer">
+                <img src="img/btn1@3x.png" alt="" ng-click="share()">
+            </div>
+            <div class="infolayer">
+                <div class="i1">
+                    <div class="i1left">邀请码</div>
+                    <div class="i1right">{{invateCode}}</div>
+                </div>
+                <div class="i2">
+                    你已经赚到
+                    <span>{{earn}}元</span>
+                </div>
+                <div class="i2">
+                    累计邀请好友
+                    <span>{{size}}位</span>
+                </div>
+            </div>
+            <div class="tablayer">
+                <div class="arrow" ng-class="{'right':tab.active==-1}"></div>
+                <div class="tabheader">
+                    <div class="tabheaderitem" ng-class="{'active':tab.active==1}" ng-click="tab.changeactive(1)">活动规则</div>
+                    <div class="tabheaderitem" ng-class="{'active':tab.active==-1}" ng-click="tab.changeactive(-1)">邀请记录</div>
+                </div>
+                <div class="tabbody">
+                    <div class="leftbody" ng-if="tab.active==1">
+                        <h2>1、活动时间：
+                            <span>2017-09-01至2017-12-01</span>
+                        </h2>
+                        <h2>2、活动用户：所有人人花注册用户</h2>
+                        <h2>3、邀请人奖励：被邀请人借款到账，邀请人 即可
+                            <span>获得2000个花币（可兑换现金20元），</span> 上不封顶；</h2>
+                        <h2>4、被邀请人福利：通过邀请码注册的新用户，
+                            <span> 获得10元免息劵，</span>可在还款时直接抵扣；</h2>
+                        <h2> 5、活动期间，
+                            <span>邀请人每周可提现1次,</span>若邀请人借款逾期超过30天，取消邀请资格与奖励；</h2>
+                        <h2>6、本活动最终解释权归{{companyname}}所有。</h2>
+                    </div>
+                    <div class="rightbody" ng-class="{'empty':tab.active==-1&&data.length==0}" ng-if="tab.active==-1">
+                        <h2 ng-if="tab.active==-1&&data.length==0" class="emptywarn">暂时没有邀请好友记录</h2>
+                        <div class="rightbodyitemlayer" ng-if="tab.active==-1" ng-style="{'top':top+'rem'}">
+                            <div class="rightbodyitem" ng-repeat="i in data track by $index">
+                                <span class="i1">{{i.date}}</span>
+                                <span class="i2">{{i.phone}}</span>
+                                <span class="i3" ng-if="i.count!=0">已放款</span>
+                                <span class="i3 red" ng-if="i.count==0">未放款</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,39 @@
+<ion-view title="人人花" id="home" hide-nav-bar='true'>
+    <ion-content scrollbar-y="false" style="background:white">
+        <img src="img/home_nav_message@3x.png" alt="" class="tomessage" ng-click="tomessage()">
+        <ion-slide-box does-continue="true" slide-interval="3000" auto-play="true">
+            <ion-slide ng-repeat="i in data.advertisement" ng-click="go(i.linkUrl)">
+                <img ng-src="{{i.imgUrl}}" alt="">
+            </ion-slide>
+        </ion-slide-box>
+        <div class="product">
+            <div class="hd">
+                <img src="img/icon_yongtu_normal.png" alt="">
+                <span class="s1">人人花</span>
+                <span class="s2">极速借款</span>
+            </div>
+            <div class="bd">
+                <div class="up">
+                    <div class="money">{{data.amountGroup[0]|number:0}}</div>
+                    <div class="moneytitle">借款金额 (元)</div>
+                    <div class="rangeminmax">
+                        <span class="s1">0</span>
+                        <span class="s2">3000</span>
+                    </div>
+                    <div class="item range {{'rangerule'+data.amountGroup[0]}}">
+                        <input type="range" name="volume" ng-model="data.amountGroup[0]" min="0" max="3000" ng-disabled="true">
+                    </div>
+                </div>
+                <div class="down">
+                    <img src="img/icon_qixian_normal-1.png" alt="">
+                    <span class="s1">借款期限</span>
+                    <span class="s2" ng-repeat="i in data.periodGroup">{{i}}天</span>
+                </div>
+            </div>
+            <div class="ft">
+                <button class="button" ng-click="sub()">马上申请</button>
+                <div class="info" ng-click="go('app.renrenhua.com/rrhprotocolh5/violate2.html')">怎样提额?</div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

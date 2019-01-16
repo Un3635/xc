@@ -1,0 +1,18 @@
+<ion-view title="更多认证" id="authlist">
+    <ion-content>
+        <div class="warn">完成以下步骤,审核通过后就可以提现了</div>
+        <div class="out" ng-class="{'rrhback':i.status==2||i.status==0}" ng-click="go(i)" ng-repeat="i in data.result">
+            <div class="authitem">
+                <img ng-src="{{i.icon}}" alt=""> {{i.authName}}
+                <span class='suc channelspan' ng-if="i.authName.indexOf('银行')>=0&&i.status==3">绑定成功</span>
+                <span class="must channelspan" ng-if="i.authName.indexOf('银行')>=0&&i.status==0">必须绑定</span>
+
+                <span class='must channelspan' ng-if="i.authName.indexOf('运营商')>=0&&i.status==0">必须认证</span>
+                <span class='in channelspan' ng-if="i.authName.indexOf('运营商')>=0&&i.status==1">认证中</span>
+                <span class='fail channelspan' ng-if="i.authName.indexOf('运营商')>=0&&i.status==2">认证失败</span>
+                <span class="suc channelspan" ng-if="i.authName.indexOf('运营商')>=0&&i.status==3">认证成功</span>
+            </div>
+        </div>
+        <button class="button sub" ng-click="sub()" ng-disabled="!cannext">下一步</button>
+    </ion-content>
+</ion-view>

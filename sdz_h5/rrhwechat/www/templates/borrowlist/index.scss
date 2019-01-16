@@ -1,0 +1,61 @@
+#borrowlist {
+    .nulldata {
+        text-align: center;
+        font-size: 0;
+        margin-top: 50%;
+        img {
+            width: p2r(121);
+            height: p2r(121);
+        }
+        h2 {
+            margin: 0;
+            line-height: 1;
+            font-size: p2r(14);
+            color: #828282;
+            margin-top: p2r(12);
+        }
+    }
+    .out {
+        width: p2r(348);
+        height: p2r(102);
+        background-color: white;
+        margin: p2r(8) auto;
+        box-sizing: border-box;
+        padding: p2r(19) p2r(12) p2r(17) p2r(17);
+        background-size: p2r(55) auto;
+        background-repeat: no-repeat;
+        background-position: p2r(277) p2r(8);
+        &.t1 {
+            background-image: url(img/icon_yiyuqi_normal-1.png);
+        }
+        &.t2 {
+            background-image: url(img/icon_linjinhuankuan_normal-1.png);
+        }
+        h2 {
+            margin: 0;
+            color: #303030;
+            font-size: p2r(16);
+            margin-bottom: p2r(9);
+            line-height: 1;
+        }
+        h3 {
+            margin: 0;
+            color: #ACACAC;
+            font-size: p2r(13);
+            margin-bottom: p2r(16);
+            line-height: 1;
+        }
+        h4 {
+            line-height: p2r(13);
+            .left {
+                font-size: p2r(18);
+                color: #F83C3C;
+            }
+            .right {
+                float: right;
+                font-size: p2r(13);
+                color: #ACACAC;
+            }
+        }
+    }
+}

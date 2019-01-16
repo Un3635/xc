@@ -1,0 +1,12 @@
+<div class="plbox">
+  <div class="plboxwarn" ng-if="binddata.dowarn">{{binddata.warn}}</div>
+  <div class="box">
+    <label class="item item-input item-select item-borderless">
+      <div class="input-label">
+        <span class='isrequire' ng-class="{'require':binddata.require}">*</span>{{binddata.name}}
+      </div>
+      <select ng-model="binddata.value" ng-options="x.value for x in binddata.datas" ng-change="change()"> </select>
+      </label>
+  </div>
+
+</div>

@@ -1,0 +1,24 @@
+<ion-modal-view id="login" ng-controller="login">
+    <ion-content>
+        <div class="bgconetnt">
+            <img src="img/denglu_bg.png" alt="" class="bg">
+            <div class="back" ng-click="loginmodal.remove()"></div>
+        </div>
+        <div class="list">
+            <label class="item item-input bordertopnone rrhbdcolor">
+                <img src="img/loginuser.png" alt="" >
+                <input type="tel" placeholder="请输入帐号" ng-model="login_data.data.phone" maxlength="11">
+            </label>
+            <div class="item item-input rrhbdcolor">
+                <img src="img/loginpwd.png" alt="">
+                <input type="{{login_data.inputtype}}" placeholder="请输入密码" ng-model="login_data.data.password" maxlength="16">
+                <img ng-src="{{login_data.imgurl}}" alt="" ng-click="login_data.changeimg()">
+            </div>
+        </div>
+        <button class="button loginbt" ng-click="login_data.login()" ng-disabled="!login_data.data.phone||!login_data.data.password">登录</button>
+        <div class="other">
+            <span class="forget" ui-sref='forgetpwd'>忘记密码</span>
+            <span class="reg" ng-click="login_data.goreg()">立即注册>></span>
+        </div>
+    </ion-content>
+</ion-modal-view>

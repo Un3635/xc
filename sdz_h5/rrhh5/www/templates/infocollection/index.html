@@ -1,0 +1,28 @@
+<ion-view title="{{data.title}}" id="infocollection">
+    <ion-nav-bar>
+        <ion-nav-buttons side="left">
+            <button class="button button-clear">取消</button>
+        </ion-nav-buttons>
+        <ion-nav-buttons side="right">
+            <button class="button button-clear" ng-click="show()">提交</button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content class="bg">
+        <div class="warn">
+            <img src="img/adam.jpg" alt=""> {{data.warn}}
+        </div>
+        <div ng-repeat="i in data.component |orderBy:'sort'" class="boxs">
+            <rrhselect binddata='i' ng-if="i.component=='select'"></rrhselect>
+            <rrhinput binddata='i' ng-if="i.component=='input'"></rrhinput>
+            <rrhlinkman binddata='i' ng-if="i.component=='linkman'"></rrhlinkman>
+            <rrhimage binddata='i' ng-if="i.component=='image'"></rrhimage>
+            <rrhpopup binddata='i' ng-if="i.component=='popup'"></rrhpopup>
+            <rrhrange binddata='i' ng-if="i.component=='range'"></rrhrange>
+            <rrhdate binddata='i' ng-if="i.component=='date'"></rrhdate>
+            <rrhtime binddata='i' ng-if="i.component=='time'"></rrhtime>
+            <rrhdatetime binddata='i' ng-if="i.component=='datetime'"></rrhdatetime>
+            <rrhimageselect binddata='i' ng-if="i.component=='imageselect'"></rrhimageselect>
+            <rrhcommonselect binddata='i' ng-if="i.component=='commonselect'"></rrhcommonselect>
+        </div>
+    </ion-content>
+</ion-view>

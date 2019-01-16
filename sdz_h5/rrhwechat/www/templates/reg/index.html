@@ -1,0 +1,41 @@
+<ion-view title="注册" id="reg">
+    <ion-content>
+        <div class="empty rrhbg"></div>
+        <div class="list">
+            <label class="item item-input bordertopnone rrhbdcolor">
+                <span class="input-label">手机号码</span>
+                <input type="tel" placeholder="(本人实名且为银行预留手机号码)" ng-model="item.phone" maxlength="11">
+            </label>
+            <div class="item item-input rrhbdcolor" ng-if="codeimg.show">
+                <span class="input-label">图形验证码</span>
+                <input type="text" placeholder="图形验证码" ng-model="codeimg.code">
+                <img ng-src='{{codeimg.url}}' alt="" class="codeimg" ng-click="codeimg.change()">
+            </div>
+            <div class="item item-input rrhbdcolor">
+                <span class="input-label">验证码</span>
+                <input type="text" ng-model="item.code">
+                <button class="button yzmbt" ng-click="getcode()" ng-disabled="!item.phone||djs.time>0">{{djs.time?(djs.time+'s'):'发送验证码'}}</button>
+            </div>
+            <div id="captcha"></div>
+            <div class="item item-input rrhbdcolor">
+                <span class="input-label">密码</span>
+                <input type="{{inputtype}}" placeholder="(6-16位的数字或字母)" ng-model="item.password" maxlength="16">
+                <img ng-src="{{imgurl}}" alt="" ng-click="changeimg()">
+            </div>
+            <label class="item item-input rrhbdcolor">
+                <span class="input-label">邀请码</span>
+                <input type="text" placeholder="(非必填)" ng-model="item.recommend_id">
+            </label>
+        </div>
+        <div class="tipstext">
+            <!--<img src="img/register_tips.png" alt=""> -->
+            注册即同意
+            <span ng-click="go('app.renrenhua.com/rrhprotocolh5/registerProtocol.html')">《注册使用服务协议》</span>、
+            <span ng-click="go('app.renrenhua.com/rrhprotocolh5/creditAuthorizationProtocol.html')">《征信调查授权协议》</span>及
+            <span ng-click="go('app.renrenhua.com/rrhprotocolh5/cost.html')">《 平台借款人费用表》</span>
+        </div>
+        <button class="button regbt" ng-click="reg()" ng-disabled="!item.phone||!item.code||!item.password">立即注册</button>
+        <h2 class="hasaccount">已有帐号?</h2>
+        <button class="button loginbt" ng-click="login()">马上登录</button>
+    </ion-content>
+</ion-view>

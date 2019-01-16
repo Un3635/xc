@@ -1,0 +1,84 @@
+.waveloginreg {
+    &.popup-hidden .popup {
+        -webkit-animation-name: uptodown;
+        animation-name: uptodown;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-timing-function: ease;
+        animation-timing-function: ease;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-transition: all 1s;
+        transition: all 1s;
+    }
+    .popup-head {
+        display: none;
+    }
+    .popup-body {
+        padding: 0;
+        .warn {
+            text-align: center;
+            font-size: p2r(14);
+            color: #6D6D6D;
+            img {
+                width: p2r(18);
+                height: p2r(21);
+                vertical-align: bottom;
+            }
+        }
+        .bts {
+            // width: p2r(272);
+            text-align: center;
+            margin-top: p2r(21);
+            margin-bottom: p2r(21);
+            font-size: 0;
+            button {
+                width: p2r(126);
+                height: p2r(45);
+                font-size: p2r(18);
+                border-radius: p2r(60);
+                &.reg {
+                    background-color: white;
+                    color: #FA4717;
+                    border: 1px solid #FA4717;
+                    margin-right: p2r(20);
+                }
+                &.login {
+                    background: -webkit-linear-gradient(left, #FF7200, #F72828);
+                    background: linear-gradient(left, #FF7200, #F72828);
+                    border: none;
+                    color: white;
+                }
+            }
+        }
+    }
+    .popup {
+        width: p2r(375);
+        height: p2r(172);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: transparent;
+    }
+    .warnbts {
+        background-color: white;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding-top: p2r(48);
+    }
+}
+
+@-webkit-keyframes uptodown {
+    from {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+    to {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+        opacity: 0;
+    }
+}

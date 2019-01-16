@@ -1,0 +1,9 @@
+<div class="poprrhcoinslist" ng-controller="poprrhcoinslist">
+    <div class="title">提现记录</div>
+    <div class="poprrhcoinslistlist">
+        <ul>
+            <li ng-repeat="i in data">{{i.createdAt|date:"yyyy年MM月dd日"}} {{i.type==-1?'-':'+'}}{{i.changeMoney}}元 <span>{{i.notes}}</span></li>
+        </ul>
+    </div>
+    <div class="close" ng-click="popover.remove();"></div>
+</div>

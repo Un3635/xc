@@ -1,0 +1,50 @@
+#contract {
+    .scroll-content,
+    .ionic-scroll {
+        background-color: white;
+    }
+    .warn {
+        font-size: p2r(16);
+        line-height: p2r(48);
+        color: #303030;
+        text-align: center;
+    }
+    .out {
+        padding-left: p2r(16);
+        .in {
+            border-top: 1px solid #f0f0f0;
+            padding-right: p2r(16);
+            font-size: p2r(14);
+            color: #7F7F7F;
+            line-height: p2r(40);
+            span {
+                float: right;
+                color: #303030;
+            }
+        }
+        &:last-of-type {
+            .in {
+                border-bottom: 1px solid #f0f0f0;
+            }
+        }
+    }
+    .sub {
+        width: p2r(344);
+        height: p2r(44);
+        font-size: p2r(17);
+        height: p2r(44);
+        color: white;
+        background-color: #F52F2F;
+        display: block;
+        margin: p2r(40) auto p2r(21);
+        border-radius: p2r(30);
+    }
+    .gocontract {
+        padding-left: p2r(20);
+        font-size: p2r(12);
+        color: #7F7F7F;
+        span {
+            color: #F52F2F;
+        }
+    }
+}

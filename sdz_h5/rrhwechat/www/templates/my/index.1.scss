@@ -1,0 +1,142 @@
+#my {
+    .myheader {
+        width: p2r(375);
+        height: p2r(135);
+        background-image: url(img/mybg1.png), url(img/mybg.png);
+        background-size: 100% p2r(50), 100% p2r(130);
+        background-position: left bottom, left top;
+        background-repeat: no-repeat;
+        position: relative;
+        .mybg1 {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        .headimg {
+            width: p2r(75);
+            height: p2r(75);
+            display: inline-block;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-left: p2r(-37.5);
+            border-radius: 50%;
+        }
+        .hideinputfile {
+            width: p2r(75);
+            height: p2r(75);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-left: p2r(-37.5);
+            border-radius: 50%;
+            opacity: 0;
+            display: inline-block;
+        }
+    }
+    .user {
+        text-align: center;
+        background-color: white;
+        border-bottom: 1px solid #EFEFF4;
+        h1 {
+            font-size: p2r(17);
+            color: #303030;
+            line-height: p2r(30);
+            margin: 0;
+        }
+        h2 {
+            height: p2r(23);
+            background-color: #FEBA27;
+            line-height: p2r(35);
+            margin: 0;
+            font-size: p2r(11);
+            line-height: p2r(23);
+            display: inline-block;
+            color: white;
+            padding-left: p2r(11);
+            padding-right: p2r(11);
+            border-radius: p2r(10);
+        }
+        h3 {
+            font-size: p2r(14);
+            color: #7F7F7F;
+            line-height: p2r(26);
+            margin: 0;
+        }
+    }
+    .bts {
+        text-align: center;
+        padding-top: p2r(25);
+        padding-bottom: p2r(25);
+        background-color: white;
+        border-bottom: 1px solid #EFEFF4;
+        button {
+            width: p2r(93);
+            height: p2r(31);
+            margin: 0 p2r(5);
+            border-radius: p2r(15);
+            font-size: p2r(15);
+            &.reg {
+                border: 1px solid #FA4D4D;
+                color: #F83C3C;
+                background-color: white;
+            }
+            &.login {
+                background-color: #F52F2F;
+                color: white;
+            }
+        }
+    }
+    .myfinance {
+        color: #303030;
+        font-size: p2r(13);
+        height: p2r(42);
+        line-height: p2r(42);
+        background-color: white;
+        margin-bottom: p2r(7);
+        padding-left: p2r(16);
+        button {
+            width: p2r(75);
+            height: p2r(30);
+            float: right;
+            font-size: p2r(14);
+            line-height: p2r(14);
+            margin-top: p2r(7);
+            margin-right: p2r(7);
+            border-radius: p2r(18);
+            &.bt1 {
+                border: 1px solid #FF5C5C;
+                background-color: white;
+                color: #FF5C5C;
+                box-shadow: 1px 1px 4px 0px #FF5C5C;
+            }
+            &.bt2 {
+                border: 1px solid #FF5C5C;
+                background-color: #FF5C5C;
+                color: white;
+            }
+        }
+    }
+    .myinfo {
+        background-color: white;
+        margin-bottom: p2r(7);
+        .col {
+            text-align: center;
+            font-size: 0;
+            padding-top: p2r(15);
+            padding-bottom: p2r(15);
+            img {
+                width: p2r(32);
+                height: p2r(32);
+            }
+            h2 {
+                margin: 0;
+                line-height: 1;
+                font-size: p2r(12);
+                color: #7F7F7F;
+            }
+        }
+    }
+}
