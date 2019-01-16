@@ -1,0 +1,297 @@
+body {
+  overflow: auto;
+}
+
+.bar {
+  height: 40px;
+}
+.bar:after {
+  background-color: transparent;
+}
+.buttons-tab:after {
+  background-color: transparent;
+}
+
+// 支出，收入明细中，scss
+.diamonds-content {
+  .item-media > img {
+    position: absolute;
+    left: 15px;
+    top: 14px;
+    width: 36px;
+    height: 36px;
+  }
+  .item-title {
+    text-align: left;
+    .icon-url {
+      margin-bottom: 8px;
+      width: 55px;
+      height: 55px;
+    }
+  }
+  .item-title > p {
+    font-family: PingFangSC-Regular;
+    letter-spacing: 0;
+  
+    &.type-title {
+      font-size: 15px;
+      color: #6d6668;
+    }
+    &.nick-name {
+      margin: 15px auto 15px;
+      font-size: 16px;
+      color: #3f3739;
+    }
+   
+    &.git-count {
+      font-size: 12px;
+      color: #6D6668;
+    }
+    &.create-time {
+      margin-top: 10px;
+      margin-bottom: 15px;
+      font-size: 13px;
+      color: #ccc8ca;
+    }
+  }
+  .userCount {
+    font-family: PingFangSC-Medium;
+    letter-spacing: 0;
+    font-size: 16px;
+    text-align: right;
+    font-weight: 700;
+    position: absolute;
+    right: .8rem;
+    top: 0px;
+    padding-top: 26px;
+  }
+  .inCount {
+    color: #fa6e6e;
+  }
+  .outCount {
+    color: #3F3739;
+  }
+  .list-block {
+    margin: 0px;
+    background: #fff;
+  }
+  .list-block .item-media + .item-inner {
+    margin-left: 52px;
+    padding-top: 26px;
+  }
+  .list-block .item-inner {
+    padding-right: 0.8rem;
+  }
+}
+
+
+// 头部多样
+
+.headerBox {
+  .buttons-row {
+    justify-content: center;
+  }
+  .buttons-row .button.active {
+    background: #fa6e6e;
+    color: #ffffff;
+
+    border-color: transparent;
+  }
+  .buttons-group {
+    & > a {
+      padding: 7px 20px;
+      font-family: PingFangSC-Medium;
+      font-size: 15px;
+      color: #ffffff;
+      letter-spacing: 0;
+      text-align: center;
+      line-height: 15px;
+      border: 1px solid #ddd9db;
+      &:first-child {
+        border-radius: 15px 0 0 15px;
+        margin-left: 0;
+        border-left-width: 1px;
+        border-left-style: solid;
+      }
+      &:last-child {
+        border-radius: 0 0.25rem 0.25rem 0;
+      }
+    }
+  }
+  .button {
+    font-family: PingFangSC-Medium;
+    padding: 7px 20px;
+    width: auto;
+    height: auto;
+    font-size: 15px;
+    color: #3f3739;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 15px;
+    border: 1px solid #ddd9db;
+  }
+  .buttons-row .button:first-child {
+    border-radius: 15px 0 0 15px;
+    margin-left: 0;
+    border-left-width: 1px;
+    border-left-style: solid;
+  }
+  .buttons-row .button:last-child {
+    border-radius: 0 15px 15px 0;
+  }
+}
+
+// 注册
+.register-wrap {
+  position: relative;
+  background: #fff;
+  min-height: 100vh;
+  .item-content {
+    padding-left: 0xp;
+  }
+  .list-block .item-title.label {
+    font-family: PingFangSC-Regular;
+    font-size: .8rem;
+    color: #6D6668;
+    letter-spacing: 0;
+    width: 16%;
+    margin-right: .5rem;
+    text-align: right;
+    padding: 5px 0px;
+  }
+  .list-block ul:before {
+    background-color: transparent;
+  }
+ 
+}
+.balance-wrap {
+  .list-block .item-title.label {
+    font-size: .8rem;
+    color: #FA6E6E;
+    width: 15%;
+  }
+  .list-block .item-inner {
+    padding-bottom: 0;
+  }
+}
+.register-wrap, .toWithDrawal-wrap {
+  ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    font-family: PingFangSC-Regular;
+    font-size: .8rem;
+    color:#CCC8CA !important;
+    letter-spacing: 0;
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-family: PingFangSC-Regular;
+      font-size: .8rem;
+      color:#CCC8CA !important;
+      letter-spacing: 0;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-family: PingFangSC-Regular;
+      font-size: .8rem;
+      color:#CCC8CA !important;
+      letter-spacing: 0;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-family: PingFangSC-Regular;
+    font-size: .8rem;
+    color:#CCC8CA !important;
+    letter-spacing: 0;
+  }
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    font-family: PingFangSC-Regular;
+    font-size: .8rem;
+    color:#CCC8CA !important;
+    letter-spacing: 0;
+  }
+}
+
+// 提现
+.toWithDrawal-wrap {
+  .to-balance-wrap {
+    ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+      font-family: PingFangSC-Regular;
+      font-size: .7rem;
+      color:#CCC8CA !important;
+      letter-spacing: 0;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+       font-family: PingFangSC-Regular;
+       font-size: .7rem;
+        color:#CCC8CA !important;
+        letter-spacing: 0;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+       font-family: PingFangSC-Regular;
+       font-size: .7rem;
+        color:#CCC8CA !important;
+        letter-spacing: 0;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      font-family: PingFangSC-Regular;
+      font-size: .7rem;
+      color:#CCC8CA !important;
+      letter-spacing: 0;
+    }
+    ::-ms-input-placeholder { /* Microsoft Edge */
+      font-family: PingFangSC-Regular;
+      font-size: .7rem;
+      color:#CCC8CA !important;
+      letter-spacing: 0;
+    }
+  }
+  
+}
+.border-1px {
+  position : relative
+}
+.border-1px:after {
+  position : absolute;
+  content:' ';
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  border-top: 1px solid #fa6e6e;
+}
+@media only screen and (max-width: 320px) {
+  html {
+    font-size: 15px!important;
+  }
+}
+@media (min-width: 320px) {
+  html {
+    font-size: 17px!important;
+  }
+}
+@media only screen and (min-width: 360px) {
+  html {
+    font-size: 20px!important;
+  }
+}
+@media only screen and (min-width: 375px){
+  html {
+    font-size: 21px!important;
+  }
+}
+@media only screen and (min-width: 414px){
+  html {
+    font-size: 23px!important;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 40px!important;
+  }
+}
+@media only screen and (min-width: 992px) {
+  html {
+    font-size: 45px!important;
+  }
+}
+@media (min-width: 1024px) {
+  html {
+    font-size: 55px!important;
+  }
+}
