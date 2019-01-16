@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'DINNeuzeitGroteskLT';
+  src: url('./DINNeuzeitGroteskLTW01BdCn.ttf');
+  font-weight:normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DINNeuzeitGroteskLTW01BdCn';
+  src: url('./DINNeuzeitGroteskLTW01BdCn.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'DINNextW01Light';
+  src: url('./DINNextW01Light.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'STSong';
+  src: url('./STSong.ttf');
+  font-weight: normal;
+  font-style: normal;
+}

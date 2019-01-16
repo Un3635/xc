@@ -1,0 +1,236 @@
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+  width: 3px;
+  height: 8px;
+  background-color: #e9e3d7;
+}
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0);
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  background-color: rgba(233, 227, 215, 0.92);
+}
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+  background-color: rgba(227, 218, 201, 0.91); //#e4e7ed
+}
+
+//首页武术文化页滚动条
+.home-culture,.home-team{
+  /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+  ::-webkit-scrollbar {
+    width: 3px;
+    height: 8px;
+    background-color: #e9e3d7;
+  }
+  /*定义滚动条轨道 内阴影+圆角*/
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0);
+    box-shadow: inset 0 0 1px rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    background-color: #537b81;
+  }
+  /*定义滑块 内阴影+圆角*/
+  ::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+    background-color: #3d6a6e; //#e4e7ed
+  }
+}
+//首页课程介绍滚动条
+.course{
+  /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+  ::-webkit-scrollbar {
+    width: 1px;
+  }
+  /*定义滚动条轨道 内阴影+圆角*/
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0);
+    box-shadow: inset 0 0 1px rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    background-color: rgba(83, 123, 129, 0.1);
+  }
+  /*定义滑块 内阴影+圆角*/
+  ::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, .1);
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, .1);
+    background-color: rgba(83, 123, 129, 0.1);
+  }
+}
+//武术文化页滚动条
+.culture{
+  /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+  ::-webkit-scrollbar {
+    width: 2px;
+  }
+}
+@media screen and (max-width: 918px){
+
+  /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+  ::-webkit-scrollbar {
+    width: 0.06rem;
+    background-color: #e9e3d7;
+  }
+  //首页武术文化滚动条
+  .home-culture,.home-team{
+    /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+    ::-webkit-scrollbar {
+      width: 0.06rem;
+      height: 0.08rem;
+      background-color: #e9e3d7;
+    }
+    /*定义滚动条轨道 内阴影+圆角*/
+    ::-webkit-scrollbar-track {
+      border-radius: 0.1rem;
+    }
+    /*定义滑块 内阴影+圆角*/
+    ::-webkit-scrollbar-thumb {
+      border-radius: 0.08rem;
+      -webkit-box-shadow: inset 0 0 0.06rem rgba(0, 0, 0, .1);
+      box-shadow: inset 0 0 0.06rem rgba(0, 0, 0, .1);
+    }
+  }
+  //首页课程介绍滚动条
+  .course{
+    /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+    ::-webkit-scrollbar {
+      width: 0.02rem;
+    }
+    /*定义滚动条轨道 内阴影+圆角*/
+    ::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0);
+      box-shadow: inset 0 0 1px rgba(0, 0, 0, 0);
+      border-radius: 10px;
+      background-color: rgba(83, 123, 129, 0.1);
+    }
+    /*定义滑块 内阴影+圆角*/
+    ::-webkit-scrollbar-thumb {
+      border-radius: 2px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, .1);
+      box-shadow: inset 0 0 3px rgba(0, 0, 0, .1);
+      background-color: rgba(83, 123, 129, 0.1);
+    }
+  }
+  //武术文化页滚动条
+  .culture{
+    /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+    ::-webkit-scrollbar {
+      width: 0.02rem;
+    }
+  }
+}
+
+
+/*清除ie输入框删除按钮及显示密码*/
+::-ms-clear,
+::-ms-reveal {
+  display: none;
+}
+
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+::-ms-expand {
+  display: none;
+}
+/*去除type=number的自带按钮*/
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="search"],
+input[type="reset"] {
+  appearance: none;
+}
+
+input[type="number"] {
+  appearance: textfield;
+}
+
+textarea {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+ul, ol, dl {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+h2 {
+  font-size: 22px;
+  line-height: 30px;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+h5 {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+h6 {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+body{
+  margin: 0;
+}
+*{
+  margin:0;
+  padding:0;
+}
+html{
+  //font-size:625%;
+}
+body{
+  font-family: STSong,DINNextW01Light,Arial;
+  font-size:18px;
+  line-height:27px;
+  @media screen and (max-width: 918px) {
+    font-size:0.2rem;
+    line-height:0.3rem;
+  }
+}
+p ,span,input,textarea{
+  font-size:18px;
+  line-height:27px;
+  color:#6c6c6a;
+  @media screen and (max-width: 918px) {
+    font-size:0.2rem;
+    line-height:0.3rem;
+  }
+}
