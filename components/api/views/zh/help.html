@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link href="../../css/article.css" rel="stylesheet">
+  <title>帮助中心</title>
+  <style>
+
+    :focus {
+      outline: none;
+    }
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+      background-color: #f9f9f9;
+    }
+
+    .qa {
+      background-color: #fff;
+    }
+
+    .panel {
+      height: 0;
+      padding: 0;
+      overflow: hidden;
+      display: block !important;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease;
+    }
+
+    .content {
+      padding: 8px 15px;
+      line-height: 24px;
+      font-size: 13px;
+      color: #999;
+      border-bottom: 1px solid #eee;
+    }
+
+    h2.open + .panel {
+      height: auto;
+      /*background: #aaffff;*/
+    }
+
+    .q {
+      position: relative;
+      margin-bottom: 0;
+      line-height: 24px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .q a {
+      display: block;
+      padding: 13px 32px 13px 15px;
+      text-decoration: none;
+      color: inherit;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    .q .icon {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      margin-top: -8px;
+      -webkit-transition: transform .3s;
+      transition: transform .3s;
+    }
+
+    .q.open .icon {
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+    }
+  </style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol viewBox="0 0 1024 1024" id="right">
+    <path d="M730.478 487.658L342.023 99.335c-13.39-13.412-35.106-13.412-48.518 0-13.392 13.368-13.392 35.083 0 48.474l364.32 364.197-364.32 364.196c-13.392 13.39-13.392 35.104 0 48.495 13.412 13.369 35.127 13.369 48.518 0l388.454-388.343c6.732-6.72 10.083-15.54 10.056-24.348.027-8.81-3.323-17.628-10.055-24.348z"
+          fill="#e4e4e4"></path>
+  </symbol>
+</svg>
+<div class="container">
+  <div class="qa">
+    <h2 class="q">XToken是什么？
+      <svg class="icon" width="16" height="16">
+        <use xlink:href="#right"></use>
+      </svg>
+    </h2>
+    <div class="panel">
+      <div class="content">
+        XToken是一款全新的数字货币钱包，为用户提供一站的存储和转账服务。XToken支持ETH和基于ERC20的数字货币，后续将陆续支持更多主流数字货币。
+      </div>
+    </div>
+  </div>
+  <div class="qa">
+    <h2 class="q">XToken支持多个钱包账户吗？
+      <svg class="icon" width="16" height="16">
+        <use xlink:href="#right"></use>
+      </svg>
+    </h2>
+    <div class="panel">
+      <div class="content">XToken支持多个钱包账户，点击 "我" ->管理钱包，选择导入钱包，将备份的钱包助记词、keystore或私钥输入，验证成功后，设置交易密码，钱包账户导入成功</div>
+    </div>
+  </div>
+  <div class="qa">
+    <h2 class="q">XToken支持哪些数字货币？
+      <svg class="icon" width="16" height="16">
+        <use xlink:href="#right"></use>
+      </svg>
+    </h2>
+    <div class="panel">
+      <div class="content">
+        当前支持ETH和基于ERC20的代币，后续将支持更多主流数字货币。
+      </div>
+    </div>
+  </div>
+  <div class="qa">
+    <h2 class="q">XToken收费吗？费率是多少？
+      <svg class="icon" width="16" height="16">
+        <use xlink:href="#right"></use>
+      </svg>
+    </h2>
+    <div class="panel">
+      <div class="content">
+        XToken对于给用户提供的数字货币存储、转账功能，不收取任何费用，转账时的手续费是支付给维护数字货币系统运行的网络节点，也称矿工费。转账页面显示的是参考手续费，实际发生手续费以实际发生为准，具体在交易记录详情页面查看。
+      </div>
+    </div>
+  </div>
+  <div class="qa">
+    <h2 class="q">如何导入钱包？
+      <svg class="icon" width="16" height="16">
+        <use xlink:href="#right"></use>
+      </svg>
+    </h2>
+    <div class="panel">
+      <div class="content">
+        点击 "我" ->管理钱包，选择导入钱包，将备份的钱包助记词输入，验证成功后，设置交易密码，钱包导入成功，即可开始管理通过该助记词备份的钱包资产，包括 ETH及基于ERC20的合约代币等
+      </div>
+    </div>
+  </div>
+  <div class="qa">
+    <h2 class="q">如何进行转账/收款？
+      <svg class="icon" width="16" height="16">
+        <use xlink:href="#right"></use>
+      </svg>
+    </h2>
+    <div class="panel">
+      <div class="content">
+        在XToken资产列表页面，选择想要交易的资产类型，即可开始转账收款：选择转账，输入收款人地址（可通过扫描二维码完成）和转账金额，验证交易密码后，即完成转账；选择收款，页面展示收款二维码，付款方可以扫描二维码完成转账，或者收款方点击二维码复制收款地址，分享发送给付款方。
+      </div>
+    </div>
+  </div>
+  <div class="qa">
+    <h2 class="q">如何修改密码？忘记密码怎么办？
+      <svg class="icon" width="16" height="16">
+        <use xlink:href="#right"></use>
+      </svg>
+    </h2>
+    <div class="panel">
+      <div class="content">
+        通过设置-修改密码，验证原密码后，即可设置新密码；因为XToken不存储用户密码，如果忘记密码，用户只能点击“我”->管理钱包，选择删除钱包，然后重新导入钱包。如果忘记密码且丢失了钱包助记词，你将丢失数字资产。
+      </div>
+    </div>
+  </div>
+  <div class="qa">
+    <h2 class="q">备份的钱包助记词丢失后能找回吗？
+      <svg class="icon" width="16" height="16">
+        <use xlink:href="#right"></use>
+      </svg>
+    </h2>
+    <div class="panel">
+      <div class="content">
+        XToken不存储用户的钱包助记词，助记词只存储在用户手机上，请妥善保管！
+      </div>
+    </div>
+  </div>
+  <div class="qa">
+    <h2 class="q">钱包首页显示的数字货币类型可以修改吗？
+      <svg class="icon" width="16" height="16">
+        <use xlink:href="#right"></use>
+      </svg>
+    </h2>
+    <div class="panel">
+      <div class="content">
+        通过点击钱包首页右侧的添加资产按钮，进入添加资产页面后，选择想要在首页展示的货币种类，打开或者关掉展示开关。
+      </div>
+    </div>
+  </div>
+  <div class="qa">
+    <h2 class="q">勾选掉钱包首页展示的数字货币，对应的资产会丢失吗？
+      <svg class="icon" width="16" height="16">
+        <use xlink:href="#right"></use>
+      </svg>
+    </h2>
+    <div class="panel">
+      <div class="content">
+        不会。在添加资产页面关掉某些数字货币的展示开关，只是在首页不进行展示，如果对应的数字货币有余额，资产不会丢失，重新打开展示开关之后，会在钱包首页展示该种数字货币及对应余额。
+      </div>
+    </div>
+  </div>
+  <div class="qa">
+    <h2 class="q">为什么ETH和基于ERC20的代币的收款地址是一样的？
+      <svg class="icon" width="16" height="16">
+        <use xlink:href="#right"></use>
+      </svg>
+    </h2>
+    <div class="panel">
+      <div class="content">
+        基于ERC20的代币是在以太坊平台发行的智能合约代币，ETH地址代表该平台的一个账户，该账户可以接收平台上的所有合约资产类型，所以地址和ETH是一样的。
+      </div>
+    </div>
+  </div>
+  <div class="qa">
+    <h2 class="q">为什么基于ERC20的代币转账时收取的手续费是ETH？
+      <svg class="icon" width="16" height="16">
+        <use xlink:href="#right"></use>
+      </svg>
+    </h2>
+    <div class="panel">
+      <div class="content">
+        对基于ERC20的代币，转账消耗以太坊平台的运算资源，需要用以太坊平台的代币ETH作为手续费，支付给维护以太坊的网络节点。
+      </div>
+    </div>
+  </div>
+</div>
+<script src="//cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="/static/lib/jquery.collapse.js"></script>
+<script>
+    $('.container').collapse({
+        query: '.q',
+        accordion: true,
+        open: function () {
+            this.addClass("open");
+            this.css({height: this.children().outerHeight()});
+        },
+        close: function () {
+            this.css({height: "0px"});
+            this.removeClass("open");
+        }
+    });
+</script>
+</body>
+</html>

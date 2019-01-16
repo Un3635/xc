@@ -1,0 +1,46 @@
+html {
+    font-family: opensans, PingFang SC, Lantinghei SC, Helvetica Neue,
+    Helvetica, Arial, Microsoft YaHei, \\\5FAE\8F6F\96C5\9ED1, STHeitiSC-Light,
+    simsun, \\\5B8B\4F53, WenQuanYi Zen Hei, WenQuanYi Micro Hei, "sans-serif";
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    margin: 0 0 20px;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 16px;
+    line-height: 28px;
+    margin: 0 0 10px;
+}
+
+p {
+    margin: 0 0 10px;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+img {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.text-indent {
+    text-indent: 2em;
+}

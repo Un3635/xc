@@ -1,0 +1,43 @@
+.border-1px {
+  position : relative
+}
+.border-1px:after {
+  position : absolute;
+  content:' ';
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  border-top: 1px solid #d5d5d5;
+}
+@media (-webkit-min-device-pixel-ratio:1.5),(min-device-pixel-ratio:1.5) {
+  .border-1px:after {
+    -webkit-transform: scaleY(0.7);
+    transform: scaleY(0.7)
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio:2),(min-device-pixel-ratio:2) {
+  .border-1px:after {
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5)
+  }
+}
+ .redPacker-btn {
+  background: #20A0FF;
+  color: #fff;
+ }
+.redPacker-btn-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.clearfix{
+  display: inline-block;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}   

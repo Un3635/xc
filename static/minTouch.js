@@ -1,0 +1,89 @@
+function TouchEvent(obj){
+  var _this=this;
+  this.obj=obj;
+  for(var i=0;i<this.obj.length;i++){
+      this.obj[i].touches={x:0,y:0};
+      this.obj[i].index=i;
+      this.obj[i].moves=true;
+      this.obj[i].leave=true;
+      this.obj[i].longTouch=true;
+      this.obj[i].addEventListener("touchstart",function(e){
+          _this.fnStart(e,this.index);
+      });
+      this.obj[i].addEventListener("touchend",function(e){
+          _this.fnEnd(e,this.index);
+      });
+      this.obj[i].addEventListener("touchmove",function(e){
+          _this.fnMove(e,this.index);
+      });
+  };
+};
+TouchEvent.prototype={
+  fnStart:function(e,index){
+      this.obj[index].moves=true;
+      this.obj[index].leave=true;
+      this.obj[index].longTouch=true;
+      this.obj[index].touches={x:e.changedTouches[0].pageX,y:e.changedTouches[0].pageY};
+      this.obj[index].time=setTimeout(function(){
+          if(this.obj[index].leave&&this.obj[index].moves){
+              this.longTap.call(this.obj[index]);
+              this.obj[index].longTouch=false;
+          };
+      }.bind(this),1000);
+  },
+  fnEnd:function(e,index){
+      var disX=e.changedTouches[0].pageX-this.obj[index].touches.x;
+      var disY=e.changedTouches[0].pageY-this.obj[index].touches.y;
+      clearTimeout(this.obj[index].time);
+    //   if(disX!=0||disY!=0){
+      if(Math.abs(disX)> 10||Math.abs(disY)>10){
+          if(Math.abs(disX)>10||Math.abs(disY)>10){
+              this.swipe.call(this.obj[index]);
+          };
+          if(Math.abs(disX)>Math.abs(disY)){
+              if(disX>10){
+                  this.swipeRight.call(this.obj[index]);
+              };
+              if(disX<-10){
+                  this.swipeLeft.call(this.obj[index]);
+              };
+          }else{
+              if(disY>10){
+                  this.swipeDown.call(this.obj[index]);
+              };
+              if(disY<-10){
+                  this.swipeUp.call(this.obj[index]);
+              };  
+          };
+      }else{
+          if(this.obj[index].longTouch&&this.obj[index].moves){
+              this.tap.call(this.obj[index]);
+              this.obj[index].leave=false
+          };
+      };
+  },
+  fnMove:function(e,index){
+      this.obj[index].moves=false;
+  },
+  swipe:function(fn){
+      this.swipe=fn;
+  },
+  swipeRight:function(fn){
+      this.swipeRight=fn;
+  },
+  swipeLeft:function(fn){
+      this.swipeLeft=fn;
+  },
+  swipeUp:function(fn){
+      this.swipeUp=fn;
+  },
+  swipeDown:function(fn){
+      this.swipeDown=fn;
+  },
+  tap:function(fn){
+      this.tap=fn;
+  },
+  longTap:function(fn){
+      this.longTap=fn;
+  }
+};

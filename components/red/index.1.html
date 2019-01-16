@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,height=device-height,maximum-scale=1.0,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <meta content="telephone=no" name="format-detection" />
+  <link rel="stylesheet" href="/lib/ydui-0.1.3/build/css/ydui.css" />
+  <link rel="stylesheet" type="text/css" href="/lib/css/swiper-3.3.1.min.css" />
+  <link rel="stylesheet" href="/lib/css/pullRefresh.css">
+  <link rel="stylesheet" href="/lib/css/common.css">
+  <link rel="stylesheet" href="src/css/index.css">
+  <title>XToken红包</title>
+</head>
+
+<body>
+  <!-- 输入手机号 -->
+  <div class="phonePopup-wrap" id="phonePopup">
+    <div class="phone-wrap m-cell">
+      <h3 class="phone-title">输入手机号码</h3>
+      <div class="cell-item item" id="phoneNumItem">
+        <div class="cell-left code">+86</div>
+        <div class="cell-right">
+          <input type="text" id="phoneNumIpt" class="cell-input" placeholder="输入手机号码" autocomplete="off" maxlength="11" />
+        </div>
+      </div>
+      <div class="cell-item item" id="yzCodeItem">
+        <div class="cell-left">
+          <input type="text" id="yzCodeIpt" class="cell-input" placeholder="输入验证码" autocomplete="off" maxlength="6" />
+        </div>
+        <div class="cell-right yzCodeBtn" id="yzCodeBtn">验证码</div>
+      </div>
+    </div>
+    <div class="btn-wrap">
+      <a href="javascript:;" class="receiveBtnSuc" id="receiveBtnSuc">领取红包</a>
+    </div>
+  </div>
+
+  <!--查看好友手气-->
+  <div class="redPacketSuc-wrap" id="redPacketSuc">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="slide-content">
+            <div>
+              <img src="src/image/2x/head_pic.png" class="pic">
+            </div>
+            <div class="nickName">XToken小秘书</div>
+            <div class="remark">大吉大利，今晚吃鸡</div>
+            <div class="redPacket-success-wrap" id="normal">
+              <div class="balance">
+                <div id="getBalance"></div>
+                <div id="getRn"></div>
+              </div>
+              <div class="content" id="getContent"></div>
+            </div>
+            <a href="javascript:;" class="download-btn" id="download">下载XToken APP</a>
+            <div class="checkFd-wrap">
+              <span class="checkFd-title">大家的手气</span>
+              <ul class="checkFd-ul" id="checkFdUl">
+                <div class="loadtip" id="loadtip">上拉加载更多</div>
+              </ul>
+            </div>
+          </div>
+          <div class="bottom">以上数据由XToken官方提供</div>
+        </div>
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </div>
+  </div>
+  <!-- 红包领取 -->
+  <div class="redPacket-wrap" id="redPacket">
+    <div>
+      <img src="src/image/2x/head_pic.png" class="pic">
+    </div>
+    <div class="nickName">XToken小秘书</div>
+    <div class="remark">大吉大利，今晚吃鸡</div>
+    <!-- 正常 -->
+    <div id="status0">
+      <div class="hint" id="hint"></div>
+      <div>
+        <img src="src/image/2x/bt_open.png" class="receive-btn" id="receiveBtn">
+      </div>
+    </div>
+    <!-- 晚 -->
+    <div id="status1">
+      <div class="hint hint1">来晚了，已抢完</div>
+      <div>
+        <a href="javascript:;" class="status1-a" id="checkFdBtn">看看大家的手气 > </a>
+      </div>
+    </div>
+  </div> -->
+  <!-- 过期 -->
+  <div id="status2">
+    <div class="hint hint2">“该红包超过24小时未被领取 已过期”
+    </div>
+  </div>
+  </div>
+</body>
+
+<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+<script src="/lib/ydui-0.1.3/build/js/ydui.flexible.js"></script>
+<script src="/lib/ydui-0.1.3/build/js/ydui.js"></script>
+<script src="/lib/swiper.jquery.min.js"></script>
+<script src="src/config/index.js"></script>
+<script src="/common/regexps.js"></script>
+<script src="src/js/tool.js"></script>
+<script src="/api/index.js"></script>
+<script src="src/js/ajax.js"></script>
+<script src="src/js/home.js"></script>
+<script src="/common/pullRefresh.js"></script>
+<script src="src/js/phone.js"></script>
+<script src="src/index.js"></script>
+
+</html>

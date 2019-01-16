@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link href="../../css/article.css" rel="stylesheet">
+  <title>Help</title>
+  <style>
+
+    :focus {
+      outline: none;
+    }
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+      background-color: #f9f9f9;
+    }
+
+    .qa {
+      background-color: #fff;
+    }
+
+    .panel {
+      height: 0;
+      padding: 0;
+      overflow: hidden;
+      display: block !important;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease;
+    }
+
+    .content {
+      padding: 8px 15px;
+      line-height: 24px;
+      font-size: 13px;
+      color: #999;
+      border-bottom: 1px solid #eee;
+    }
+
+    h2.open + .panel {
+      height: auto;
+      /*background: #aaffff;*/
+    }
+
+    .q {
+      position: relative;
+      margin-bottom: 0;
+      line-height: 24px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .q a {
+      display: block;
+      padding: 13px 32px 13px 15px;
+      text-decoration: none;
+      color: inherit;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    .q .icon {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      margin-top: -8px;
+      -webkit-transition: transform .3s;
+      transition: transform .3s;
+    }
+
+    .q.open .icon {
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+    }
+  </style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol viewBox="0 0 1024 1024" id="right">
+    <path d="M730.478 487.658L342.023 99.335c-13.39-13.412-35.106-13.412-48.518 0-13.392 13.368-13.392 35.083 0 48.474l364.32 364.197-364.32 364.196c-13.392 13.39-13.392 35.104 0 48.495 13.412 13.369 35.127 13.369 48.518 0l388.454-388.343c6.732-6.72 10.083-15.54 10.056-24.348.027-8.81-3.323-17.628-10.055-24.348z"
+          fill="#e4e4e4"></path>
+  </symbol>
+</svg>
+<div class="container">
+  <div class="qa">
+    <h2 class="q">What is XToken?
+      <svg class="icon" width="16" height="16">
+        <use xlink:href="#right"></use>
+      </svg>
+    </h2>
+    <div class="panel">
+      <div class="content">
+        XToken is a new digital token wallet, providing users with one-stop storage and transfer services. XToken
+        supports ETH and digital token based on ERC20, which shall also continue to support more mainstream digital
+        tokens.
+      </div>
+    </div>
+  </div>
+  <div class="qa">
+    <h2 class="q">Does XToken support multiple wallet accounts?
+      <svg class="icon" width="16" height="16">
+        <use xlink:href="#right"></use>
+      </svg>
+    </h2>
+    <div class="panel">
+      <div class="content">Yes, XToken supports multiple wallet accounts. Click "Me" -> Managing Wallet, and select
+        Import Wallet, inputting the backup mnemonic words of wallet, keystore or private key. After successful
+        verification, set the transaction password, and the wallet account is successfully imported.
+      </div>
+    </div>
+  </div>
+  <div class="qa">
+    <h2 class="q">Which digital token does XToken support?
+      <svg class="icon" width="16" height="16">
+        <use xlink:href="#right"></use>
+      </svg>
+    </h2>
+    <div class="panel">
+      <div class="content">
+        It currently supports ETH and token based on ERC20, and shall continue to support more mainstream digital tokens
+        afterward.
+      </div>
+    </div>
+  </div>
+  <div class="qa">
+    <h2 class="q">Does XToken charge? And what is the rate?
+      <svg class="icon" width="16" height="16">
+        <use xlink:href="#right"></use>
+      </svg>
+    </h2>
+    <div class="panel">
+      <div class="content">
+        XToken does not charge any fees for the digital token storage and transfer function provided to users. The
+        transfer poundage has also known as the transaction fee is paid to the network node which maintains the
+        operation of the digital token system. The transfer page shows the reference poundage. And the actual poundage
+        incurred actually shall be subject to the actual situation, which is checked on the detailed page of the
+        transaction record.
+      </div>
+    </div>
+  </div>
+  <div class="qa">
+    <h2 class="q">How to create a wallet?
+      <svg class="icon" width="16" height="16">
+        <use xlink:href="#right"></use>
+      </svg>
+    </h2>
+    <div class="panel">
+      <div class="content">
+        Open XToken, and select Create a Wallet on the wallet asset page, after setting the transaction password, then
+        the wallet shall be created successfully The user needs to backup the wallet mnemonic words according to the
+        tips, and possessing the mnemonic words shall completely control the wallet assets. XToken does not store users’
+        wallet mnemonic words, thus, losing mnemonic words means losing wallet assets. Please make sure to keep it
+        properly.
+      </div>
+    </div>
+  </div>
+  <div class="qa">
+    <h2 class="q">How to import a wallet?
+      <svg class="icon" width="16" height="16">
+        <use xlink:href="#right"></use>
+      </svg>
+    </h2>
+    <div class="panel">
+      <div class="content">
+        Click "Me" -> Managing Wallet, and select Import Wallet, input the backup wallet mnemonic words. After
+        successful verification, set the transaction password, thus, the wallet is successfully imported. And then you
+        can start managing the backup wallet assets through the mnemonic words, including ETH and contract tokens based
+        on ERC20, etc.
+      </div>
+    </div>
+  </div>
+  <div class="qa">
+    <h2 class="q">How to transfer/collect payment?
+      <svg class="icon" width="16" height="16">
+        <use xlink:href="#right"></use>
+      </svg>
+    </h2>
+    <div class="panel">
+      <div class="content">
+        On the page of XToken asset list that select the asset type to be traded is to start the transfer and collect
+        payment: Select Transfer, input the payee’s address (which can be completed by scanning the QR code) and the
+        transfer amount, and the transfer shall be completed after the verification of transaction password. Select the
+        Collect Payment, with the page displaying the QR code of collecting payment, and the payer can scan the QR code
+        to complete the transfer. Or the payee can click the QR code to copy the collecting payment address, sharing and
+        sending to the payer.
+      </div>
+    </div>
+  </div>
+  <div class="qa">
+    <h2 class="q">How to modify the password? What if you forget the password?
+      <svg class="icon" width="16" height="16">
+        <use xlink:href="#right"></use>
+      </svg>
+    </h2>
+    <div class="panel">
+      <div class="content">
+        Through setting - Modify password, and the new password can be set after the verification of the original
+        password. Because XToken does not store the user’s password, if you forget the password, the user can only click
+        "Me" -> Managing Wallet, select Delete Wallet and then re-import the wallet. If you forget your password and
+        lose your wallet mnemonic words, then you shall lose your digital assets.
+      </div>
+    </div>
+  </div>
+  <div class="qa">
+    <h2 class="q">Can the backup wallet mnemonic words be retrieved if they are lost?
+      <svg class="icon" width="16" height="16">
+        <use xlink:href="#right"></use>
+      </svg>
+    </h2>
+    <div class="panel">
+      <div class="content">
+        XToken does not store the user's wallet mnemonic words, which is only stored on the user's mobile phone. Please
+        keep it properly!
+      </div>
+    </div>
+  </div>
+  <div class="qa">
+    <h2 class="q">Can the type of digital token displayed on the wallet homepage be modified?
+      <svg class="icon" width="16" height="16">
+        <use xlink:href="#right"></use>
+      </svg>
+    </h2>
+    <div class="panel">
+      <div class="content">
+        After clicking the Add Asset button on the right side of the wallet homepage and entering the page of Add
+        Assets, select the token type you want to display on the homepage and turn the display switch on or off.
+      </div>
+    </div>
+  </div>
+  <div class="qa">
+    <h2 class="q">Shall the corresponding assets be lost after checking the digital token displayed on the wallet
+      homepage?
+      <svg class="icon" width="16" height="16">
+        <use xlink:href="#right"></use>
+      </svg>
+    </h2>
+    <div class="panel">
+      <div class="content">
+        No, it won’t. On the Add Assets page, turning off the display switch for some digital token just means it shall
+        not display on the homepage. If there is the balance of the corresponding digital token, then the asset shall
+        not be lost. After re-opening the display switch, such digital token and corresponding balance shall be
+        displayed on the wallet homepage.
+      </div>
+    </div>
+  </div>
+  <div class="qa">
+    <h2 class="q">Why the collecting address of ETH and that of token based on ERC20 the same?
+      <svg class="icon" width="16" height="16">
+        <use xlink:href="#right"></use>
+      </svg>
+    </h2>
+    <div class="panel">
+      <div class="content">
+        The token based on ERC20 is a smart contract token issued on the Ethereum Platform. The ETH address represents
+        an account of the platform. And such account can receive all contract asset types on this platform, so the
+        address is the same as that of ETH.
+      </div>
+    </div>
+  </div>
+  <div class="qa">
+    <h2 class="q">Why does ETH equal the poundage charged for the token based on ERC20 at the time of transfer?
+      <svg class="icon" width="16" height="16">
+        <use xlink:href="#right"></use>
+      </svg>
+    </h2>
+    <div class="panel">
+      <div class="content">
+        For the token based on ERC20, the transfer consumes the computing resources of the Ethereum Platform, which
+        needs token ETH of Ethereum Platform as the poundage to be paid to the network node that maintains the Ethereum.
+      </div>
+    </div>
+  </div>
+</div>
+<script src="//cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="/static/lib/jquery.collapse.js"></script>
+<script>
+    $('.container').collapse({
+        query: '.q',
+        accordion: true,
+        open: function () {
+            this.addClass("open");
+            this.css({height: this.children().outerHeight()});
+        },
+        close: function () {
+            this.css({height: "0px"});
+            this.removeClass("open");
+        }
+    });
+</script>
+</body>
+</html>

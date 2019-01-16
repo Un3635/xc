@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>邀请好友</title>
+    <link rel="stylesheet" href="../../css/invite.css">
+    <link rel="stylesheet" href="/assets/css/weChat-browser.css">
+</head>
+<body>
+<div class="container login-page" id="app" :class="{'is-mounted': _isMounted}">
+    <div class="inner">
+        <img class="slogan-img" src="../../images/invite/login-slogan.png" alt="">
+        <form>
+            <div class="form-group">
+                <label>手机号</label>
+                <input class="form-control" type="text" name="mobile" v-model="mobile" v-validate="'required|mobile'"
+                       placeholder="输入本人实名的手机号">
+            </div>
+            <div class="form-group has-append">
+                <label>验证码</label>
+                <input class="form-control" type="text" name="code" v-model="code" v-validate="'required|code'"
+                       placeholder="输入验证码">
+                <span class="append" @click="sendVerifyCode">{{btnText}}</span>
+            </div>
+            <button type="button" class="btn" :disabled="mobile===''||code===''" @click="register">立即注册</button>
+            <p class="tips">
+                注册即表示您同意 <a href="../zh/user-agreement.html">《XToken服务协议》</a>
+            </p>
+            <transition name="fade">
+                <div class="msg-box" v-if="errMsg" @click="errMsg=''">{{errMsg}}</div>
+            </transition>
+        </form>
+    </div>
+    <transition name="fade">
+        <div class="notify" v-if="notify" @click="notify=''">{{notify}}</div>
+    </transition>
+    <div id="get_wy_code_login_captcha"></div>
+    <div class="weChatWrap" id="weChatWrap">
+        <span>请点击右上角使用浏览器打开</span>
+    </div>
+</div>
+<script src="./browser.min.js"></script>
+<script src="//cdn.bootcss.com/vue/2.5.16/vue.min.js"></script>
+<script src="//cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+<script src="//cdn.bootcss.com/vee-validate/2.0.9/vee-validate.min.js"></script>
+<script src="//cdn.bootcss.com/qs/6.5.0/qs.min.js"></script>
+<script src="//cstaticdun.126.net/load.min.js"></script>
+<script src="/static/config/index.js"></script>
+<script src="../../js/config.js"></script>
+<script src="/static/weChat-browser.js"></script>
+<script>
+    window.onload = function() {
+        if(weChatBrowser()) {
+            document.getElementById('weChatWrap').style.display = "block";
+        } else {
+            document.getElementById('weChatWrap').style.display = "none";
+        }
+    }
+</script>
+<script type="text/babel"> 
+    function wy_captcha({el, mode = 'popup'}) {
+        return new Promise((resolve, reject) => {
+            var _intance;
+            initNECaptcha({
+                captchaId: Config.captchaId,
+                element: el,
+                mode: mode,
+                width: 'auto',
+                onReady: (intance) => {
+                    _intance = intance;
+                },
+                onVerify: (err, data) => {
+                    if (err) return;
+                    if (mode === 'float') {
+                        _intance.destroy();
+                    }
+                    resolve({
+                        validate: data.validate,
+                        intance: _intance
+                    })
+                }
+            }, (intance) => {
+                if (mode === 'popup') {
+                    intance.popUp()
+                }
+            }, (err) => reject({msg: '验证码获取超时,请重试'}));
+        })
+    }
+
+    VeeValidate.Validator.extend('mobile', function (value) {
+        return Config.regexp.mobile.test(value);
+    });
+    VeeValidate.Validator.extend('code', function (value) {
+        return Config.regexp.code.test(value);
+    });
+
+    Vue.use(VeeValidate, Config.validateConfig);
+
+    axios.defaults.headers = {
+        'Content-Type': 'application/x-www-form-urlencoded'
+    };
+    axios.defaults.transformRequest = [data => Qs.stringify(data)];
+
+    axios.defaults.baseURL = Config.baseURL;
+
+    axios.interceptors.response.use((res) => res, (err) => {
+        if (err && err.response) {
+            switch (err.response.status) {
+                case 400:
+                    err.msg = '请求错误';
+                    break;
+                case 401:
+                    err.msg = '未授权，请登录';
+                    break;
+                case 403:
+                    err.msg = '拒绝访问';
+                    break;
+                case 404:
+                    err.msg = `请求地址出错`;
+                    break;
+                case 408:
+                    err.msg = '请求超时';
+                    break;
+                case 500:
+                    err.msg = '服务器内部错误';
+                    break;
+                case 501:
+                    err.msg = '服务未实现';
+                    break;
+                case 502:
+                    err.msg = '网关错误';
+                    break;
+                case 503:
+                    err.msg = '服务不可用';
+                    break;
+                case 504:
+                    err.msg = '网关超时';
+                    break;
+                case 505:
+                    err.msg = 'HTTP版本不受支持';
+                    break;
+                default:
+                    err.msg = '未知错误,请稍后重试'
+            }
+        }
+        return Promise.reject(err);
+    });
+
+    function responseHandler(resp) {
+        let data = resp.data;
+        if (data.code === '0') {
+            return Promise.resolve(data.result);
+        }
+        let errMsg = Config.ErrorMapping[data.code] || data.msg || '系统异常,请联系管理员或稍后重试';
+        return Promise.reject({code: data.code, msg: errMsg});
+    }
+
+    new Vue({
+        el: '#app',
+        data:function() {
+           return {
+            mobile: '',
+            code: '',
+            errMsg: '',
+            btnText: '验证码',
+            timer: null,
+            codeToken: '',
+            notify: ''
+           }
+        },
+        methods: {
+            sendVerifyCode:function() {
+                if (this.timer) {
+                    return;
+                }
+                var time = 60;
+                var account = this.mobile;
+                this.$validator.validate('mobile', account)
+                    .then(result => {
+                        if (!result) {
+                            return Promise.reject({msg: this.errors.first('mobile')});
+                        }
+                        return result;
+                    })
+                    .then(() => axios.post(Config.smsCode, {account: account, type: Config.smsCodeType}))
+                    .then(responseHandler)
+                    .then(res => {
+                        if (res.openWyValid) {
+                            return wy_captcha({el: "#get_wy_code_login_captcha"})
+                                .then(data => axios.post(Config.verify, {account: account, wyCode: data.validate}))
+                                .then(responseHandler)
+                                .then(() => axios.post(Config.smsCode, {account: account, type: Config.smsCodeType}))
+                                .then(responseHandler);
+                        }
+                        return res;
+                    })
+                    .then(res => {
+                        this.notify = '验证码发送成功';
+                     
+                        // this.codeToken = res.codeToken;
+                        this.codeToken = true;
+                        this.btnText = time + 's';
+                        this.timer = setInterval(() => {
+                            time--;
+                            this.btnText = time + 's';
+                            if (time === 0) {
+                                clearInterval(this.timer);
+                                this.timer = null;
+                                this.btnText = '重新发送';
+                            }
+                        }, 1000);
+                    })
+                    .catch(err => {
+                        this.errMsg = err.msg;
+                    });
+            },
+            register:function() {
+                var inviteCode = Qs.parse(location.search.substr(1)).code || '';
+                var postData = {
+                    account: this.mobile,
+                    smsCode: this.code,
+                    codeToken: this.codeToken,
+                    inviteCode: inviteCode
+                };
+                if (!postData.codeToken) {
+                    this.errMsg = '请重新获取验证码';
+                    return;
+                }
+                this.$validator.validateAll()
+                    .then(result => {
+                        if (!result) {
+                            return Promise.reject({msg: this.errors.items[0].msg});
+                        }
+                        return result;
+                    })
+                    .then(() => axios.post(Config.register, postData))
+                    .then(responseHandler)
+                    .then(() => {
+                        window.location.href = window.location.href.replace('register.html', 'register-ok.html')
+                    })
+                    .catch(err => {
+                        if (err.code === '5011') {
+                           setTimeout(function() {
+                                window.location.href = window.location.href.replace('register.html', 'register-ok.html?registerCode=1')
+                           }, 1000)
+                        }
+                        this.errMsg = err.msg;
+                    });
+            }
+        },
+        watch: {
+            errMsg(val) {
+                if (val) {
+                    setTimeout(() => {
+                        this.errMsg = '';
+                    }, 2000);
+                }
+            },
+            notify(val) {
+                if (val) {
+                    setTimeout(() => {
+                        this.notify = '';
+                    }, 2000);
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>

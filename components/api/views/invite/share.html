@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>邀请好友分享页</title>
+  <link rel="stylesheet" href="../../css/invite.css">
+</head>
+<body>
+<div class="container">
+  <div class="inner">
+    <img class="slogan-img" src="../../images/invite/share-slogan.png" alt="">
+    <p class="slogan-txt">快来注册XToken, 与我一起瓜分ETH</p>
+    <div class="wrap">
+      <div id="qrcode"></div>
+      <p>长按识别二维码</p>
+      <p class="grey">注册并下载即可获得ETH</p>
+    </div>
+  </div>
+</div>
+<!-- <script src="//cdn.bootcss.com/qrcode-generator/1.4.0/qrcode.min.js"></script> -->
+<script src="/static/lib/qrcode.min.js"></script>
+<script>
+    (function () {
+        var wrap = document.getElementById('qrcode');
+        // var qr = qrcode(8, 'H');
+        var href = window.location.href.replace('share.html', 'register.html?inviteCode=4CFVBERT');
+        // qr.addData(href);
+        // qr.make();
+        // wrap.innerHTML = qr.createImgTag(10);
+        // setTimeout(function () {
+        //     var width = wrap.clientWidth;
+        //     var qrImg = wrap.children[0];
+        //     qrImg.width = width;
+        //     qrImg.height = width;
+        // }, 10);
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+          text: href,
+          width: wrap.clientWidth,
+          height: wrap.clientWidth,
+          colorDark : "#000000",
+          colorLight : "#ffffff",
+          correctLevel : QRCode.CorrectLevel.H
+        });
+    })();
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>注册成功</title>
+    <link rel="stylesheet" href="../../css/invite.css">
+</head>
+<body>
+<div class="reg-ok">
+    <img class="logo" src="/assets/images/logo.png" alt="">
+    <h2 id="success"></h2>
+    <p>立即前往下载领取ETH</p>
+    <!-- <a class="btn" href="https://www.cw.pub/app.php/610">立即下载</a> -->
+    <a class="btn" href="http://m.xt.top/download">立即下载</a>
+</div>
+</body>
+<script src="/static/util.js"></script>
+<script>
+  window.onload = function() {
+    var code = util.getParam('registerCode');
+    var reg = new RegExp("^1");
+    if(reg.test(code)) {
+      document.getElementById('success').innerHTML = '恭喜您，您已注册！';
+    } else {
+      document.getElementById('success').innerHTML = '恭喜您，注册成功！';
+    }
+  }
+</script>
+</html>

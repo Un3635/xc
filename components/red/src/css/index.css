@@ -1,0 +1,367 @@
+
+body, html{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  font-family: PingFangSC-Regular;
+  letter-spacing: 0;
+}
+
+
+/* 红包领取  */
+.redPacket-wrap, .redPacketSuc-wrap{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+/* 背景设置 */ 
+.redPacket-wrap, .phonePopup-wrap{
+  /* background: url(../image/2x/redpacket_bg.png) no-repeat; */
+  background-image: url(../image/2x/redpacket_bg.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+.redPacketSuc-wrap{
+  position: relative;
+  background: #e33c2b;
+  /* height: auto; */
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  display: none;
+ }
+
+
+
+.redPacket-wrap, .redPacketSuc-wrap .redPacketSuc-slide{
+  padding: 0px .5rem 0px .5rem;
+}
+.picBox {
+  margin: .8rem auto 0px;
+  padding: 2px 2px 2px 2px;
+  width: 61px;
+  height: 60px;
+  border-radius: 50%;
+  background: #fff;
+}
+.picBox > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pic {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+.nickName {
+  font-size: 16px;
+  color: #FFFFFF;
+  text-align: center;
+  margin-top: .4rem;
+}
+
+.remark {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #FF9B91;
+}
+
+.hint {
+  margin: 1.6rem 0px 1.7rem 0px;
+  font-size: .5rem;
+  color: #FFE994;
+}
+@media screen and (max-width: 320px) {
+  .hint {
+    margin: 54px 0px 60px 0px;
+  }
+}
+.receive-btn {
+  margin: auto;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+/* 红包领取成功 */
+.redPacketSuc-wrap {
+  font-family: PingFangSC-Medium;
+}
+
+.balance {
+  margin-top: 1.1rem;
+  margin-bottom: 1.3rem;
+}
+.balance > div:first-child {
+  font-size: 28px;
+  color: #FFE994;
+}
+.balance > div:last-child {
+  font-family: PingFangSC-Regular;
+  font-size: 15px;
+  color: #FF9B91;
+}
+.redPacketSuc-wrap .content {
+  font-family: PingFangSC-Regular;
+  margin-bottom: .5rem;
+  font-size: 13px;
+  color: #FF9B91;
+  letter-spacing: 0;
+  text-align: center;
+}
+.download-btn {
+  font-family: PingFangSC-Semibold;
+  display: inline-block;
+  width: 100%;
+  border: none;
+  padding: 12px 0px;
+  font-size: 18px;
+  color: #E8583C;
+  background: #FFDBA7;
+  border-radius: 10px;
+}
+.download-btn2 {
+  margin-top: 1.1rem;
+}
+/* 查看好友的手气 */
+.checkFd-wrap {
+  display: none;
+  margin-top: .7rem;
+  /* margin-bottom: .5rem; */
+}
+
+.checkFd-title:before, .checkFd-title:after {
+  content: '';
+  display: inline-block;
+  width: 30px;
+  margin: auto 13px;
+  vertical-align: middle;
+  border: 1px solid #FF9B91;
+}
+
+.checkFd-ul {
+  font-family: PingFangSC-Regular;
+  font-size: 10px;
+ 
+  color: #999999;
+  letter-spacing: 0;
+  background: #fff;
+  margin: 20px auto 0px;
+  padding-top: 12px;
+  padding: 12px .3rem 12px .5rem;
+  border-radius: 8px;
+ 
+}
+
+.checkFd-wrap .checkFd-title {
+  display: inline-block;
+  width: 100%;
+  font-size: 16px;
+  color: #FF9B91;
+  text-align: center;
+}
+.checkFd-wrap li {
+  display: flex;
+  padding: 12px 0px;
+}
+.fdPic-wrap {
+  margin-right: .3rem;
+}
+ .fdPic {
+   display: inline-block;
+   margin-top: 2px;
+   width: 22px;
+   height: 22px;
+   border-radius: 50%;
+ }
+ .checkFd-wrap .left {
+   text-align: left;
+ }
+ .phoneNum {
+  font-size: 12px;
+ }
+.checkFd-wrap .right > div{
+  font-size: 13px;
+  color: #333333;
+  margin-top: 5px;
+}
+.checkFd-wrap .right {
+  flex: 1;
+  margin-right: .2rem;
+  font-size: 13px;
+  text-align: right;
+  color: #333333;
+}
+
+.checkFd-content {
+  width: 100%;
+}
+@media screen and (max-width: 320px) { /*当屏幕尺寸小于320px时，应用下面的CSS样式*/
+  .phoneNum {
+    font-size: 11px;
+   }
+  .checkFd-wrap .right {
+    font-size: 10px;
+  }
+}
+/* 输入手机号样式 */
+.phonePopup-wrap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: none;
+}
+
+.phone-wrap {
+  position: relative;
+  margin: 24px 23px 0px 23px;
+  padding-bottom: 24px;
+  overflow: hidden;
+}
+.phone-wrap .code {
+  font-family: PingFangSC-Regular;
+  font-size: 16px;
+  color: #CCCCCC;
+  letter-spacing: 0;
+}
+.icon-error {
+  position: absolute;
+  right: 8px;
+  top: 7px;
+  font-size: 17px;
+}
+.item {
+  margin-right: .24rem;
+}
+.itemActive:not(:last-child):after {
+  border-bottom: 1px solid #20A0FF;
+}
+.phone-title {
+  font-family: PingFangSC-Medium;
+  display: inline-block;
+  margin: 19px 25px 23px 25px;
+  font-size: 17px;
+  color: #333333;
+}
+
+.cell-item {
+  background: #F8F8F9;
+  border-radius: 10px;
+  /* margin: 0px 27px 20px 23px; */
+  margin: 0px .52rem .4rem .43rem;
+  /* margin-bottom: 20px; */
+}
+/* #yzCodeItem > .cell-left {
+  flex: 0 0 80px;
+  min-width: 80px;
+} */
+
+/* .cell-item:last-child {
+
+} */
+
+.cell-item:not(:last-child):after, .m-cell:after {
+  display: none;
+}
+.code:after{
+ content: "";
+ display: block;
+ margin: auto 8px;
+ width: 1px;
+ height: 10px;
+ background: #d5d5d5;
+}
+
+.yzCodeBtn {
+  font-family: PingFangSC-Regular;
+  /* flex: 0 0 70px; */
+  font-size: .3rem;
+  color: #E8583C;
+}
+.yzCodeBtn-disabled {
+  color: #cccccc;
+}
+.btn-wrap {
+  margin: 27px 27px 0px 23px;
+}
+.receiveBtnSuc {
+  font-family: PingFangSC-Semibold;
+  display: inline-block;
+  border: none;
+  width: 100%;
+  padding: 13px 0px;
+  font-size: 18px;
+  color: #E8583C;
+  background: #FEDFB4;
+  border-radius: 10px;
+}
+
+.none {
+  display: none;
+}
+.block {
+  display: block;
+}
+
+/* 上拉加载 */
+.loadtip {
+  display: none;
+}
+
+/* 晚了 */
+.status1-a {
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  text-align: center;
+}
+.hint1 {
+  margin-bottom: 1rem;
+  color: #FFFFFF;
+}
+.checkFd-end-wrap {
+  display: none;
+}
+/* 过期 */
+.hint2 {
+  color: #FFFFFF;
+}
+
+
+/* 状态隐藏 */
+#status0, #status1, #status2 {
+  display: none;
+}
+
+.redPacketSuc-slide {
+  height: auto; 
+  min-height: 100%;
+}
+
+.slide-content {
+  padding-bottom: 58px; /* 必须使用和footer相同的高度 */
+}
+
+.footer {
+  font-family: PingFangSC-Regular;
+  /* margin-top: 13px; */
+  font-size: 12px;
+  color: #FF9B91;
+  letter-spacing: 0;
+  /* height: 50px; */
+  margin-top: -50px;
+  overflow: hidden;
+  clear: both;
+}
+
+
+input::-webkit-input-placeholder {
+  font-size: .3rem;
+  color: #cccccc;
+}
