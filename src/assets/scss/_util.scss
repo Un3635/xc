@@ -1,0 +1,26 @@
+/* 该文件存储一些常用工具类，e.g. float */
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.clearfix:after {
+  clear: both;
+  content: '';
+  display: table;
+}
