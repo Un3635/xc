@@ -1,0 +1,82 @@
+@import '~@/assets/style/unit/color.scss';
+
+// 工具类名统一前缀
+$prefix: d2;
+
+// 禁止用户选中 鼠标变为手形
+%unable-select {
+  user-select: none;
+  cursor: pointer;
+}
+
+// 填满父元素
+// 组要父元素 position: relative | absolute;
+%full {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+// flex 垂直水平居中
+%flex-center-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+%flex-center-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+// 将元素模拟成卡片外观
+%card {
+  border: 1px solid #dddee1;
+  border-color: #e9eaec;
+  background: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  position: relative;
+}
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: #F5F5F5;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0);
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+  background-color: #ebeef3; //#e4e7ed
+}
+
+//首页文字样式
+.page-cover__title{
+  font-size:22px;
+  color:#c24aa9 !important;
+  padding:18px 0 12px;
+  letter-spacing: 1px;
+  font-weight:200;
+}
+.page-cover__sub-title{
+  font-size:16px;
+  color:#000;
+  letter-spacing: 1px;
+  font-weight:200;
+}
