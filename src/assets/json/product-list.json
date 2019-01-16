@@ -1,0 +1,213 @@
+[
+  {
+    "text": "热销机型",
+    "menutext": "menu0",
+    "name": "",
+    "active": false,
+    "scrollheight": "",
+    "menutab": "menutab0",
+    "prods": [
+      {
+        "name": "Thinkpad T430 极速版",
+        "desc": "14.0英寸笔记本电脑i5/4G/120G SSD/集显",
+        "id": "fac97202-b5b3-4ea1-9ef1-9d21b446782e",
+        "price": "115",
+        "img": "/static/images/hot/Thinkpad_T430_14.png",
+        "className": ""
+      },
+      {
+        "name": "Thinkpad X230",
+        "desc": "12.5英寸便携笔记本电脑 i5/8GB/120GB SSD/集显",
+        "id": "4d7001af-eafe-493c-9ebd-b36c07799940",
+        "price": "120",
+        "img": "/static/images/hot/X230.jpg",
+        "className": ""
+      },
+      {
+        "name": "Thinkpad T440 极速版",
+        "desc": "14.0英寸笔记本电脑i5/8G/240G SSD/集显",
+        "id": "f0533d46-2fcf-4599-b599-740b76f6627b",
+        "price": "160",
+        "img": "/static/images/hot/Thinkpad_T440_14.png"
+      },
+      {
+        "name": "ThinkPad X1 Carbon",
+        "desc": "14.0英寸超级本i5/8G/256G SSD/集显",
+        "id": "4e041e78-546a-4f2f-9d50-c304bc78513c",
+        "price": "199",
+        "img": "/static/images/hot/X1.jpg"
+      },
+      {
+        "name": "全新mini办公台式机",
+        "desc": "23.8英寸显示器i5/8G/120G SSD+1T/GTX750Ti 2G/23.8寸",
+        "id": "c0001d05-9629-4f24-9c7b-ba5866ab5f58",
+        "price": "199",
+        "img": "/static/images/hot/nmgp_172.png"
+      }
+    ]
+  },
+  {
+    "text": "行政办公",
+    "menutext": "menu1",
+    "name": "",
+    "active": false,
+    "scrollheight": "",
+    "menutab": "menutab1",
+    "prods": [
+      {
+        "name": "全新 DELL 3050MFF迷你商务机",
+        "desc": "G4560T/4G/500G/19.5英寸",
+        "id": "eeec8138-8ac3-4314-866c-0bc677a1a66e",
+        "price": "99",
+        "img": "/static/images/largeImg/administration/xzbg1.png",
+        "className": "big"
+      },
+      {
+        "name": "Thinkpad X240",
+        "desc": "12.5英寸便携笔记本电脑i5/8G/240G SSD/集显",
+        "id": "2782514a-e4ad-4b13-b656-4f3312909682",
+        "price": "185",
+        "img": "/static/images/minImg/administration/xzbg2.jpg"
+      },
+      {
+        "name": "Thinkpad X220",
+        "desc": "12.5英寸便携笔记本电脑i5/4G/320G/集显",
+        "id": "628961bc-0ac6-44ad-af6b-8daef6e3f707",
+        "price": "75",
+        "img": "/static/images/minImg/administration/xzbg3.png"
+      }
+    ]
+  },
+  {
+    "text": "技术开发",
+    "menutext": "menu2",
+    "name": "",
+    "active": false,
+    "scrollheight": "",
+    "menutab": "menutab2",
+    "prods": [
+      {
+        "name": "全新 DELL 7050MT  P2317",
+        "desc": " 23英寸显示器i5/8G/256G SSD",
+        "id": "b7f9c958-2874-4179-9676-7cbadc233ad5",
+        "price": "215",
+        "img": "/static/images/minImg/technologicalDevelopment/jskf1.png"
+      },
+      {
+        "name": "全新 latitude 3480 ",
+        "desc": "14英寸笔记本电脑i5/8G/256G SSD",
+        "id": "25a83430-b667-4be6-9109-df3796fb2156",
+        "price": "178",
+        "img": "/static/images/minImg/technologicalDevelopment/jskf2.png"
+      },
+      {
+        "name": "Thinkpad T440P 极速版",
+        "desc": "14.0英寸笔记本电脑i7/16G/240G SSD/集显",
+        "id": "ec42c7b1-323f-4992-98b3-d3a44d8cb847",
+        "price": "218",
+        "img": "/static/images/minImg/technologicalDevelopment/jskf3.png"
+      }
+    ]
+  },
+  {
+    "text": "图形处理",
+    "menutext": "menu3",
+    "menutab": "menutab3",
+    "name": "",
+    "active": false,
+    "scrollheight": "",
+    "prods": [
+      {
+        "name": "全新 latitude 5480",
+        "desc": "14英寸笔记本电脑i5/8G/256G SSD",
+        "id": "07370a39-bfdc-46ec-8b61-5a83e9555dcc",
+        "price": "238",
+        "img": "/static/images/largeImg/graphicProcessing/txcl1.png"
+      },
+      {
+        "name": "Apple MacBook Pro",
+        "desc": "15英寸i7/16G/256G SSD",
+        "id": "2e2a371f-0df8-4af1-9c10-d5898cc33bd9",
+        "price": "499",
+        "img": "/static/images/minImg/graphicProcessing/txcl2.png"
+      },
+      {
+        "name": "Thinkpad T430 极速版",
+        "desc": "14.0英寸笔记本电脑i5/4G/120G SSD/集显",
+        "id": "fac97202-b5b3-4ea1-9ef1-9d21b446782e",
+        "price": "115",
+        "img": "/static/images/minImg/graphicProcessing/txcl3.png"
+      }
+    ]
+  },
+  {
+    "text": "商务便携",
+    "menutext": "menu4",
+    "menutab": "menutab4",
+    "name": "",
+    "active": false,
+    "scrollheight": "",
+    "prods": [
+      {
+        "name": "Thinkpad X1 Carbon",
+        "desc": "14英寸轻薄笔记本电脑i7/8G/256G SSD",
+        "id": "086732ae-d793-42f3-8cd1-81b21298df69",
+        "price": "225",
+        "img": "/static/images/largeImg/businessPortable/swbj1.png",
+        "className": "big"
+      },
+      {
+        "name": "全新 latitude 7280",
+        "desc": "12.5英寸商务笔记本电脑i5/8G/512G SSD",
+        "id": "697b12b8-4290-4050-aa3a-e69c9524e2a4",
+        "price": "295",
+        "img": "/static/images/minImg/businessPortable/swbj2.png"
+      },
+      {
+        "name": "全新 latitude 5280",
+        "desc": "12.5英寸商务笔记本电脑i5/8G/256G SSD",
+        "id": "696c2885-a4b0-4d07-90c5-8f1b9ee54940",
+        "price": "258",
+        "img": "/static/images/minImg/businessPortable/swbj3.png"
+      }
+    ]
+  },
+  {
+    "text": "电脑配件",
+    "menutext": "menu5",
+    "menutab": "menutab5",
+    "name": "",
+    "active": false,
+    "scrollheight": "",
+    "prods": [
+      {
+        "name": "P2317H",
+        "desc": "23英寸显示器",
+        "id": "10ef36c6-cbad-4a92-b0c3-ae46e9acb636",
+        "price": "45",
+        "img": "/static/images/minImg/businessPortable/jqpj1.png"
+      },
+      {
+        "name": "全新DELL E2016H",
+        "desc": "19.5英寸显示器",
+        "id": "c24ac95b-5121-4f24-8bc4-9a3e2e67c440",
+        "price": "30",
+        "img": "/static/images/minImg/businessPortable/jqpj2.png"
+      },
+      {
+        "name": "全新DELL E2216H",
+        "desc": "19.5英寸显示器",
+        "id": "fa1e0507-ef18-4c8f-ac51-49543fa3e806",
+        "price": "35",
+        "img": "/static/images/minImg/businessPortable/jqpj3.png"
+      }
+    ]
+  }
+]
+
+
+
+
+
+
+

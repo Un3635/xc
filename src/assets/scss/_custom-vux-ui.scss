@@ -1,0 +1,237 @@
+$primary: #303137;
+$secondary: #a99067;
+$weak-warning: #ffe6a1;
+$orange: #fd7220;
+$warning: #fdaa24;
+$success: #2bb56f;
+$danger: #f95453;
+$info: #4d87ea;
+
+$text-primary: #303137;
+$text-regular: #606166;
+$text-secondary: #969699;
+$text-placeholder: #cccdcf;
+
+$bg-primary: #f5f5f7;
+$bg-regular: #fafafa;
+
+$line-primary: #f4f4f4;
+$line-regular: #edeef0;
+
+/************   导航header，footer样式修改 ************/
+
+.custom-header.vux-header {
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 100;
+}
+
+.container .vux-header {
+  background: #fff;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.10);
+  .vux-header-left {
+    .left-arrow::before {
+      border-color: #222;
+    }
+  }
+  .vux-header-title {
+    color: $text-primary;
+  }
+  .vux-header-right {
+    a {
+      color: $text-primary;
+    }
+  }
+}
+
+.footer-bar.weui-tabbar {
+  background: #fff;
+  box-shadow: 0 -3px 4px 0 rgba(0, 0, 0, 0.08);
+  &:before {
+    display: none;
+  }
+  .weui-tabbar__icon {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/************   x-button样式修改 ************/
+.container .weui-btn {
+  font-size: 16px;
+  &.weui-btn_primary {
+    &.weui-btn_disabled {
+      opacity: 0.2;
+    }
+    &.weui-btn_primary:not(.weui-btn_disabled):active {
+      opacity: 0.8;
+    }
+  }
+}
+
+/************   swiper样式修改 ************/
+.container .vux-slider > .vux-indicator {
+  &.vux-indicator-center {
+    margin-left: -5px;
+  }
+  > a {
+    margin-left: 10px;
+    > .vux-icon-dot {
+      background: #929292;
+      &.active {
+        background: #35363C;
+      }
+    }
+  }
+}
+.swiper-pagination.swiper-pagination-bullets{
+  .swiper-pagination-bullet{
+    background: #929292;
+  }
+  .swiper-pagination-bullet.swiper-pagination-bullet-active{
+    background: #35363C;
+  }
+}
+
+/************   inline-x-number样式修改 ************/
+.container .vux-inline-x-number {
+  .vux-number-selector, input {
+    border-color: #fff;
+    background: #F5F5F5;
+    height: 28px;
+    svg {
+      fill: #979797;
+      width: 10px;
+    }
+  }
+  input {
+    font-size: 12px;
+    color: $text-primary;
+    -webkit-appearance: none;
+  }
+  .vux-number-selector-plus {
+    margin-right: 0;
+  }
+}
+
+/************   toast样式修改 ************/
+.vux-toast {
+  .weui-toast {
+    background: rgba(0,0,0,.8);
+    border-radius: 2px;
+    p.weui-toast__content {
+      font-size: 14px;
+    }
+  }
+}
+
+/************   弹窗样式修改 ************/
+.vux-confirm, .vux-alert, .vux-x-dialog {
+  .weui-dialog {
+    border-radius: 8px;
+    position: absolute;
+    .weui-dialog__title {
+      font-size: 16px;
+    }
+    .weui-dialog__bd {
+      color: $text-primary;
+    }
+    .weui-dialog__btn {
+      font-size: 16px;
+      &:after {
+        height: 30px;
+        top: 9px;
+      }
+    }
+  }
+}
+
+/************   cell样式修改 ************/
+.weui-cells.vux-no-group-title {
+  margin: 0;
+}
+.container .weui-cell::after,.container .weui-cell::before{
+  background: $line-primary;
+  border-color: $line-primary;
+}
+.container .weui-cells.vux-no-group-title {
+  &::before,&::after {
+    border-color: transparent;
+    display: none;
+  }
+}
+
+/************  x-input样式修改 ************/
+.vux-x-input.weui-cell {
+  input {
+    font-size: 15px;
+    color: $text-secondary;
+    &::-webkit-input-placeholder {
+      color: $text-secondary;
+    }
+  }
+}
+
+/************  账户详情x-table样式修改 ************/
+.account .vux-table td:before, .vux-table th:before {
+  display: none;
+}
+
+.account .vux-table.vux-table-no-cell-bordered td:after, .vux-table.vux-table-no-cell-bordered th:after {
+  display: none;
+}
+
+/************  progress样式修改 ************/
+.weui-progress .weui-progress__bar {
+  border-radius: 10px;
+  height: 5px;
+  overflow: hidden;
+  .weui-progress__inner-bar {
+    background: #FFE6A1;
+    background-image: linear-gradient(-90deg, #F2D291 4%, #FFE6A1 100%);
+  }
+
+}
+
+/************  account中的scroller样式修改 ************/
+.account .weui-loadmore_line, .sldetails .weui-loadmore_line {
+  margin: 0 auto;
+  margin-top: 2.4em;
+  justify-content: center;
+}
+
+.account .weui-loadmore_line .weui-loadmore__tips {
+  text-align: center;
+}
+
+/************ scroller上样式修改 ************/
+.xs-plugin-pullup-container{
+  display: flex;
+  border-top: 0;
+  margin: 0 auto;
+  line-height: 40px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  //width: 64% !important;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+  color: #999999;
+  //left:50%;
+  //margin-left: -32%;
+  //&::after,&::before{
+  //  height: 1px;
+  //  position: relative;
+  //  top: 19px;
+  //  flex: 1;
+  //  content: '';
+  //  border-top: 1px solid #E5E5E5;
+  //}
+  //&::before{
+  //  border-top: 1px solid #E5E5E5;
+  //}
+}
+/************ tab上样式修改 ************/
