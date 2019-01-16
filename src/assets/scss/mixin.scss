@@ -1,0 +1,29 @@
+@mixin public-btn {
+  font-family: PingFangSC-Medium;
+  background-image: linear-gradient(-90deg, #fa5f5f 0%, #fa8c64 100%);
+  border-radius: 5.2rem;
+  font-size: 0.8rem;
+  color: #ffffff;
+  letter-spacing: -0.39px;
+  margin: auto;
+}
+
+@mixin scroll-style {
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #eceaea;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+  }
+  &::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+  }
+}

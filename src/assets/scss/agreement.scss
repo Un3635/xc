@@ -1,0 +1,32 @@
+.agreement-wrap {
+  font-family: PingFangSC-Semibold;
+  padding-bottom: 80px;
+  background: #fff;
+  h1 {
+    display: block;
+    padding: 20px 0;
+    font-size: 23px;
+    text-align: center;
+  }
+  .weight-style {
+    font-weight: 700;
+  }
+  .line-style {
+    text-decoration: underline;
+  }
+  section {
+    padding: 0 15px 0 22px;
+    h2 {
+      padding: 15px 0;
+      font-size: 20px;
+    }
+    p {
+      font-family: PingFangSC-Regular;
+      font-size: 15px;
+      color: #5b5b5b;
+      letter-spacing: 2px;
+      line-height: 30px;
+    }
+  }
+}
+
