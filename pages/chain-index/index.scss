@@ -1,0 +1,132 @@
+@import "../../other/util.scss";
+.page-chain-market {
+  .pcm-list {
+    @include clearfix();
+    position: relative;
+    padding-bottom: p2r(20);
+    &-left {
+      width: p2r(125);
+      float: left;
+      .pcm-list-item.bgleft {
+        text-align: left;
+        padding-left: p2r(16);
+        vertical-align: bottom;
+      }
+      .pcm-list-item:not(.bgleft) {
+        margin-left: p2r(16);
+        width: p2r(125-16);
+        line-height: 1;
+        padding-top: p2r(12);
+        text-align: left;
+        position: relative;
+        &::after {
+          content: "";
+          width: 1px;
+          height: p2r(8);
+          background-color: #eeeeee;
+          position: absolute;
+          right: 0;
+          bottom: p2r(-4);
+          -webkit-transform: scaleX(0.5);
+          transform: scaleX(0.5);
+          left: auto;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 1px;
+          background-color: #eeeeee;
+          position: absolute;
+          right: 0;
+          -webkit-transform: scaleY(0.5);
+          transform: scaleY(0.5);
+        }
+        span {
+          &.zh {
+            font-size: p2r(14);
+            color: #555658;
+          }
+          &.en {
+            font-size: p2r(11);
+            color: #98999b;
+          }
+        }
+      }
+    }
+    &-right {
+      width: p2r(250);
+      float: left;
+      overflow-x: scroll;
+      white-space: nowrap;
+      &-row {
+        width: p2r(
+          250
+        ); // height: p2r(40);//这边用rem底部border对齐有问题,只能先固定50px,留坑了
+        height: 50px;
+      }
+    }
+    &-item {
+      width: p2r(125); // line-height: p2r(40);
+      // height: p2r(40);
+      line-height: 50px;
+      height: 50px;
+      display: inline-block;
+      text-align: right;
+      font-size: p2r(14);
+      color: #555658;
+      position: relative;
+      &::after {
+        content: "";
+        height: 1px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #eeeeee;
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+      }
+    }
+  }
+  .bgleft {
+    background: #f2f3f5;
+    font-size: p2r(14);
+    color: #98999b;
+    border-bottom: 0px solid #eeeeee;
+  }
+  .bgright {
+    background: #f8f9fd;
+    font-size: p2r(14);
+    color: #98999b;
+    border-bottom: 0px solid #eeeeee;
+  }
+  .pcm-tab {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    a {
+      text-align: center;
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      font-size: p2r(14);
+      color: #98999b;
+      line-height: p2r(48);
+      &.active {
+        color: #4d87ea;
+        font-weight: 900;
+      }
+    }
+  }
+}
+
+.rateUp {
+  color: #f95453 !important;
+}
+
+.rateDown {
+  color: #3dc28c !important;
+}

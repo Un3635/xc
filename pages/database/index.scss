@@ -1,0 +1,60 @@
+@import "../../other/util.scss";
+.page_database {
+    &_item {
+        padding-top: p2r(16);
+        &_title {
+            text-align: center;
+            margin-bottom: p2r(16);
+            font-size: p2r(14);
+            color: #000000;
+        }
+        &_swipe {
+            height: p2r(108) !important;
+            .mint-swipe-indicators {
+                bottom: p2r(10);
+            }
+            .mint-swipe-indicator {
+                opacity: 0.5;
+                background: #dddddd;
+                border-radius: p2r(69);
+                width: p2r(4);
+                height: p2r(4);
+                &.is-active {
+                    background: #232426;
+                    border-radius: p2r(96);
+                    width: p2r(8);
+                    height: p2r(4);
+                }
+            }
+        }
+        &_list {
+            @include clearfix();
+            &_item {
+                width: 25%;
+                float: left;
+                text-align: center;
+                margin-bottom: p2r(20); // height: p2r(74);
+                // overflow: hidden;
+                img {
+                    width: p2r(40);
+                    height: p2r(40);
+                    border-radius: 50%;
+                    margin-bottom: p2r(5);
+                }
+                .zh {
+                    font-size: p2r(12);
+                    color: #333333;
+                    margin-bottom: p2r(2);
+                }
+                .en {
+                    font-size: p2r(10);
+                    color: #98999b;
+                }
+            }
+        }
+    }
+    &_line {
+        background: #eeeeee;
+        height: p2r(10);
+    }
+}

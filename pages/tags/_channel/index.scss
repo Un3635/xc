@@ -1,0 +1,39 @@
+@import "../../../other/util.scss";
+.page_tag_nav {
+    line-height: p2r(44);
+    height: p2r(44);
+    text-align: center;
+    border-bottom: 1px solid #eeeeee;
+    position: relative;
+    &_img {
+        width: p2r(24);
+        height: p2r(24);
+        font-size: p2r(18);
+        color: #000000;
+        vertical-align: middle;
+        border-radius: 50%;
+        margin-right: p2r(6);
+    }
+    &_back {
+        position: absolute;
+        left: p2r(20);
+        top: p2r(15);
+        width: p2r(14);
+        height: p2r(14);
+        border-left: 2px solid #000000;
+        border-bottom: 2px solid #000000;
+        transform: rotate(45deg);
+    }
+    .head_img {
+        width: p2r(33);
+        height: p2r(18);
+        font-size: p2r(18);
+        color: #000000;
+        vertical-align: middle;
+        margin-right: p2r(6);
+    }
+}
+
+.page_tag_list {
+    padding: p2r(16);
+}

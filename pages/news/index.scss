@@ -1,0 +1,193 @@
+@import "../../other/util.scss";
+[v-cloak] {
+    display: none;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.contaner {
+    width: 100%;
+    padding: 0 p2r(16);
+    .head {
+        height: p2r(44);
+        line-height: p2r(44);
+        border-bottom: 1px solid #eeeeee;
+        text-align: center;
+        position: relative;
+        font-size: p2r(16);
+        &_back {
+            position: absolute;
+            left: 0;
+            top: p2r(15);
+            width: p2r(14);
+            height: p2r(14);
+            border-left: 2px solid #000000;
+            border-bottom: 2px solid #000000;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        &_img {
+            width: p2r(33);
+            height: p2r(18);
+            font-size: p2r(18);
+            color: #000000;
+            vertical-align: middle;
+            margin-right: p2r(6);
+        }
+    }
+    .page_details {
+        width: 100%;
+        &_head {
+            color: #000;
+            font-size: p2r(20);
+            line-height: 1.5;
+            font-weight: bold;
+            margin-top: p2r(16);
+        }
+        &_info {
+            min-height: p2r(20);
+            height: auto;
+            line-height: p2r(20);
+            margin-top: p2r(13);
+            font-size: p2r(12);
+            .author {
+                display: inline-block;
+                vertical-align: p2r(7);
+                margin-left: p2r(6);
+                font-size: p2r(12);
+                color: #232426;
+            }
+            .readnum {
+                margin-top: p2r(4);
+            }
+            img {
+                width: p2r(20);
+                height: p2r(20);
+                border-radius: 100%;
+            }
+            .fl {
+                color: #000;
+                margin-right: p2r(6);
+            }
+            .text {
+                display: inline-block;
+                min-height: p2r(20);
+                height: p2r(20);
+                line-height: p2r(20);
+                span {
+                    display: inline-block;
+                    color: #999999;
+                    margin-left: p2r(6);
+                }
+            }
+            .fr {
+                color: #999999;
+            }
+        }
+        &_img {
+            width: 100%;
+            height: p2r(192);
+            margin-top: p2r(16);
+        }
+        &_text {
+            font-size: p2r(16);
+            margin-top: p2r(16);
+            * {
+                line-height: 1.75;
+                color: #000;
+            }
+            img {
+                width: 100% !important;
+                margin-top: p2r(10);
+            }
+            p {
+                font-size: p2r(15);
+                margin-top: p2r(10);
+            }
+            ol {
+                padding-left: p2r(16);
+            }
+        }
+        &_remark {
+            font-size: p2r(14);
+            color: #98999b;
+            p {
+                clear: both;
+                margin-bottom: p2r(13);
+                line-height: 1.75;
+                span {
+                    display: inline-block;
+                    margin-bottom: p2r(13);
+                    line-height: 1.75;
+                }
+                .left {
+                    float: left;
+                    width: p2r(60);
+                }
+                .right {
+                    float: right;
+                    width: p2r(266);
+                }
+            }
+            p:first-of-type {
+                margin-top: p2r(40);
+            }
+        }
+        &_tags {
+            min-height: p2r(48);
+            height: auto;
+            overflow: hidden;
+            margin-top: p2r(41);
+            padding-bottom: p2r(16);
+            border-bottom: 1px solid #eeeeee;
+            ul {
+                li {
+                    padding: 0 p2r(16);
+                    height: p2r(32);
+                    text-align: center;
+                    background-color: #fafafa;
+                    border-radius: 99px;
+                    margin-right: p2r(10);
+                    float: left;
+                    a {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        line-height: p2r(32);
+                        color: #000;
+                        font-size: p2r(14);
+                    }
+                }
+            }
+        }
+        &_recom {
+            margin-top: p2r(16);
+            color: #000;
+            font-size: p2r(18);
+            text-align: center;
+            margin-bottom: p2r(20);
+            position: relative;
+            span {
+                display: block;
+                width: p2r(20);
+                height: 4px;
+                background-color: #ecf3ff;
+                border-radius: 100px;
+                margin: auto;
+                position: absolute;
+                top: p2r(25);
+                left: 0;
+                right: 0;
+            }
+            .articles {
+                margin-top: p2r(16);
+            }
+        }
+    }
+}
